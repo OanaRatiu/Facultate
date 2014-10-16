@@ -155,7 +155,7 @@ class simpleapp_tk(Tkinter.Tk):
 
         self.grid_columnconfigure(1, weight=1)
 
-    def _OnEncryptButtonClick(self):
+    def initialize_cypher(self):
         try:
             if self.entry_alphabet.get():
                 self.affine_cypher.set_alphabet(self.entry_alphabet.get())
@@ -163,21 +163,15 @@ class simpleapp_tk(Tkinter.Tk):
             self.affine_cypher.b = int(self.entry_b.get())
             self.affine_cypher.ecnrypted_alphabet = self.affine_cypher.encrypt()
         except ValueError as e:
-            tkMessageBox.showinfo(e.message)
+            tkMessageBox.showinfo('Exception', e.message)
             return
 
+    def _OnEncryptButtonClick(self):
+        self.initialize_cypher()
         self.entry_cyphertext_str.set(self.affine_cypher.affine_word(self.entry_text.get()))
 
     def _OnDecryptButtonClick(self):
-        try:
-            if self.entry_alphabet.get():
-                self.affine_cypher.set_alphabet(self.entry_alphabet.get())
-            self.affine_cypher.a = int(self.entry_m.get())
-            self.affine_cypher.b = int(self.entry_b.get())
-            self.affine_cypher.ecnrypted_alphabet = self.affine_cypher.encrypt()
-        except ValueError as e:
-            tkMessageBox.showinfo(e.message)
-            return
+        self.initialize_cypher()
         self.decrypted_entry_str.set(self.affine_cypher.decrypt(self.entry_text.get()))
 
 
