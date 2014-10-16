@@ -1,0 +1,15 @@
+Affine Cypher
+
+We need an order of letters(call it alphabet) and we shall compute its encryption, by this formula:
+    - every letter has its index in the alphabet (i)
+    - we have two values a and b
+    - (a * i + b) % (length of alphabet)
+
+Than, to compute the cyphertext (affine_word function) we need to look into the alphabet to find the
+corresponding value in the encrypted alphabet, so we can return the letter.
+
+The decryption goes like this, using the formula:
+    - we need to find the numbers i and j for which (a * i) % (length of alphabet) = 1 
+                                                and (b + j) % (length of alphabet) = 0
+    - then, we compute the inverse of each letter :
+         (((alphabet[letter] + j) % (length of alphabet) ) * i) % (length of alphabet)
