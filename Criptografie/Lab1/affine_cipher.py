@@ -15,21 +15,20 @@ class AffineCypher(object):
         self.len = len(alphabet)
 
     def encrypt(self):
+        self.validate()
         ecnrypted_alphabet = {}
         for key, value in self.alphabet.items():
             ecnrypted_alphabet[key] = (self.a * value + self.b) % self.len
         return ecnrypted_alphabet
 
     def affine_word(self, text):
-        self.validate()
         ciphertext = ''
         for letter in text:
             ciphertext += [key for key, value in self.alphabet.items() 
-                 if value == self.ecnrypted_alphabet[letter]][0]
+                if value == self.ecnrypted_alphabet[letter]][0]
         return ciphertext
 
     def decrypt(self, ciphertext):
-        self.validate()
         dechyper = ''
         for i in range(self.len):
             if (self.a * i) % self.len == 1:
