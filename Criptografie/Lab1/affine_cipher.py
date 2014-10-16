@@ -12,6 +12,7 @@ class AffineCypher(object):
 
     def set_alphabet(self, alphabet):
         self.alphabet = {alphabet[i]: i for i in range(len(alphabet))}
+        self.len = len(alphabet)
 
     def encrypt(self):
         ecnrypted_alphabet = {}
@@ -38,12 +39,14 @@ class AffineCypher(object):
                 break
         # we will work by the formula (letter + j) * i mod(self.len), y = a*x + b
         for letter in ciphertext:
-            value_to_be_decr = ((((self.alphabet[letter] + j) % self.len ) * i) %self.len)
+            value_to_be_decr = ((((self.alphabet[letter] + j) % self.len ) * i) % self.len)
             dechyper += [key for key, value in self.alphabet.items() 
                  if value == value_to_be_decr][0]
         return dechyper
 
     def validate_numbers(self):
+        if type(self.a) is not int or type(self.b) is not int:
+            return False
         if self.a not in range(self.len) or self.b not in range(self.len):
             return False
         return True
@@ -161,18 +164,20 @@ class simpleapp_tk(Tkinter.Tk):
             self.affine_cypher.b = int(self.entry_b.get())
             self.affine_cypher.ecnrypted_alphabet = self.affine_cypher.encrypt()
         except ValueError as e:
-            tkMessageBox.showinfo(str(e))
+            tkMessageBox.showinfo(e.message)
             return
 
         self.entry_cyphertext_str.set(self.affine_cypher.affine_word(self.entry_text.get()))
 
     def _OnDecryptButtonClick(self):
         try:
+            if self.entry_alphabet.get():
+                self.affine_cypher.set_alphabet(self.entry_alphabet.get())
             self.affine_cypher.a = int(self.entry_m.get())
             self.affine_cypher.b = int(self.entry_b.get())
             self.affine_cypher.ecnrypted_alphabet = self.affine_cypher.encrypt()
         except ValueError as e:
-            tkMessageBox.showinfo(str(e))
+            tkMessageBox.showinfo(e.message)
             return
         self.decrypted_entry_str.set(self.affine_cypher.decrypt(self.entry_text.get()))
 
