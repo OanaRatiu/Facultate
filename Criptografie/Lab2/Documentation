@@ -1,0 +1,40 @@
+The first method computes the greatest common divisor by parsing the number liniarly.
+Here is the output:
+    First method: gcd=2 | Time: 342693 ms8
+    First method: gcd=2 | Time: 352881 ms8
+    First method: gcd=2 | Time: 299 ms5
+    First method: gcd=1 | Time: 19174 ms7
+    First method: gcd=2 | Time: 40 ms4
+    First method: gcd=1 | Time: 1.50335e+06 ms9
+    First method: gcd=1 | Time: 3 ms3
+    First method: gcd=1 | Time: 3.65893e+06 ms9
+    First method: gcd=1 | Time: 2810 ms6
+    First method: gcd=1 | Time: 1 ms2
+
+The second method computes the greatest common divisor by making modulo between the numbers.
+When one of them is 0 the algorithm returns the other.
+The algorithm goes recursively.
+Here is the output:
+    Second method: gcd=2 | Time: 1 ms8
+    Second method: gcd=2 | Time: 1 ms8
+    Second method: gcd=2 | Time: 1 ms5
+    Second method: gcd=1 | Time: 1 ms7
+    Second method: gcd=2 | Time: 0 ms4
+    Second method: gcd=1 | Time: 0 ms9
+    Second method: gcd=1 | Time: 1 ms3
+    Second method: gcd=1 | Time: 1 ms9
+    Second method: gcd=1 | Time: 1 ms6
+    Second method: gcd=1 | Time: 1 ms2
+
+
+The third method computes the greatest common divisor by making modulo between the numbers, until the first is 0.
+Third method: gcd=78000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078000000000078 | Time: 24648 ms
+Third method: gcd=14 | Time: 9661 ms
+Third method: gcd=1 | Time: 5787 ms
+Third method: gcd=3 | Time: 164 ms
+Third method: gcd=2 | Time: 17986 ms
+Third method: gcd=1 | Time: 11762 ms
+Third method: gcd=1 | Time: 4045 ms
+Third method: gcd=4 | Time: 1127 ms
+Third method: gcd=1 | Time: 730239 ms
+Third method: gcd=2 | Time: 72597 ms
