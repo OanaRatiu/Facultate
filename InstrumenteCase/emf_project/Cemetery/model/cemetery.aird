@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_E6ev0JUmEeSemdZJHjrwcw" selectedViews="_FBGVMJUmEeSemdZJHjrwcw" version="8.1.1">
+  <models xmi:type="ecore:EPackage" href="cemetery.ecore#/"/>
+  <models xmi:type="genmodel:GenModel" href="cemetery.genmodel#/"/>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_FBGVMJUmEeSemdZJHjrwcw" initialized="true">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_FJgDQJUmEeSemdZJHjrwcw" name="cemetery class diagram">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_FJ5r4JUmEeSemdZJHjrwcw" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_FJ5r4ZUmEeSemdZJHjrwcw" type="Sirius" element="_FJgDQJUmEeSemdZJHjrwcw" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_LqP-AJUnEeSemdZJHjrwcw" type="2003" element="_Lp1uUJUnEeSemdZJHjrwcw">
+            <children xmi:type="notation:Node" xmi:id="_LqQlEJUnEeSemdZJHjrwcw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_LqRMIJUnEeSemdZJHjrwcw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_cXnTMJUnEeSemdZJHjrwcw" type="3010" element="_cXbtAJUnEeSemdZJHjrwcw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_cXnTMZUnEeSemdZJHjrwcw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_MEChkJUoEeSemdZJHjrwcw" type="3010" element="_MDzRAJUoEeSemdZJHjrwcw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_MEChkZUoEeSemdZJHjrwcw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_9TWdUJZMEeSM77BlWf6chw" type="3010" element="_9Qk2IJZMEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_9TWdUZZMEeSM77BlWf6chw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_LqRMIZUnEeSemdZJHjrwcw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_LqRMIpUnEeSemdZJHjrwcw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_LqP-AZUnEeSemdZJHjrwcw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LqP-ApUnEeSemdZJHjrwcw" x="60" y="60" width="159" height="109"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HrmqkJZNEeSM77BlWf6chw" type="2003" element="_Hqug0JZNEeSM77BlWf6chw">
+            <children xmi:type="notation:Node" xmi:id="_Hr7asJZNEeSM77BlWf6chw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_Hr7asZZNEeSM77BlWf6chw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_JuZowJZNEeSM77BlWf6chw" type="3010" element="_Jtqo8JZNEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_JuZowZZNEeSM77BlWf6chw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_rpgU8JZQEeSM77BlWf6chw" type="3010" element="_ro8UQJZQEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_rpgU8ZZQEeSM77BlWf6chw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_Hr7aspZNEeSM77BlWf6chw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_Hr7as5ZNEeSM77BlWf6chw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_HrmqkZZNEeSM77BlWf6chw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HrmqkpZNEeSM77BlWf6chw" x="72" y="216" width="183" height="111"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_y2KQQJZNEeSM77BlWf6chw" type="2003" element="_y1gwAJZNEeSM77BlWf6chw">
+            <children xmi:type="notation:Node" xmi:id="_y2KQQ5ZNEeSM77BlWf6chw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_y2K3UJZNEeSM77BlWf6chw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_1uFfoJZNEeSM77BlWf6chw" type="3010" element="_1tb_YJZNEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_1uFfoZZNEeSM77BlWf6chw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_57Sf4JZNEeSM77BlWf6chw" type="3010" element="_56sqAJZNEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_57Sf4ZZNEeSM77BlWf6chw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_9KdKkJZNEeSM77BlWf6chw" type="3010" element="_9Je6MJZNEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_9KdKkZZNEeSM77BlWf6chw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_i8XlsJZQEeSM77BlWf6chw" type="3010" element="_i7v6oJZQEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_i8XlsZZQEeSM77BlWf6chw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_y2K3UZZNEeSM77BlWf6chw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_y2K3UpZNEeSM77BlWf6chw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_y2KQQZZNEeSM77BlWf6chw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y2KQQpZNEeSM77BlWf6chw" x="516" y="216" width="207" height="123"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_BkS4oJZOEeSM77BlWf6chw" type="2003" element="_BjuQ4JZOEeSM77BlWf6chw">
+            <children xmi:type="notation:Node" xmi:id="_BkS4o5ZOEeSM77BlWf6chw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_BkS4pJZOEeSM77BlWf6chw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_EpnDwJZOEeSM77BlWf6chw" type="3010" element="_Eo55IJZOEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_EpnDwZZOEeSM77BlWf6chw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_zqkd0JZPEeSM77BlWf6chw" type="3010" element="_zpuwUJZPEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_zqkd0ZZPEeSM77BlWf6chw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_Z1e5sJZQEeSM77BlWf6chw" type="3010" element="_Z0fbMJZQEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Z1e5sZZQEeSM77BlWf6chw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_eVPCgJZQEeSM77BlWf6chw" type="3010" element="_eUteEJZQEeSM77BlWf6chw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_eVPCgZZQEeSM77BlWf6chw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_BkS4pZZOEeSM77BlWf6chw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_BkS4ppZOEeSM77BlWf6chw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_BkS4oZZOEeSM77BlWf6chw" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BkS4opZOEeSM77BlWf6chw" x="540" y="24" width="193" height="121"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_FJ5r4pUmEeSemdZJHjrwcw"/>
+          <edges xmi:type="notation:Edge" xmi:id="_j_x1YJZOEeSM77BlWf6chw" type="4001" element="_j-SAkJZOEeSM77BlWf6chw" source="_BkS4oJZOEeSM77BlWf6chw" target="_LqP-AJUnEeSemdZJHjrwcw">
+            <children xmi:type="notation:Node" xmi:id="_j_yccJZOEeSM77BlWf6chw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j_yccZZOEeSM77BlWf6chw" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_j_zDgJZOEeSM77BlWf6chw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j_zDgZZOEeSM77BlWf6chw" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_j_zqkJZOEeSM77BlWf6chw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j_zqkZZOEeSM77BlWf6chw" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_j_x1YZZOEeSM77BlWf6chw" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_j_x1YpZOEeSM77BlWf6chw" fontColor="7490599" fontName="Ubuntu" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_j_x1Y5ZOEeSM77BlWf6chw" points="[0, 0, 328, -10]$[-326, -35, 2, -45]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_j_0RoJZOEeSM77BlWf6chw" id="(0.0,0.6033057851239669)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_j_0RoZZOEeSM77BlWf6chw" id="(0.9685534591194969,0.42201834862385323)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_DPy7sJZPEeSM77BlWf6chw" type="4001" element="_DPA4kJZPEeSM77BlWf6chw" source="_BkS4oJZOEeSM77BlWf6chw" target="_y2KQQJZNEeSM77BlWf6chw">
+            <children xmi:type="notation:Node" xmi:id="_DPziwJZPEeSM77BlWf6chw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DPziwZZPEeSM77BlWf6chw" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DPziwpZPEeSM77BlWf6chw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DPziw5ZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DP0J0JZPEeSM77BlWf6chw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DP0J0ZZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_DPy7sZZPEeSM77BlWf6chw" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_DPy7spZPEeSM77BlWf6chw" fontColor="7490599" fontName="Ubuntu" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DPy7s5ZPEeSM77BlWf6chw" points="[-9, 2, 2, -85]$[-9, 75, 2, -12]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DP0J0pZPEeSM77BlWf6chw" id="(0.5699481865284974,0.9834710743801653)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DP0J05ZPEeSM77BlWf6chw" id="(0.8482758620689655,0.13402061855670103)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_IcDlMJZPEeSM77BlWf6chw" type="4001" element="_IbfkgJZPEeSM77BlWf6chw" source="_BkS4oJZOEeSM77BlWf6chw" target="_HrmqkJZNEeSM77BlWf6chw">
+            <children xmi:type="notation:Node" xmi:id="_IcDlNJZPEeSM77BlWf6chw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IcDlNZZPEeSM77BlWf6chw" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_IcDlNpZPEeSM77BlWf6chw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IcDlN5ZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_IcEMQJZPEeSM77BlWf6chw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IcEMQZZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_IcDlMZZPEeSM77BlWf6chw" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_IcDlMpZPEeSM77BlWf6chw" fontColor="7490599" fontName="Ubuntu" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IcDlM5ZPEeSM77BlWf6chw" points="[-3, 1, 330, -86]$[-331, 79, 2, -8]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IcEMQpZPEeSM77BlWf6chw" id="(0.02072538860103627,0.9504132231404959)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IcEMQ5ZPEeSM77BlWf6chw" id="(0.7650273224043715,0.08108108108108109)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ca-KsJZPEeSM77BlWf6chw" type="4001" element="_caZi8JZPEeSM77BlWf6chw" source="_HrmqkJZNEeSM77BlWf6chw" target="_LqP-AJUnEeSemdZJHjrwcw">
+            <children xmi:type="notation:Node" xmi:id="_ca-xwJZPEeSM77BlWf6chw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ca-xwZZPEeSM77BlWf6chw" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ca-xwpZPEeSM77BlWf6chw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ca-xw5ZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ca-xxJZPEeSM77BlWf6chw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ca-xxZZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ca-KsZZPEeSM77BlWf6chw" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ca-KspZPEeSM77BlWf6chw" fontColor="7490599" fontName="Ubuntu" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ca-Ks5ZPEeSM77BlWf6chw" points="[0, -1, 19, 57]$[-17, -50, 2, 8]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ca_Y0JZPEeSM77BlWf6chw" id="(0.546448087431694,0.018018018018018018)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ca_Y0ZZPEeSM77BlWf6chw" id="(0.5849056603773585,0.926605504587156)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ioI3kJZPEeSM77BlWf6chw" type="4001" element="_injowJZPEeSM77BlWf6chw" source="_y2KQQJZNEeSM77BlWf6chw" target="_HrmqkJZNEeSM77BlWf6chw">
+            <children xmi:type="notation:Node" xmi:id="_ioI3lJZPEeSM77BlWf6chw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ioI3lZZPEeSM77BlWf6chw" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ioJeoJZPEeSM77BlWf6chw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ioJeoZZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ioJeopZPEeSM77BlWf6chw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ioJeo5ZPEeSM77BlWf6chw" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ioI3kZZPEeSM77BlWf6chw" routing="Rectilinear" jumpLinkStatus="Above"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ioI3kpZPEeSM77BlWf6chw" fontColor="7490599" fontName="Ubuntu" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ioI3k5ZPEeSM77BlWf6chw" points="[0, 0, 265, -18]$[-263, 20, 2, 2]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ioJepJZPEeSM77BlWf6chw" id="(0.0,0.5670103092783505)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ioJepZZPEeSM77BlWf6chw" id="(0.9890710382513661,0.6576576576576577)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_N5juMJUnEeSemdZJHjrwcw" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_N5k8UJUnEeSemdZJHjrwcw">
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_pwtSMZZOEeSM77BlWf6chw" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_pwtSMpZOEeSM77BlWf6chw" labelFormat="bold" showIcon="false" labelExpression="service:render">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_pwtSM5ZOEeSM77BlWf6chw" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </endLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_Fgt1cpZPEeSM77BlWf6chw" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_Fgt1c5ZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false" labelExpression="service:render">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_Fgt1dJZPEeSM77BlWf6chw" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </endLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_KlkPYpZPEeSM77BlWf6chw" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_KlkPY5ZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false" labelExpression="service:render">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_KlkPZJZPEeSM77BlWf6chw" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </endLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_eHJYopZPEeSM77BlWf6chw" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_eHJYo5ZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false" labelExpression="service:render">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_eHJYpJZPEeSM77BlWf6chw" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </endLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_kg_PkJZPEeSM77BlWf6chw" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_kg_PkZZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false" labelExpression="service:render">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_kg_PkpZPEeSM77BlWf6chw" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </endLabelStyleDescription>
+          </computedStyleDescriptions>
+          <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="_pwsrIJZOEeSM77BlWf6chw">
+            <key xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_pwsrIZZOEeSM77BlWf6chw">
+              <key xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/decedati"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_pwtSMJZOEeSM77BlWf6chw" key="_j-SAkJZOEeSM77BlWf6chw">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_pwtSNJZOEeSM77BlWf6chw" value="_pwtSMZZOEeSM77BlWf6chw">
+                  <key xmi:type="ecore:EPackage" href="cemetery.ecore#/"/>
+                </value>
+              </value>
+            </value>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_Fgt1cJZPEeSM77BlWf6chw">
+              <key xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/detinatori"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_Fgt1cZZPEeSM77BlWf6chw" key="_DPA4kJZPEeSM77BlWf6chw">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_Fgt1dZZPEeSM77BlWf6chw" value="_Fgt1cpZPEeSM77BlWf6chw">
+                  <key xmi:type="ecore:EPackage" href="cemetery.ecore#/"/>
+                </value>
+              </value>
+            </value>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_KlkPYJZPEeSM77BlWf6chw">
+              <key xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/morminte"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_KlkPYZZPEeSM77BlWf6chw" key="_IbfkgJZPEeSM77BlWf6chw">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_KlkPZZZPEeSM77BlWf6chw" value="_KlkPYpZPEeSM77BlWf6chw">
+                  <key xmi:type="ecore:EPackage" href="cemetery.ecore#/"/>
+                </value>
+              </value>
+            </value>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_eHJYoJZPEeSM77BlWf6chw">
+              <key xmi:type="ecore:EReference" href="cemetery.ecore#//Mormant/decedati"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_eHJYoZZPEeSM77BlWf6chw" key="_caZi8JZPEeSM77BlWf6chw">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_eHJYpZZPEeSM77BlWf6chw" value="_eHJYopZPEeSM77BlWf6chw">
+                  <key xmi:type="ecore:EPackage" href="cemetery.ecore#/"/>
+                </value>
+              </value>
+            </value>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_kg-ogJZPEeSM77BlWf6chw">
+              <key xmi:type="ecore:EReference" href="cemetery.ecore#//Detinator/morminte"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_kg-ogZZPEeSM77BlWf6chw" key="_injowJZPEeSM77BlWf6chw">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_kg_Pk5ZPEeSM77BlWf6chw" value="_kg_PkJZPEeSM77BlWf6chw">
+                  <key xmi:type="ecore:EPackage" href="cemetery.ecore#/"/>
+                </value>
+              </value>
+            </value>
+          </cache>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Lp1uUJUnEeSemdZJHjrwcw" name="Decedat" tooltipText="" incomingEdges="_j-SAkJZOEeSM77BlWf6chw _caZi8JZPEeSM77BlWf6chw" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="cemetery.ecore#//Decedat"/>
+        <semanticElements xmi:type="ecore:EClass" href="cemetery.ecore#//Decedat"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_kUKvMJj6EeSh0ZfNSSsGkg" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_kUKvMZj6EeSh0ZfNSSsGkg"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_kUKvMpj6EeSh0ZfNSSsGkg"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_kUKvM5j6EeSh0ZfNSSsGkg" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_kUKvNJj6EeSh0ZfNSSsGkg" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cXbtAJUnEeSemdZJHjrwcw" name="idDecedat : EInt = 0" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Decedat/idDecedat"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Decedat/idDecedat"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_d10WkJUnEeSemdZJHjrwcw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_d10WkZUnEeSemdZJHjrwcw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_d10WkpUnEeSemdZJHjrwcw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_d10Wk5UnEeSemdZJHjrwcw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_MDzRAJUoEeSemdZJHjrwcw" name="nume : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Decedat/nume"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Decedat/nume"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_2n7v4JUoEeSemdZJHjrwcw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_2n7v4ZUoEeSemdZJHjrwcw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_2n7v4pUoEeSemdZJHjrwcw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_2n7v45UoEeSemdZJHjrwcw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Qk2IJZMEeSM77BlWf6chw" name="prenume : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Decedat/prenume"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Decedat/prenume"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="__vcsUJZMEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__vcsUZZMEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__vcsUpZMEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="__vcsU5ZMEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Hqug0JZNEeSM77BlWf6chw" name="Mormant" tooltipText="" outgoingEdges="_caZi8JZPEeSM77BlWf6chw" incomingEdges="_IbfkgJZPEeSM77BlWf6chw _injowJZPEeSM77BlWf6chw" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="cemetery.ecore#//Mormant"/>
+        <semanticElements xmi:type="ecore:EClass" href="cemetery.ecore#//Mormant"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_udvXIJZQEeSM77BlWf6chw" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_udvXIZZQEeSM77BlWf6chw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_udvXIpZQEeSM77BlWf6chw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_udvXI5ZQEeSM77BlWf6chw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_udvXJJZQEeSM77BlWf6chw" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Jtqo8JZNEeSM77BlWf6chw" name="idMormant : EInt = 0" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Mormant/idMormant"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Mormant/idMormant"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_M16MQJZNEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_M16MQZZNEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_M16MQpZNEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_M16MQ5ZNEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ro8UQJZQEeSM77BlWf6chw" name="addDecedat(decedat Decedat)" tooltipText="addDecedat(decedat)">
+          <target xmi:type="ecore:EOperation" href="cemetery.ecore#//Mormant/addDecedat"/>
+          <semanticElements xmi:type="ecore:EOperation" href="cemetery.ecore#//Mormant/addDecedat"/>
+          <semanticElements xmi:type="ecore:EParameter" href="cemetery.ecore#//Mormant/addDecedat/decedat"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ro87UJZQEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_ro87UZZQEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_ro87UpZQEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_ro87U5ZQEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_y1gwAJZNEeSM77BlWf6chw" name="Detinator" tooltipText="" outgoingEdges="_injowJZPEeSM77BlWf6chw" incomingEdges="_DPA4kJZPEeSM77BlWf6chw" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="cemetery.ecore#//Detinator"/>
+        <semanticElements xmi:type="ecore:EClass" href="cemetery.ecore#//Detinator"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nMdh4JZQEeSM77BlWf6chw" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_nMdh4ZZQEeSM77BlWf6chw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_nMdh4pZQEeSM77BlWf6chw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_nMdh45ZQEeSM77BlWf6chw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_nMdh5JZQEeSM77BlWf6chw" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_1tb_YJZNEeSM77BlWf6chw" name="idDetinator : EInt = 0" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Detinator/idDetinator"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Detinator/idDetinator"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_31reQJZNEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_31reQZZNEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_31reQpZNEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_31reQ5ZNEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_56sqAJZNEeSM77BlWf6chw" name="nume : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Detinator/nume"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Detinator/nume"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_7UCbgJZNEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_7UCbgZZNEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_7UCbgpZNEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_7UCbg5ZNEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Je6MJZNEeSM77BlWf6chw" name="chitanta : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Detinator/chitanta"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Detinator/chitanta"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-j97MJZNEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_-j97MZZNEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_-j97MpZNEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_-j97M5ZNEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_i7v6oJZQEeSM77BlWf6chw" name="addMormant(mormant Mormant)" tooltipText="addMormant(mormant)">
+          <target xmi:type="ecore:EOperation" href="cemetery.ecore#//Detinator/addMormant"/>
+          <semanticElements xmi:type="ecore:EOperation" href="cemetery.ecore#//Detinator/addMormant"/>
+          <semanticElements xmi:type="ecore:EParameter" href="cemetery.ecore#//Detinator/addMormant/mormant"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_i7whsJZQEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_i7whsZZQEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_i7whspZQEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_i7whs5ZQEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_BjuQ4JZOEeSM77BlWf6chw" name="Inspector" tooltipText="" outgoingEdges="_j-SAkJZOEeSM77BlWf6chw _DPA4kJZPEeSM77BlWf6chw _IbfkgJZPEeSM77BlWf6chw" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="cemetery.ecore#//Inspector"/>
+        <semanticElements xmi:type="ecore:EClass" href="cemetery.ecore#//Inspector"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_hHz30JZQEeSM77BlWf6chw" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_hH0e4JZQEeSM77BlWf6chw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_hH0e4ZZQEeSM77BlWf6chw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hH0e4pZQEeSM77BlWf6chw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_hH0e45ZQEeSM77BlWf6chw" red="255" green="252" blue="216"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Eo55IJZOEeSM77BlWf6chw" name="nume : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="cemetery.ecore#//Inspector/nume"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="cemetery.ecore#//Inspector/nume"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_F0eUYJZOEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_F0eUYZZOEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_F0eUYpZOEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_F0eUY5ZOEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_zpuwUJZPEeSM77BlWf6chw" name="addDecedat(decedat Decedat)" tooltipText="addDecedat(decedat)">
+          <target xmi:type="ecore:EOperation" href="cemetery.ecore#//Inspector/addDecedat"/>
+          <semanticElements xmi:type="ecore:EOperation" href="cemetery.ecore#//Inspector/addDecedat"/>
+          <semanticElements xmi:type="ecore:EParameter" href="cemetery.ecore#//Inspector/addDecedat/decedat"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zpwlgJZPEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_zpwlgZZPEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_zpwlgpZPEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_zpwlg5ZPEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Z0fbMJZQEeSM77BlWf6chw" name="addDetinator(detinator Detinator)" tooltipText="addDetinator(detinator)">
+          <target xmi:type="ecore:EOperation" href="cemetery.ecore#//Inspector/addDetinator"/>
+          <semanticElements xmi:type="ecore:EOperation" href="cemetery.ecore#//Inspector/addDetinator"/>
+          <semanticElements xmi:type="ecore:EParameter" href="cemetery.ecore#//Inspector/addDetinator/detinator"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Z0gpUJZQEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Z0gpUZZQEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Z0gpUpZQEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_Z0gpU5ZQEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_eUteEJZQEeSM77BlWf6chw" name="addMormant(mormant Mormant)" tooltipText="addMormant(mormant)">
+          <target xmi:type="ecore:EOperation" href="cemetery.ecore#//Inspector/addMormant"/>
+          <semanticElements xmi:type="ecore:EOperation" href="cemetery.ecore#//Inspector/addMormant"/>
+          <semanticElements xmi:type="ecore:EParameter" href="cemetery.ecore#//Inspector/addMormant/mormant"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_eUuFIJZQEeSM77BlWf6chw" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_eUuFIZZQEeSM77BlWf6chw"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_eUuFIpZQEeSM77BlWf6chw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_eUuFI5ZQEeSM77BlWf6chw"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_j-SAkJZOEeSM77BlWf6chw" name="[1..*] decedati" sourceNode="_BjuQ4JZOEeSM77BlWf6chw" targetNode="_Lp1uUJUnEeSemdZJHjrwcw">
+        <target xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/decedati"/>
+        <semanticElements xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/decedati"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_pwtSNZZOEeSM77BlWf6chw" description="_pwtSMZZOEeSM77BlWf6chw" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_pwtSNpZOEeSM77BlWf6chw"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_pwtSN5ZOEeSM77BlWf6chw" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_pwtSOJZOEeSM77BlWf6chw"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_pwtSOZZOEeSM77BlWf6chw" labelSize="6" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_pwtSOpZOEeSM77BlWf6chw" red="39" green="76" blue="114"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_DPA4kJZPEeSM77BlWf6chw" name="[1..*] detinatori" sourceNode="_BjuQ4JZOEeSM77BlWf6chw" targetNode="_y1gwAJZNEeSM77BlWf6chw">
+        <target xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/detinatori"/>
+        <semanticElements xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/detinatori"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Fgt1dpZPEeSM77BlWf6chw" description="_Fgt1cpZPEeSM77BlWf6chw" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Fgt1d5ZPEeSM77BlWf6chw"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Fgt1eJZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Fgt1eZZPEeSM77BlWf6chw"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_Fgt1epZPEeSM77BlWf6chw" labelSize="6" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Fgt1e5ZPEeSM77BlWf6chw" red="39" green="76" blue="114"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_IbfkgJZPEeSM77BlWf6chw" name="[1..*] morminte" sourceNode="_BjuQ4JZOEeSM77BlWf6chw" targetNode="_Hqug0JZNEeSM77BlWf6chw">
+        <target xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/morminte"/>
+        <semanticElements xmi:type="ecore:EReference" href="cemetery.ecore#//Inspector/morminte"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_KlkPZpZPEeSM77BlWf6chw" description="_KlkPYpZPEeSM77BlWf6chw" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_KlkPZ5ZPEeSM77BlWf6chw"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_KlkPaJZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_KlkPaZZPEeSM77BlWf6chw"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_KlkPapZPEeSM77BlWf6chw" labelSize="6" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_KlkPa5ZPEeSM77BlWf6chw" red="39" green="76" blue="114"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_caZi8JZPEeSM77BlWf6chw" name="[1..*] decedati" sourceNode="_Hqug0JZNEeSM77BlWf6chw" targetNode="_Lp1uUJUnEeSemdZJHjrwcw">
+        <target xmi:type="ecore:EReference" href="cemetery.ecore#//Mormant/decedati"/>
+        <semanticElements xmi:type="ecore:EReference" href="cemetery.ecore#//Mormant/decedati"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_eHJYppZPEeSM77BlWf6chw" description="_eHJYopZPEeSM77BlWf6chw" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_eHJYp5ZPEeSM77BlWf6chw"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_eHJYqJZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_eHJYqZZPEeSM77BlWf6chw"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_eHJYqpZPEeSM77BlWf6chw" labelSize="6" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_eHJYq5ZPEeSM77BlWf6chw" red="39" green="76" blue="114"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_injowJZPEeSM77BlWf6chw" name="[1..*] morminte" sourceNode="_y1gwAJZNEeSM77BlWf6chw" targetNode="_Hqug0JZNEeSM77BlWf6chw">
+        <target xmi:type="ecore:EReference" href="cemetery.ecore#//Detinator/morminte"/>
+        <semanticElements xmi:type="ecore:EReference" href="cemetery.ecore#//Detinator/morminte"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_kg_PlJZPEeSM77BlWf6chw" description="_kg_PkJZPEeSM77BlWf6chw" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_kg_PlZZPEeSM77BlWf6chw"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_kg_PlpZPEeSM77BlWf6chw" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_kg_Pl5ZPEeSM77BlWf6chw"/>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_kg_PmJZPEeSM77BlWf6chw" labelSize="6" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_kg_PmZZPEeSM77BlWf6chw" red="39" green="76" blue="114"/>
+          </endLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_FJgDRZUmEeSemdZJHjrwcw"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Constraint']"/>
+      <target xmi:type="ecore:EPackage" href="cemetery.ecore#/"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

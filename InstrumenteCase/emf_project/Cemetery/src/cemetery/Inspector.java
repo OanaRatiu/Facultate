@@ -1,0 +1,127 @@
+/**
+ */
+package cemetery;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Inspector</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link cemetery.Inspector#getNume <em>Nume</em>}</li>
+ *   <li>{@link cemetery.Inspector#getDecedati <em>Decedati</em>}</li>
+ *   <li>{@link cemetery.Inspector#getDetinatori <em>Detinatori</em>}</li>
+ *   <li>{@link cemetery.Inspector#getMorminte <em>Morminte</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see cemetery.CemeteryPackage#getInspector()
+ * @model
+ * @generated
+ */
+public interface Inspector extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Nume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nume</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nume</em>' attribute.
+	 * @see #setNume(String)
+	 * @see cemetery.CemeteryPackage#getInspector_Nume()
+	 * @model
+	 * @generated
+	 */
+	String getNume();
+
+	/**
+	 * Sets the value of the '{@link cemetery.Inspector#getNume <em>Nume</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nume</em>' attribute.
+	 * @see #getNume()
+	 * @generated
+	 */
+	void setNume(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Decedati</b></em>' reference list.
+	 * The list contents are of type {@link cemetery.Decedat}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Decedati</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decedati</em>' reference list.
+	 * @see cemetery.CemeteryPackage#getInspector_Decedati()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<Decedat> getDecedati();
+
+	/**
+	 * Returns the value of the '<em><b>Detinatori</b></em>' reference list.
+	 * The list contents are of type {@link cemetery.Detinator}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Detinatori</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Detinatori</em>' reference list.
+	 * @see cemetery.CemeteryPackage#getInspector_Detinatori()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<Detinator> getDetinatori();
+
+	/**
+	 * Returns the value of the '<em><b>Morminte</b></em>' reference list.
+	 * The list contents are of type {@link cemetery.Mormant}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Morminte</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Morminte</em>' reference list.
+	 * @see cemetery.CemeteryPackage#getInspector_Morminte()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<Mormant> getMorminte();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void addDecedat(Decedat decedat);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void addDetinator(Detinator detinator);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void addMormant(Mormant mormant);
+
+} // Inspector

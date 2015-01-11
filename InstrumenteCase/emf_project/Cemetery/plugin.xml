@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cemetery -->
+      <package
+            uri="http://www.example.org/cemetery"
+            class="cemetery.CemeteryPackage"
+            genModel="model/cemetery.genmodel"/>
+   </extension>
+
+</plugin>

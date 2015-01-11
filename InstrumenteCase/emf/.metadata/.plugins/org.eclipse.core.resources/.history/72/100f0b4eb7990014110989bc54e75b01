@@ -1,0 +1,778 @@
+/**
+ */
+package cemetery;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see cemetery.CemeteryFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface CemeteryPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "cemetery";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://www.example.org/cemetery";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "cemetery";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	CemeteryPackage eINSTANCE = cemetery.impl.CemeteryPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link cemetery.impl.DecedatImpl <em>Decedat</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cemetery.impl.DecedatImpl
+	 * @see cemetery.impl.CemeteryPackageImpl#getDecedat()
+	 * @generated
+	 */
+	int DECEDAT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id Decedat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECEDAT__ID_DECEDAT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECEDAT__NUME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Prenume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECEDAT__PRENUME = 2;
+
+	/**
+	 * The number of structural features of the '<em>Decedat</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECEDAT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Decedat</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECEDAT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link cemetery.impl.MormantImpl <em>Mormant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cemetery.impl.MormantImpl
+	 * @see cemetery.impl.CemeteryPackageImpl#getMormant()
+	 * @generated
+	 */
+	int MORMANT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id Mormant</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MORMANT__ID_MORMANT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Decedati</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MORMANT__DECEDATI = 1;
+
+	/**
+	 * The number of structural features of the '<em>Mormant</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MORMANT_FEATURE_COUNT = 2;
+
+	/**
+	 * The operation id for the '<em>Add Decedat</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MORMANT___ADD_DECEDAT__DECEDAT = 0;
+
+	/**
+	 * The number of operations of the '<em>Mormant</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MORMANT_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link cemetery.impl.DetinatorImpl <em>Detinator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cemetery.impl.DetinatorImpl
+	 * @see cemetery.impl.CemeteryPackageImpl#getDetinator()
+	 * @generated
+	 */
+	int DETINATOR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Id Detinator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETINATOR__ID_DETINATOR = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETINATOR__NUME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Chitanta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETINATOR__CHITANTA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Morminte</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETINATOR__MORMINTE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Detinator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETINATOR_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Add Mormant</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETINATOR___ADD_MORMANT__MORMANT = 0;
+
+	/**
+	 * The number of operations of the '<em>Detinator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETINATOR_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link cemetery.impl.InspectorImpl <em>Inspector</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cemetery.impl.InspectorImpl
+	 * @see cemetery.impl.CemeteryPackageImpl#getInspector()
+	 * @generated
+	 */
+	int INSPECTOR = 3;
+
+	/**
+	 * The feature id for the '<em><b>Nume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR__NUME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Decedati</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR__DECEDATI = 1;
+
+	/**
+	 * The feature id for the '<em><b>Detinatori</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR__DETINATORI = 2;
+
+	/**
+	 * The feature id for the '<em><b>Morminte</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR__MORMINTE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Inspector</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Add Decedat</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR___ADD_DECEDAT__DECEDAT = 0;
+
+	/**
+	 * The operation id for the '<em>Add Detinator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR___ADD_DETINATOR__DETINATOR = 1;
+
+	/**
+	 * The operation id for the '<em>Add Mormant</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR___ADD_MORMANT__MORMANT = 2;
+
+	/**
+	 * The number of operations of the '<em>Inspector</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSPECTOR_OPERATION_COUNT = 3;
+
+
+	/**
+	 * Returns the meta object for class '{@link Decedat <em>Decedat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Decedat</em>'.
+	 * @see Decedat
+	 * @model instanceClass="Decedat"
+	 * @generated
+	 */
+	EClass getDecedat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Decedat#getIdDecedat <em>Id Decedat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Decedat</em>'.
+	 * @see Decedat#getIdDecedat()
+	 * @see #getDecedat()
+	 * @generated
+	 */
+	EAttribute getDecedat_IdDecedat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Decedat#getNume <em>Nume</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nume</em>'.
+	 * @see Decedat#getNume()
+	 * @see #getDecedat()
+	 * @generated
+	 */
+	EAttribute getDecedat_Nume();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Decedat#getPrenume <em>Prenume</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prenume</em>'.
+	 * @see Decedat#getPrenume()
+	 * @see #getDecedat()
+	 * @generated
+	 */
+	EAttribute getDecedat_Prenume();
+
+	/**
+	 * Returns the meta object for class '{@link cemetery.Mormant <em>Mormant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mormant</em>'.
+	 * @see cemetery.Mormant
+	 * @generated
+	 */
+	EClass getMormant();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cemetery.Mormant#getIdMormant <em>Id Mormant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Mormant</em>'.
+	 * @see cemetery.Mormant#getIdMormant()
+	 * @see #getMormant()
+	 * @generated
+	 */
+	EAttribute getMormant_IdMormant();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cemetery.Mormant#getDecedati <em>Decedati</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Decedati</em>'.
+	 * @see cemetery.Mormant#getDecedati()
+	 * @see #getMormant()
+	 * @generated
+	 */
+	EReference getMormant_Decedati();
+
+	/**
+	 * Returns the meta object for the '{@link cemetery.Mormant#addDecedat(Decedat) <em>Add Decedat</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Decedat</em>' operation.
+	 * @see cemetery.Mormant#addDecedat(Decedat)
+	 * @generated
+	 */
+	EOperation getMormant__AddDecedat__Decedat();
+
+	/**
+	 * Returns the meta object for class '{@link cemetery.Detinator <em>Detinator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Detinator</em>'.
+	 * @see cemetery.Detinator
+	 * @generated
+	 */
+	EClass getDetinator();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cemetery.Detinator#getIdDetinator <em>Id Detinator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Detinator</em>'.
+	 * @see cemetery.Detinator#getIdDetinator()
+	 * @see #getDetinator()
+	 * @generated
+	 */
+	EAttribute getDetinator_IdDetinator();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cemetery.Detinator#getNume <em>Nume</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nume</em>'.
+	 * @see cemetery.Detinator#getNume()
+	 * @see #getDetinator()
+	 * @generated
+	 */
+	EAttribute getDetinator_Nume();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cemetery.Detinator#getChitanta <em>Chitanta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Chitanta</em>'.
+	 * @see cemetery.Detinator#getChitanta()
+	 * @see #getDetinator()
+	 * @generated
+	 */
+	EAttribute getDetinator_Chitanta();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cemetery.Detinator#getMorminte <em>Morminte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Morminte</em>'.
+	 * @see cemetery.Detinator#getMorminte()
+	 * @see #getDetinator()
+	 * @generated
+	 */
+	EReference getDetinator_Morminte();
+
+	/**
+	 * Returns the meta object for the '{@link cemetery.Detinator#addMormant(cemetery.Mormant) <em>Add Mormant</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Mormant</em>' operation.
+	 * @see cemetery.Detinator#addMormant(cemetery.Mormant)
+	 * @generated
+	 */
+	EOperation getDetinator__AddMormant__Mormant();
+
+	/**
+	 * Returns the meta object for class '{@link cemetery.Inspector <em>Inspector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Inspector</em>'.
+	 * @see cemetery.Inspector
+	 * @generated
+	 */
+	EClass getInspector();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cemetery.Inspector#getNume <em>Nume</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nume</em>'.
+	 * @see cemetery.Inspector#getNume()
+	 * @see #getInspector()
+	 * @generated
+	 */
+	EAttribute getInspector_Nume();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cemetery.Inspector#getDecedati <em>Decedati</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Decedati</em>'.
+	 * @see cemetery.Inspector#getDecedati()
+	 * @see #getInspector()
+	 * @generated
+	 */
+	EReference getInspector_Decedati();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cemetery.Inspector#getDetinatori <em>Detinatori</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Detinatori</em>'.
+	 * @see cemetery.Inspector#getDetinatori()
+	 * @see #getInspector()
+	 * @generated
+	 */
+	EReference getInspector_Detinatori();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cemetery.Inspector#getMorminte <em>Morminte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Morminte</em>'.
+	 * @see cemetery.Inspector#getMorminte()
+	 * @see #getInspector()
+	 * @generated
+	 */
+	EReference getInspector_Morminte();
+
+	/**
+	 * Returns the meta object for the '{@link cemetery.Inspector#addDecedat(Decedat) <em>Add Decedat</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Decedat</em>' operation.
+	 * @see cemetery.Inspector#addDecedat(Decedat)
+	 * @generated
+	 */
+	EOperation getInspector__AddDecedat__Decedat();
+
+	/**
+	 * Returns the meta object for the '{@link cemetery.Inspector#addDetinator(cemetery.Detinator) <em>Add Detinator</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Detinator</em>' operation.
+	 * @see cemetery.Inspector#addDetinator(cemetery.Detinator)
+	 * @generated
+	 */
+	EOperation getInspector__AddDetinator__Detinator();
+
+	/**
+	 * Returns the meta object for the '{@link cemetery.Inspector#addMormant(cemetery.Mormant) <em>Add Mormant</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Mormant</em>' operation.
+	 * @see cemetery.Inspector#addMormant(cemetery.Mormant)
+	 * @generated
+	 */
+	EOperation getInspector__AddMormant__Mormant();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	CemeteryFactory getCemeteryFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link cemetery.impl.DecedatImpl <em>Decedat</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cemetery.impl.DecedatImpl
+		 * @see cemetery.impl.CemeteryPackageImpl#getDecedat()
+		 * @generated
+		 */
+		EClass DECEDAT = eINSTANCE.getDecedat();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Decedat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DECEDAT__ID_DECEDAT = eINSTANCE.getDecedat_IdDecedat();
+
+		/**
+		 * The meta object literal for the '<em><b>Nume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DECEDAT__NUME = eINSTANCE.getDecedat_Nume();
+
+		/**
+		 * The meta object literal for the '<em><b>Prenume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DECEDAT__PRENUME = eINSTANCE.getDecedat_Prenume();
+
+		/**
+		 * The meta object literal for the '{@link cemetery.impl.MormantImpl <em>Mormant</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cemetery.impl.MormantImpl
+		 * @see cemetery.impl.CemeteryPackageImpl#getMormant()
+		 * @generated
+		 */
+		EClass MORMANT = eINSTANCE.getMormant();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Mormant</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MORMANT__ID_MORMANT = eINSTANCE.getMormant_IdMormant();
+
+		/**
+		 * The meta object literal for the '<em><b>Decedati</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MORMANT__DECEDATI = eINSTANCE.getMormant_Decedati();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Decedat</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MORMANT___ADD_DECEDAT__DECEDAT = eINSTANCE.getMormant__AddDecedat__Decedat();
+
+		/**
+		 * The meta object literal for the '{@link cemetery.impl.DetinatorImpl <em>Detinator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cemetery.impl.DetinatorImpl
+		 * @see cemetery.impl.CemeteryPackageImpl#getDetinator()
+		 * @generated
+		 */
+		EClass DETINATOR = eINSTANCE.getDetinator();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Detinator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DETINATOR__ID_DETINATOR = eINSTANCE.getDetinator_IdDetinator();
+
+		/**
+		 * The meta object literal for the '<em><b>Nume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DETINATOR__NUME = eINSTANCE.getDetinator_Nume();
+
+		/**
+		 * The meta object literal for the '<em><b>Chitanta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DETINATOR__CHITANTA = eINSTANCE.getDetinator_Chitanta();
+
+		/**
+		 * The meta object literal for the '<em><b>Morminte</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DETINATOR__MORMINTE = eINSTANCE.getDetinator_Morminte();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Mormant</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DETINATOR___ADD_MORMANT__MORMANT = eINSTANCE.getDetinator__AddMormant__Mormant();
+
+		/**
+		 * The meta object literal for the '{@link cemetery.impl.InspectorImpl <em>Inspector</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cemetery.impl.InspectorImpl
+		 * @see cemetery.impl.CemeteryPackageImpl#getInspector()
+		 * @generated
+		 */
+		EClass INSPECTOR = eINSTANCE.getInspector();
+
+		/**
+		 * The meta object literal for the '<em><b>Nume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INSPECTOR__NUME = eINSTANCE.getInspector_Nume();
+
+		/**
+		 * The meta object literal for the '<em><b>Decedati</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSPECTOR__DECEDATI = eINSTANCE.getInspector_Decedati();
+
+		/**
+		 * The meta object literal for the '<em><b>Detinatori</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSPECTOR__DETINATORI = eINSTANCE.getInspector_Detinatori();
+
+		/**
+		 * The meta object literal for the '<em><b>Morminte</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSPECTOR__MORMINTE = eINSTANCE.getInspector_Morminte();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Decedat</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation INSPECTOR___ADD_DECEDAT__DECEDAT = eINSTANCE.getInspector__AddDecedat__Decedat();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Detinator</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation INSPECTOR___ADD_DETINATOR__DETINATOR = eINSTANCE.getInspector__AddDetinator__Detinator();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Mormant</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation INSPECTOR___ADD_MORMANT__MORMANT = eINSTANCE.getInspector__AddMormant__Mormant();
+
+	}
+
+} //CemeteryPackage
