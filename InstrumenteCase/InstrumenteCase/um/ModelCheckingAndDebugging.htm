@@ -1,0 +1,246 @@
+<html>
+
+<head>
+<title>Model checking and debugging</title>
+<link rel="stylesheet" href="Help.css" type="text/css"/>
+</head>
+
+<body>
+
+<p><a href="#Overview">Overview</a></p>
+
+<p><a href="#BatchEvaluation">Batch evaluation</a></p>
+
+<p><a href="#PartialBatchEvaluation">Partial batch evaluation</a></p>
+
+<p><a href="#LocalEvaluation">Local evaluation</a></p>
+
+<br><br>
+
+<h1><a name="Overview"></a>Overview</h1>
+
+<br>
+
+<p>OCLE performs model checking in an innovative and intuitive
+manner: evaluating constraints specified by the user on different model
+elements. It also helps in debugging your models and OCL specifications. If the constraints are expressed at the metamodel level (well formedness rules)
+they can be used to check the well formedness of the target
+user model. For instance, a rule may be written that ensures the uniqueness of
+names in a namespace. Such a rule should be evaluated on all the namespaces in
+the target model - packages, classes, collaborations and so on. If such a rule
+evaluates to false or if it cannot be evaluated for some reason, the model is
+considered faulty - either the model contains errors or the OCL specifications
+are not adequate. Constraints expressed at the level of the user model are
+evaluated on the corresponding instances found in the user model. For example, a
+constraint defined for a class in the model must be evaluated over all its
+loaded instances and all the loaded instances of any of its child classes.</p>
+
+<p>The following sections describe the ways
+in which you can check your model using the OCLE model checking engine but also
+some additional evaluation related features. The example used in this section is
+included in the distribution in the <b>examples/Use</b> directory.
+Before reading further we recommend loading this project in OCLE.</p>
+
+<br><br>
+
+<h1><a name="BatchEvaluation"></a>Batch evaluation</h1>
+
+<br>
+
+<p>The simplest way to check your model is to perform a full batch evaluation 
+of the constraints included in the active project. First compile the OCL specifications 
+as described <a href="Compiling.htm#UsingTheCompiler">here</a>. 
+  Then select the <b>Check model</b> option from the <b>Tools</b> 
+  menu (or the corresponding <img src="images/model_check.gif" alt="Check UML Model"/> toolbar button).
+  OCLE will traverse the loaded model and evaluate the corresponding 
+  OCL expressions (invariants) on each model element. Thus, if a rule is defined 
+  in the context of metaclass <b>Class</b>, it will be evaluated for each class and association class in 
+  your model. Also, if a rule is defined for a class in your model, it will be 
+  evaluated for all its instances and all the instances of its child classes - if any are found. For details about instance management in OCLE, please
+  refer to <a href="umlmodels.htm#ImportingInstances">importing instances</a> or <a href="umlmodels.htm#snapshot_diag">snapshot diagrams</a>.
+  While evaluating, a progress dialog is displayed containing 
+  also a <b>Cancel</b> button. Press this button to stop the evaluation process at 
+  any time.</p>
+
+<p>If a rule evaluates to false or it cannot be evaluated on some model element, 
+  this fact is considered an evaluation problem - either a model or a specification 
+  error. Evaluation problems are displayed in the <b>Evaluation</b> 
+  panel in a tree-like manner. At the root level there are two child nodes - one 
+  for the UML metamodel and one for the currently loaded user model. Expanding these 
+  nodes you can navigate to the (meta) classes whose instances have caused the 
+  errors. In our example, you will first see the message</p>
+
+<blockquote>
+<pre>
+30 evaluations requested.
+30 have been performed, 10 problem(s) found</pre>
+</blockquote>
+
+<p>displayed in the <b>LOG</b> panel. Select the <b>Evaluation</b> panel to 
+see the detailed errors. Expand the nodes starting from <b>User model (CarRental2)</b>
+then going over to <b>Branch</b>. Now expand the node for <b>Branch</b> and its child 
+nodes. For each (meta) class, the rules that have evaluated to false (or could 
+not be evaluated) for at least one instance are displayed as child nodes. The 
+  (meta) classes are displayed in the error browser in the same manner as in the 
+  model browser. For each instance that has caused a problem, a new node is created 
+  and added as a child node to the node corresponding to the rule. For the rules 
+  that have evaluated to false, a message following the pattern <b>Rule failed for 
+  context &lt;model element specification&gt;</b> is displayed. If a rule could not 
+  be evaluated for a given model element, the message <b>Evaluation exception for 
+  context &lt;model element specification&gt;</b> is displayed and the most probable 
+  reason for this situation is provided between square brackets, as you can see 
+  in figure 1.</p>
+
+<table  align="center">
+<tr><td><img src="images/BatchEvaluationErrorReporting.gif" alt="Batch evaluation error reporting"></td></tr>
+<tr>
+<td align="center"><code>Fig.1 Batch evaluation and error reporting</code></td></tr>
+</table>
+
+<p>Once you have seen the problems displayed,
+OCLE helps you identify the causes (or more simply, to debug your
+model/specifications). By selecting an error in the evaluation error panel,
+the corresponding context is selected in the model browser and also in the property
+sheet and the OCL rule is highlighted in the text editor. The current context for
+that rule is automatically set to the faulty model element and you can perform successive
+local evaluations to identify the cause of the error. Please refer to <a href="#LocalEvaluation">local evaluation</a>
+bellow.</p>
+
+<br><br>
+
+<h1><a name="PartialBatchEvaluation"></a>Partial batch evaluation</h1>
+
+<br>
+
+<p>Sometimes, when you work on large UML models, you might want to check only 
+  a part of your model, especially if you trust that the other parts are correct 
+  with regards to the UML specification. OCLE allows you to define a finer grained 
+  mapping between model elements and OCL rules. Select the <b>Partial checks</b> 
+  option from the <b>Tools</b> menu. The following selection dialog 
+  is displayed:</p>
+
+<table  align="center">
+<tr>
+    <td><img src="images/PartialBatchEvaluation.gif" alt="Partial evaluation (customizing the evaluation process)"></td>
+  </tr>
+<tr>
+    <td align="center"><code>Fig.2 Partial evaluation (customizing the evaluation process)</code></td>
+  </tr>
+</table>
+
+<p>In the left hand side, you see the packages
+(and subsystems) in the loaded UML model. By selecting (or unselecting) a
+certain package you specify that the contents of that package will or will not
+be included in the evaluation process. You might for instance uncheck a certain
+package - in this way no model element defined in it will be included in the evaluation process. The right hand side
+tree displays the UML metamodel and the current model. All the (meta) classes
+that have at least one rule attached to them also have their corresponding node
+in this tree. The rules are added as child nodes to the nodes of the classifiers
+in the context of which the rules are defined. Thus you can uncheck a certain
+rule to specify that it will not be taken into account when performing the batch
+evaluation. By default, when the dialog is first displayed, all the nodes in the
+two trees are selected. Selecting or unselecting a node will automatically
+select / unselect all of its child nodes (recursively until leaf nodes are
+reached).</p>
+
+<p>After having defined your
+selection, press the <b>Evaluate</b> button to start the (partial) batch evaluation.
+The same effects will be obtained as in the case of a full batch evaluation;
+only the number of possible evaluations will be lower than in that case. Once the evaluation process completes,
+you may use the same steps as described above to identify the causes of the reported errors.</p>
+
+<br><br>
+
+<h1><a name="LocalEvaluation"></a>Local evaluation</h1>
+
+<br>
+
+<p>This is a powerful feature of OCLE that allows you to partially evaluate an 
+  OCL expression for a certain matching context. In this way you can see the results of UML model navigations 
+  in long navigation expressions. Usually, to perform a local evaluation you will 
+  first have to choose a rule to evaluate and a model element upon which 
+  to evaluate it. Once you have chosen the rule, double click on its context declaration. 
+  OCLE will popup a menu with all the possible instances for the class that is 
+  mentioned in the context declaration. In the popup menu, instances are displayed 
+  using the same icons as in the model browser and their fully qualified name 
+  is given. Select an instance by double-clicking it. OCLE automatically sets 
+  the context for all the rules connected to that context declaration to point 
+  to the selected instance. When computing the list of instances OCLE takes 
+  inheritance into account. Thus, double-clicking on a <b>ModelElement</b> context 
+  declaration will bring out the list with all model elements in the current 
+  model. Please note, however, that it may take a few seconds until you see the list displayed in the graphical interface.
+  This burden is caused by the huge number of elements in the list. </p>
+
+<p>Once you have set the context, just double click on different parts of the 
+  expression you have chosen. OCLE will try to evaluate the selected expression. 
+  The results of any evaluation operation are displayed 
+  in the <b>OCL Output</b> panel. If the evaluation result is an element 
+  in the loaded model, it will be displayed as a hyperlink; clicking the hyperlink will select 
+  that element in the model browser and in the property sheet. The same is true 
+  if the evaluation results in a collection: its items will also be displayed 
+  as hyperlinks.</p>
+
+<table  align="center">
+<tr><td><img src="images/LocalEvaluation.gif" alt="Local evaluation (results displayed in the OCL Output panel)"></td></tr>
+<tr><td align="center"><code>Fig.3 Local evaluation (results displayed in the OCL Output panel)</code></td></tr>
+</table>
+
+
+<p>Double click on the expression stereotype (<b>inv</b>) to evaluate the entire expression.</p>
+
+<p>You can also use this feature of OCLE to evaluate definition constraints (those 
+  written using the <b>def-let</b> mechanism of OCL). The procedure is the same (you 
+  first have to set the context), but some additional explanations are required. 
+  You first have to define the actual values for the possible formal parameters 
+  of the selected definition constraint. Select a parameter name and choose <b>Evaluate selection</b> from the toolbar. OCLE will
+  popup a list containing all possible values for that parameter. The values in the popup 
+  menu are determined from the loaded model, based on the parameter type. The 
+  same rules as for the context selection popup apply. However, an actual value cannot be specified for
+  formal parameters that have a primitive type. After setting the values 
+  for all the formal parameters, double click on the corresponding <b>let</b> stereotype. 
+  OCLE will try to evaluate the definition constraint and display the result in the <b>OCL 
+  Output</b> panel, in the manner described above. If the value for a parameter 
+  has not been set, OCLE will display a <b>constant value uninitialized</b> message.</p>
+
+<br>
+
+<p><b>Notes:</b></p>
+
+<ul>
+<blockquote>
+  <li>
+    You don't have to set the context for an expression if it does not refer to any element in the loaded model. For
+example, the expression Set{1..10}-&gt;includes(2) can be evaluated without the
+user model. This is especially useful for OCL newcomers, who may use <a href="compiling.htm#implicit">specifications with implicit context declaration</a>
+when learning OCL. However, if you try to set the context for an expression and no
+model is loaded, OCLE will warn you about no model being loaded.</li>
+  <li>
+  Evaluation operations take only the results of the last compilation into account. This means that some OCL specifications
+  must have been compiled before these operations are enabled. If the result of the last compilation process was affected by some other
+  operation (the modification of a compiled file, for example), evaluation operations are automatically disabled (and you can notice this
+  on the toolbar). To perform a batch / local evaluation you are not required to define an OCLE project. Only a UML model must be loaded and some rules must
+    have been successfully compiled. Thus, for simpler expressions, you may want
+    to compile only the active file, as shown in <a href="Compiling.htm#UsingTheCompiler">using
+    the compiler</a>.</li>
+	<li>Once you have performed some local evaluations and (hopefully) identified the cause of an evaluation error,
+	you may debug your UML model and OCL specifications using the model browser, the property sheet and the
+	built-in text editor.</li>
+	<li>Once the context has been set for a certain classifier, its value may be reused irrespective of the specification file.
+	This is particularly useful for OCLE projects comprising more specification files. You may set the context in one file and
+	evaluate a rule in that context, declared in another file.</li>
+  </blockquote>
+</ul>
+<br><br>
+<h1>See also</h1>
+<blockquote>
+  <p><a href="Compiling.htm">The built-in OCL compiler</a></p>
+</blockquote>
+
+<table>
+  <tr> 
+    <td valign="top" align="center"><a href="OCLE_TOC.htm"><img src="images/prev.gif"/></a></td>
+    <td valign="middle" align="center"><a href="OCLE_TOC.htm">Back to main index</a></p></td>
+  </tr>
+</table>
+</body>
+</html>

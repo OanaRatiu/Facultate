@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project name="Cofetarie">
+    <Directory kind="0" name="Constraints">
+        <File AbsolutePath="C:/Users/Dan/Didactic/ICASE 2014-2015/Cofetarie/Cofetarie.bcr" RelativePath="Cofetarie.bcr" kind="1" selected="true"/>
+    </Directory>
+    <Directory kind="0" name="Models">
+        <Model AbsolutePath="C:/Users/Dan/Didactic/ICASE 2014-2015/Cofetarie/Cofetarie.xml" RelativePath="Cofetarie.xml" kind="2" selected="true"/>
+    </Directory>
+</Project>

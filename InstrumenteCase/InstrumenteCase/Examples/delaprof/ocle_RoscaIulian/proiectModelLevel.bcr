@@ -1,0 +1,92 @@
+-- In this file you can write OCL constraints at the UML model level.
+
+model SaleSystemApplication
+
+context Administrator
+    -- name must be defined
+	    inv : self.name<> ''
+	        
+context SaleAgent
+    -- id must be defined and greater than zero
+        inv : id.isDefined() and id > 0
+    -- name must not be empty
+        inv : self.name <> ''
+     	inv : SaleAgent.allInstances.id->isUnique(n | n)
+
+context SaleItem
+    -- quantity sold must be greater than zero
+    	inv : self.quantitySold > 0
+    	    
+context Product
+    -- barCode must be defined
+    	inv : self.barCode <> ''
+    	    
+    -- name is not empty
+    	inv : self.name <> ''
+    	    
+    -- price must be greater than zero
+    	inv : self.price > 0
+    	    
+    	def getPrice:
+    	    let getPrice():Real = self.price
+    	        
+    
+    	    
+context Administrator::createNewProduct(bCode:String, name:String, price:Real)
+	pre: bCode <> '' and name <> '' and price > 0 
+        
+context Administrator::deleteProduct(bCode:String)
+	pre: bCode <> ''
+        
+context Administrator::updateProduct(bCode:String, name:String, price:Real)
+    pre: bCode <> '' and name <> '' and price > 0 
+
+
+context Stock::addProduct(p:Product) 
+		-- stock contains the new product
+    	post: self.products->includes(p)
+    	    
+context Stock::deleteProduct(p:Product) 
+		-- stock doesn't contain the product
+    	post: not self.products->includes(p)
+    	    
+
+-- OBSERVERS 
+context Sale
+    def getSaleDate:
+        let getSaleDate():DateTime = self.saleDate
+    def getItems:
+        let getItems():Set(SaleItem) = self.items
+context SaleAgent
+
+      def size:
+        let size = self.sales->size 
+		 
+	  def lastSale:
+        let lastSale: Sequence(OclAny) = self.sales->collectNested( s| Sequence{s, s.getSaleDate, s.getItems})->asSequence->last
+        
+      def getId:
+        let getId():Integer = self.id
+        
+        def getName:
+        let getName():String = self.name
+        
+        def getSales:
+        let getSales():Set(Sale) = self.sales
+        
+        
+context Stock
+    -- select products based on price
+      def n :
+        let n = 10  
+    def selectProds : 
+        let selectProds: Set(Product) = self.products->select(p | p.getPrice > n ) 
+        
+        
+context SaleSystem
+
+    def mostSalesAgent:
+        let mostSalesAgent : String = self.saleAgents->collectNested(a | Tuple{id = a.getId, name = a.getName, sales = a.getSales, valSize = a.getSales->size})
+        ->sortedBy(a | a.valSize)->last.name
+        
+endmodel

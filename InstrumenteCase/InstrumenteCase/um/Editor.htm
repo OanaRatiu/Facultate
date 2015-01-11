@@ -1,0 +1,208 @@
+<html>
+
+<head>
+<title>Editor</title>
+<link rel="stylesheet" href="Help.css" type="text/css"/>
+</head>
+
+<body>
+
+<p><a href="#Overview">Overview</a></p>
+
+<p><a href="#Managing Files">Managing Files and Views</a></p>
+
+<p><a href="#Undo/Redo">Undo / Redo</a></p>
+
+<p><a href="#Find/Replace">Find / Replace</a></p>
+
+<p><a href="#SyntaxHighlight">Syntax Highlighting</a></p>
+<br><br>
+
+<h1><a name="#Overview"></a>Overview</h1>
+
+<br>
+
+<p>OCLE provides a powerful, customizable text editor which is capable of undo / redo, 
+advanced find / replace, syntax highlighting and auto-indentation for OCL.
+
+<p>The editor allows you to view and modify the contents of any text file. It also provides syntax highlighting for 
+OCL text files, XML documents and java sources. The syntax highlighting mechanism is sensitive to the type 
+of the active file. Auto-indentation 
+is only available for OCL sources (the editor will apply it for any text file, but this will be 
+fixed in a future version). The table below lists the key bindings used by the editor. This version does not allow you
+to change these bindings.</p>
+<P ALIGN="RIGHT">
+<div align="center">
+  <center><TABLE BORDER="1" CELLSPACING=2 CELLPADDING=3 WIDTH="70%">
+  <tr><td align="center"><p><b>Key binding</b></p></td>
+  <td align="center"><p><b>Action</b></p></td>
+  </tr>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + n</TD>
+<TD WIDTH="62%" align="center">
+<P>Create new text file</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + o</TD>
+<TD WIDTH="62%" align="center">
+<P>Open existing file</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + s</TD>
+<TD WIDTH="62%" align="center">
+<P>Save the currently open file</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + F4</TD>
+<TD WIDTH="62%" align="center">
+<P>Close the currently open file</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + z</TD>
+<TD WIDTH="62%" align="center">
+<P>Undo last editing operation</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + y</TD>
+<TD WIDTH="62%" align="center">
+<P>Redo the previously undone operation</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + c</TD>
+<TD WIDTH="62%" align="center">
+<P>Copy current selection to clipboard</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + x</TD>
+<TD WIDTH="62%" align="center">
+<P>Cut selection to clipboard</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + v</TD>
+<TD WIDTH="62%" align="center">
+<P>Paste text from clipboard</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + f</TD>
+<TD WIDTH="62%" align="center">
+<P>Invoke the Find / Replace dialog</TD>
+</TR>
+<TR><TD WIDTH="38%" align="center">
+<P>Ctrl + a</TD>
+<TD WIDTH="62%" align="center">
+<P>Select the entire contents of the current file</TD>
+</TR>
+</TABLE>
+  </center>
+</div>
+<br><br>
+<h1><a name="Managing Files"></a>Managing Files and Views</h1>
+<br>
+
+<p>The editor allows you to create new files and edit existing ones. All these operations can be accessed via the <b>Files</b> menu of the application.</P>
+
+<p>The <b>Open (Ctrl+O)</b> option allows you to open any text file, but the default file filters will display only OCL and BCR (business constraint rules) files. To open any other text file select <b>All
+files</b> from the <b>File type</b> list box of the file chooser dialog.</P>
+
+<p>The editor displays all currently open files, each one in a separate
+window. Note that open diagrams are also displayed. Of course, the toolbar is automatically updated according to 
+the active window. For any open file you see its full name as the title of the corresponding window. The editor 
+also displays a combo box with all open windows, so that you can easily switch between them.</P>
+
+<p>Before closing a dirty file, you will be prompted to save it. Dirty files are marked with an asterisk (*) in the corresponding window and also in the combo box. When exiting the application, all open files are 
+closed, so you will be prompted to save the dirty ones.</P>
+
+<br>
+
+<h1><a name="Undo/Redo"></a>Undo / Redo </h1>
+<br>
+
+<p>The editor allows you to undo and then redo any editing operations such as character typing, 
+cut and paste, replace and replace-all, text deletions. When you insert characters, they are grouped until a separator 
+such as a blank or a parenthesis is encountered. So when you undo the typing, all characters defining an identifier are deleted. Separators are also grouped together, but only with other separators. For example, if you typed 'package Foundation::Core', the first undo operation will delete 'Core', the next one will delete the two ':' signs and so on.</P>
+
+<p>If you do a <b>Replace all</b> operation (see next section) you can undo all replacements 
+with a single undo operation. When possible, the editor will restore the selection, if the case.</P>
+
+<p>The <b>Undo</b> and <b>Redo</b> operations are available through the <b>Edit</b> menu. See the corresponding shortcuts at the end of this section.</P>
+
+<br>
+
+<h1><a name="Find/Replace"></a>Find / Replace</h1>
+<br>
+
+<p>The text editor provides advanced search and replace capabilities, accessible through the <b>Find / Replace</b> option in the <b>Edit</b> menu. The dialog below appears when you select this option. It allows you to specify 
+the direction for the search (forward / backward) relative to the caret position in the current file, also if you want to perform a case-sensitive search (the <b>Case sensitive</b> check box) and whether you are interested in whole words only (the
+<b>Whole words only</b> check box). Note that you can also perform a global search either in the project files or in the files you specify. To select the target files, click one of the radio buttons available in the <b>Target</b> section.</p>
+
+<table  align="center">
+<tr><td><img src="images/FindReplace.gif" alt="Find / Replace Dialog"></td></tr>
+<tr><td align="center"><code>Fig.1 Find / Replace Dialog</code></td></tr>
+</table>
+
+<p>Use the <b>Find next</b> button to search for the first occurrence of the text you entered in the
+<b>Text to find:</b> list box. This will take into account the search direction you specified and the
+<b>Case sensitive</b> and <b>Whole words only</b> options. If such an occurrence is found in the currently
+open file, it will be selected. If you specified other target than the current text file, the <b>Find next</b> button 
+will be disabled. In this case you will not be able to specify the search direction because the search engine will take 
+into account the entire contents of any of the files included in the search.</P>
+
+<p>The <b>Find all</b> option is used to obtain all the occurrences
+of the text to find. They will be displayed in the <b>Search results</b> panel,
+grouped by the file in which they are located. Expanding a file node will lead
+to all the lines in that file that contain the text to find. Clicking on such a
+line in the <b>Search results</b> panel automatically selects the corresponding
+occurrence in the text editor. Note that the same line may be displayed more
+than once, if the given text to find appears more than once in that line.</P>
+
+<p>If you specify <b>Files in the project</b>, all the files in the 
+project will be included in the search, even if they are not selected in the 
+project browser. To specify arbitrary file paths, use the <b>Custom directory</b> 
+option. You will have to provide a directory as root and a file filter to match 
+the file names. All the files in the specified directory and in all of its 
+subfolders (recursive) will be compared against the specified pattern. The 
+pattern may also contain the standard wildcards '*' and '?', where '*' means any
+string and '?' means any character. More than one pattern may be given. Multiple patterns are
+comma separated, as in the example '*.ocl, *.xml, *.java'. This implies that you
+cannot use commas in the specification of patterns.</P>
+
+<p>If you select <b>Replace</b> you will be prompted to replace each occurrence of the text you 
+search for with the new text. You may choose 'Yes', 'No', 'Stop' or 'All'. Selecting 'Yes' will 
+simply replace the currently highlighted occurrence and pass to the next occurrence, if any. 
+If you select 'No', the current occurence of the text to find is not replaced, but the search 
+continues. Select 'Stop' to stop the search / replace process. If you want to replace all the 
+remaining occurrences at once, just select 'All' when prompted. The <b>Replace ...</b> option 
+is only available if the target for the search is set to <b>Current buffer</b>. Once you have 
+specified that you want to replace all the occurrences of the search text, you can immediately 
+undo the <b>Replace all</b> operation. In this case, all the replacements will be undone as one.</p>
+
+<br><br>
+
+<h1><a name="SyntaxHighlight"></a>Syntax Highlighting</h1>
+<br>
+
+<p>The editor provides syntax highlighting for OCL, XML and Java, but new languages (such as C++) may easily be added. As you can see in the figure below, reserved words, identifiers, numeric, string and enumeration literals and invalid entities are marked with different colors. The colors, as well as the typeface for each lexical category are easily selectable, see below.</P>
+
+
+<table  align="center">
+<tr><td><img src="images/SyntaxHighlighting.gif" alt="Syntax Highlighting"></td></tr>
+<tr><td align="center"><code>Fig.2 Syntax Highlighting</code></td></tr>
+</table>
+
+<br><br>
+<h1>See also</h1>
+<blockquote>
+  <p><a href="ProjectManagement.htm#AttachingOCLFiles">Attaching OCL files to a
+  project</a></p>
+</blockquote>
+<br>
+
+<table>
+  <tr> 
+    <td valign="top" align="center"><a href="OCLE_TOC.htm"><img src="images/prev.gif"/></a></td>
+    <td valign="middle" align="center"><a href="OCLE_TOC.htm">Back to main index</a></p></td>
+  </tr>
+</table>
+
+</BODY>
+</HTML>

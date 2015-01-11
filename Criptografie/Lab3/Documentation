@@ -1,0 +1,16 @@
+Systems of congruences
+
+Firstly, we need to check if every n (x = y mod n1 ...) is prime with the others.
+Then, if so, we need to compute the congruence of each equation.
+Then, we just apply the formula:
+	x = (a*N1*K1 + b*N2*K2 + c*N3*K3) % N;
+	where 
+		x = a mod n1;
+		x = b mod n2;
+		x = c mod n3;
+
+
+
+
+P1 pt lab 4
+2 pt lab 5 - pana in 15 ianuarie pt 1 punct

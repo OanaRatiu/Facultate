@@ -1,0 +1,46 @@
+P {
+	text-indent: 4%;
+	margin-left: 25px;
+	margin-right: 25px;
+	font-size: 12pt;
+	line-height: 20pt;
+	color: blue;
+}
+
+P.rule {
+	font-family: "Courier";
+}
+
+P.img {
+	text-align: center
+}
+
+H1 {
+	text-indent: 4%;
+	margin-left: 25px;
+	margin-right: 25px;
+	font-size: 24pt;
+	font-weight: bold
+}
+
+H2 {
+	text-indent: 6%;
+	margin-left: 25px;
+	margin-right: 25px;
+	font-size: 18pt;
+	font-weight: bold
+}
+
+H3 {
+	text-indent: 10%;
+}
+
+body {
+	background-image: url("images/background.jpg")
+}
+li {
+	color:blue;
+}
+pre {
+	color: blue;
+}

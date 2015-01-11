@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project name="IR20">
+    <Directory kind="0" name="Constraints">
+        <File AbsolutePath="C:/Users/Dan/Didactic/ICASE-2013-2014/ROSCA Iulian_233/Iulian_20_dec/proiectModelLevel.bcr" RelativePath="proiectModelLevel.bcr" kind="1" selected="true"/>
+    </Directory>
+    <Directory kind="0" name="Models">
+        <Model AbsolutePath="C:/Users/Dan/Didactic/ICASE-2013-2014/ROSCA Iulian_233/Iulian_20_dec/SaleSystemApplication.xml" RelativePath="SaleSystemApplication.xml" kind="2" selected="true"/>
+    </Directory>
+</Project>

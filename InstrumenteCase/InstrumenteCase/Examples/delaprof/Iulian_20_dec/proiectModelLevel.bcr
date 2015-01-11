@@ -1,0 +1,97 @@
+-- In this file you can write OCL constraints at the UML model level.
+
+model SaleSystemApplication
+
+context Administrator
+    -- name must be defined
+	    inv : self.name<> ''
+	        
+context SaleAgent
+    -- id must be defined and greater than zero
+        inv : self.id.isDefined() and id > 0
+    -- name must not be empty
+        inv : self.name <> ''
+
+    	    
+
+context SaleItem
+    -- quantity sold must be greater than zero
+    	inv : self.quantitySold > 0
+    	    
+    	    
+context Sale    
+	inv sale_id_is_not_empty: 
+	    self.saleId.isDefined() and self.saleId > 0 
+	    
+	inv sale_date_is_defined: 
+	    self.saleDate.isDefined() and  self.saleDate <> 0
+	    
+	inv sale_agent_id_is_defined: 
+	    self.saleAgentId.isDefined() and self.saleAgentId > 0
+    	    
+context Product
+    -- barCode must be defined
+    	inv barCode:
+    	     self.barCode <> ''
+    	    
+    -- name is not empty
+    	inv name:
+    	     self.name <> ''
+    	    
+    -- price must be greater than zero
+    	inv price:
+    	     self.price > 0
+    	    
+    	def getPrice:
+    	    let getPrice():Real = self.price
+    
+    	    
+context Administrator::createNewProduct(bCode:String, name:String, price:Real)
+	pre:bCode <> '' and name <> '' and price > 0 
+        
+context Administrator::deleteProduct(bCode:String)
+	pre: bCode <> ''
+        
+context Administrator::updateProduct(bCode:String, name:String, price:Real)
+    pre: bCode <> '' and name <> '' and price > 0 
+
+
+context Stock::addProduct(p:Product) 
+		-- stock contains the new product
+    	post: self.products->includes(p)
+    	    
+context Stock::deleteProduct(p:Product) 
+		-- stock doesn't contain the product
+    	post: not self.products->includes(p)
+    	    
+
+-- OBSERVERS 
+
+context SaleAgent
+    
+	    def getId:
+	        let getId():Integer = self.id
+	        
+	    def getName:
+	        let getName():String = self.name
+	        
+		def getSales:
+			let getSales():Sequence(Sale) = self.sales
+
+		def totalSales: 
+	    	let totalSale: Set(Sale) = self.sales->asSet
+    		
+        
+context Stock
+    -- select products based on price
+      
+    def selectProds : 
+        let selectProds(prep:Product): Set(Product) = self.products->select(p | p.getPrice > prep.getPrice ) 
+        
+        
+context SaleSystem
+    def mostSalesAgent:
+        let mostSalesAgent : String = self.saleAgents->collectNested(a | Tuple{id = a.getId, name = a.getName, sales = a.getSales, valSize = a.getSales->size})
+        ->sortedBy(a | a.valSize)->last.name
+        
+endmodel

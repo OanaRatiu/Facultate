@@ -1,0 +1,8 @@
+a:char; d:int; c : int ; 
+{
+if a(c+d)
+    then{a==-9;}5
+    'l'
+    {a=1;"abc"read}
+    4
+}

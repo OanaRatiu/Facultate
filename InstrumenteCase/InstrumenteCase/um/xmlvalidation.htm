@@ -1,0 +1,372 @@
+<html>
+<head>
+<link rel="stylesheet" href="Help.css" type="text/css"/>
+<title>Semantic Validation of XML Files</title>
+</head>
+
+<body>
+
+<p><b>Using OCLE to ensure the syntactic and semantic validity of XML documents</b></p>
+ 
+<p>  
+Beginning with version 2.0.3, <b>OCLE</b> offers a new approach for syntactic and semantic validation of XML documents against DTD definitions. 
+By transforming DTD definitions and XML documents in UML models, OCLE allows the description of XML semantic constraints by means of
+OCL. Validation of XML data against DTD definitions and against user defined semantic constraints is achieved through evaluation of these 
+constraints against the model obtained from reverse engineering DTD and XML documents. Once the corresponding UML model is consistent, the
+user can revert the model back into DTD or/and XML documents.
+</p> 
+
+<p>
+In this section we will illustrate the practical use of the proposed approach through a relevant example, included in the
+<i>ocle2.0.3-example.zip</i> file. The example is named <b>BankModel</b>.
+</p>					 
+
+<p>
+<b>1.	Syntactic validation of XML documents</b>
+
+<p>
+In this example, we consider the design of a simple application that contains two tiers: the data tier (consisting of 
+several XML documents) and the logical tier (describing the business objects). Our objective is to achieve syntactic and
+semantic consistency of the information stored in the data tier, in the context of its integration with the logical tier. Both logical 
+and data tiers are represented in UML and the syntactic and semantic rules are expressed in OCL.
+</p>
+
+<p>
+Problem statement: A bank has several branches in different cities. This bank keeps its interest rates in a XML file that conforms 
+to the InterestRates.dtd. Each branch manages a set of customer accounts. Customer and account information is stored in XML files 
+conforming to Customers.dtd and Accounts.dtd respectively.
+The UML model shown below describes the logical tier for our example. This tier is not aware of the source of information for 
+interest rates, customers or accounts (these sources may be relational databases and/or XML files or other data repositories). 
+</p>						   																								  
+
+<p>
+To run this example, open a new project (existing file project) in OCLE and attach to it the BankLogicalModel.xml.zip model from the BankModel 
+directory, included in the <i>ocle2.0.3-example.zip</i> file.
+</p>
+<p>	
+The UML diagram shown below is included in the model.
+</p>
+
+<p> 
+<img src="BankLogicalModel.gif" width="687" height="157" alt="" border="0"/>
+</p>
+<p>
+Figure 1 - UML model showing the logical tier
+</p>
+	   
+<p>	
+The next step in running the example is reversing DTD definitions for interest rates, customers and accounts. Go to the <b>Model</b> menu and
+choose the <b>Reverse engineer DTD</b> submenu and open the DTD files associated with this example: Customers.dtd, Accounts.dtd and
+InterestRates.dtd. After performing these operations, the logical model presented in Figure 1 will be modified in order to integrate 
+concepts from both application tiers. Note the presence of the new classes: Customer, InterestRate and Account into the model.
+<p>
+<p>	
+<img src="BankModelAfterReDTD.gif" width="689" height="349" alt="" border="0">
+</p>
+ 		
+<p>
+Figure 2 - UML model after reversing DTD definitions
+</p>
+	
+<p>
+The stereotyped UML classes were found in the DTD definitions. Note that Accounts, Customers and InterestRates concepts appear in both tiers. 
+In this way, the classes corresponding to DTD descriptions can be automatically linked to the logical tier. The mentioned elements connect 
+the logical tier with the data tier. In case these elements were present only in the data tier, the connections between them and the classes 
+from the logical model should be done by hand. 
+</p>
+
+<p>	
+The next step for syntactic and semantic validation of XML documents is reverting the XML data into the UML model. In the OCLE model browser
+go to the <i>Collaboration</i> element from the BankModel and from the popup menu (opened with right click) choose the <b>Import XML objects</b> option.
+Then open the XML files associated with the example: Clients.xml, InterestRates.xml, AccountB.xml and AccountsCJ.xml. Data from XML files is
+converted to UML objects and links between these objects. If elements from XML files are found in the UML model obtained from reverting DTD
+definition, then an object that is the instance of the class coresponding to its DTD definition is created. For XML elements that do not have
+a corresponding definition, the static elements that describe the element (UML class and association) are automatically inserted into the model, so that the
+information carried in XML gets included in the model. The difference between "legal" XML elements (included in DTD definitions) and "illegal"
+XML elements is the stereotype attached to these elements: objects corresponding to illegal XML elements are marked with <i>XMLUnexpectedElement</i>, 
+while the static UML elements introduced in model by the presence of XML "illegal" elements are marked with <i>DTDUndefinedElement</i>. These
+elements can be easily identified in OCLE model browser, where they are marked with red color.
+</p>
+
+<p>	
+Note that the example model has some elements marked with red after reverting XML documents. These are the bankBranch and #PCDATA classes,
+marked with <i>DTDUndefinedElement</i>, the A_Accounts_bankBranch association, marked with <i>DTDUndefinedAssociation</i> in the static
+model and the corresponding objects: bankBranch_1, #PCDATA_1 marked with <i>XMLUnexpectedElement</i> and the links A_Accounts_2_bankBranch_1 
+and A_bankBranch_1_#PCDATA_1, marked with <i>XMLUnexpectedLink</i>. This situation occured because the file AccountsCJ.xml has an element
+bankBranch instead of the attribute bankBranch specified in the DTD definitions. By including the bankBranch element into the model, we did
+not lose the information about the branch. To solve the problem we can go into the Collaboration and choose the Accounts object that has no
+value attached to the bankBranch slot, but instead has a link with the bankBranch_1 object. We can insert for the slot the value corresponding
+to the bank_branch_1 element ('Cluj-Napoca'). From the model browser, go to the Accounts object that has that problem, choose from the popup
+menu the <b>Edit object</b> option and set the value of the slot to 'Cluj-Napoca'.
+</p>										 
+
+<p>
+<img src="UnexpectedElements.gif" width="581" height="220" alt="" border="0">
+</p>
+							  		  
+<p>
+Figure 3 - The unexpected XML elements
+</p>
+
+<p>
+After saving the information about the branch for Account_2 object, we can delete the elements marked as Unexpected or Undefined. 
+In order to identify critical model elements corresponding to XML constructs that do not comply with the DTD definitions, we can specify 
+and evaluate additional OCL invariants specified at the UML metamodel level. For example, we can specify invariants that identify the classes, 
+attributes and associations stereotyped as 'DTDUndefined'. 
+<p font="Courier New"> 
+<pre>
+-- “hasStereotype” returns true if a stereotype named “stereotypeName”
+--  is attached to the ModelElement instance
+context ModelElement
+   def: 
+let hasStereotype(stereotypeName: String): Boolean = 		
+		if (self.stereotype.name->includes(stereotypeName)
+               then true 
+               else false
+            endif 
+
+-- A Class “is_Defined” if it is not stereotyped as DTDUndefinedElement 
+context Class
+    inv is_Defined:
+        if (hasStereotype('DTDUndefinedElement'))
+           then false
+           else true
+    endif
+</pre>
+</p>
+<p>
+The OCL invariants constraining the Association and Attribute classes are analogous to the above invariant (only the names of the stereotypes 
+are different). In a similar manner we can identify the objects, links and attribute links stereotyped as 'XMLUnexpectedElement' or 'XMLMissingElement':
+							
+<p font="Courier New"> 
+<pre>
+-- “is_Valid” returns false if an Object instance has attached one of
+--  the stereotypes XMLUnexpectedElement, XMLMissingElement 
+context Object  
+    inv is_Valid:
+        if (hasStereotype('XMLUnexpectedElement') or
+            hasStereotype('XMLMissingElement'))
+           then false 
+     	   else true
+    	endif
+</pre>	
+</p>
+	
+<p>
+The OCL invariants constraining the Link and AttributeLink classes are analogous to the above invariant (only the names of the stereotypes are 
+different). 
+</p>
+
+<p>
+The DTDProfile.ocl file contains the OCL specifications. In this file were also included some OCL specifications that describe the structural
+rules imposed by DTD specification (with respect to the W3C DTD specification). In the next paragraf we exemplify some of these constraints.
+</p>
+ 
+<p>
+Most of DTD validation rules require the specification of new OCL constraints. For example, in the context of a DTD choice group, the following 
+structural rule is defined: “Any content particle in a choice list MAY appear in the element content at the location where the choice list 
+appears in the grammar”. In UML, this rule is modeled as an exclusive OR between all the associations of a container with its contained elements:
+</p>
+												
+<p font="Courier New"> 
+<pre>
+context Instance
+   inv DTDChoice:
+      if self.classifier->forAll(c | c.stereotype->exists(s |
+                                   Set{'DTDChoice'}->includes(s.name)))
+         then  self.allOppositeLinkEnds->collect( lE: LinkEnd|
+                    lE.associationEnd)->select(isNavigable)->size = 1
+         else true    
+      endif
+</pre>	  
+</p>
+
+<p>
+Attributes defined in DTD must also conform to a set of structural rules. The following W3C validity constraint: “If the default declaration is 
+the keyword #REQUIRED, then the attribute MUST be specified for all elements of the type in the attribute-list declaration.” can be specified 
+using OCL as shown below: 
+</p>
+   
+<p font="Courier New">
+<pre>
+context Attribute
+   inv REQUIRED:
+      if self.stereotype.name->includes('REQUIRED')
+         then self.attributeLink.value->any(v | v.isUndefined)->isEmpty
+         else true
+      endif 
+</pre>
+</p>		 
+	  			
+<p>	
+Back to our example, we attach to the project the file DTDProfile.ocl, containing the specifications described above, compile and then evaluate
+the model against these specifications. The evaluation results in some errors, that can be found in the Error pane. In the UML metamodel/Model
+Management we find the errors caused by the presence of unexpected and undefined elements. OCLE offers advanced debugging features, allowing
+the identification of the elements that cause errors.
+</p>	  											 
+
+<p>	
+Evaluating the subexpressions of the unexpectedElements invariant we can find the unexpected elements introduced in model after reverting the XML documents.
+Because we saved the information about the branchBank_1 for the Account_2 object into the value of the branchBank slot, we can now delete the 
+bankBranch_1 and #PCDATA_1 objects. Also, we can delete the static elements introduced into the XML models: the classes bankBranch and #PCDATA.
+The removal of static model elements causes the removal of corresponding objects, so that the consistency of the model is preserved. Thus, the
+removal of bankBranch and #PCDATA classes causes the removal of bank_branch_1 and #PCDATA_1 objects. 
+</p>	 																							 
+
+<p>	
+The evaluation of missingElements invariant reveals that the bankBranch slot in Accounts_2 object is marked with 'XMLMissingAttribute'.
+We remove the stereotype by choosing the <b>Edit stereotype</b> option from the popup menu (opened with right click on the slot) and deselecting the 
+'XMLMissingAttribute' stereotype.
+</p>
+
+<p>	
+The evaluation of the BankModel against the constraints from DTDProfile.ocl identifies also other syntactical problems of XML documents. After the
+removal of undefined and unexpected elements from model, one single error is reported when evaluating the model against DTDProfile.ocl. This
+error occurs for the enumerationType invariant (context Attribute), caused by an unexpected value given to the accountType slot, which
+accepts only two values: 'deposit' and 'loan'. We can identify the slots containing invalid values by evaluating the invalidSlots def-let 
+expression in the context of accountType attribute. In our example, there is an accountType slot value that has the value 'depozit', instead 
+of 'deposit'. We can navigate from OCL Output pane to the object that contains the invalid value for accountType slot and correct this value.
+</p>																																		 
+
+<p>	
+After performing these steps, we have validated syntactically the XML documents against the DTD definitions through the evaluation of OCL constraints
+on the corresponding UML model.
+</p>
+	
+<p>
+<b>2.	Semantic validation of XML documents</b>
+
+<p>	
+For the UML model obtained in the previous section, we provide a set of OCL specifications enabling the semantic validation of XML data. The 
+final goal of this semantic validation is the estimation of the bank’s monthly benefit and the comparison of this benefit with the financial 
+objective of that bank for the current year. This comparison can be useful in establishing the bank’s short-term strategy in order to achieve 
+its objective. For this step we attach to our project the BankConstraints.bcr file, that contains the semantic constraints for the BankModel model.
+</p>  
+	
+<p>
+First, we need to ensure that all XML data complies with the data types expected by the logical layer. For example, the type conformance for 
+InterestRate's attributes should check if the value of the <i>duration</i> attribute is a valid Integer and the value of the <i>rate</i> attribute value is a valid Real. 
+In OCL, these constraints can be expressed as:	  
+</p>
+
+<p font="Courier New">
+<pre>
+context InterestRate
+    inv typeConformance:
+        duration.toInteger().oclIsKindOf(Integer) and 
+        rate.toReal().oclIsKindOf(Real)
+	 
+</pre>
+</p>  
+
+<p>
+Furthermore, OCL can be used to enforce semantic validity of XML data loaded from several XML documents. For example, we can impose that an
+account should have a client that is already registered as a client of the bank. This means that the value of the client attribute for Account objects
+should be found between the ID attribute values of the Client objects. 
+</p>
+	
+<p font="Courier New">
+<pre>			   
+context Bank
+def:
+	-- returns the set of 'ID' slot values of 'Client' objects
+	let clientIDs: Set(String) = self.clients.client.id->asSet
+				 
+context BankBranch
+	inv validCustomerValues: 
+		-- tests if all the accounts have valid 'client' slot values
+    	self.accounts.account->forAll(a | clientsIds->includes(a.client))
+
+</pre>
+</p>						  
+	
+<p>
+The following specifications illustrate the semantic relationships between XML data and the UML logical model in which the data was integrated. 
+For example: the 'location' of a BankBranch should be identical with the 'branchBank' attribute value of Accounts instances connected to 
+this branch. 
+</p>
+   
+<p font="Courier New">
+<pre>	
+context BankBranch
+
+	inv identicalLocation:
+    	self.accounts.bankBranch = location
+</pre>
+</p>			 
+
+<p>
+Now we return to our final goal: estimation of bank's benefit for the current month and comparison of the obtained value with the bank’s 
+financial objective. For simplicity, we assume that the bank offers only monthly interest payment. In order to obtain the bank's benefit for the current month, 
+we have to compute the monthly interest for each account in every branch of the bank. In the InterestRates context, we can specify an OCL 
+operation that returns the monthly interest rate for a given account type and term:
+</p>
+
+<p font="Courier New">
+<pre>
+context InterestRates
+def:	   
+	-- obtain the interest rate per account type and duration
+    let ratePerTypeAndDuration(accountType:NewEnumeration, duration: Integer) = 
+	   	self.interestRate->any(r | r.type = accountType and r.duration.toInteger() = duration)
+					 
+	-- conpute the monthly rate per account type and duration
+    let monthlyRate(accountType:NewEnumeration, duration:Integer):Real = 
+       	if ratePerTypeAndDuration(accountType,duration).isDefined 
+       	    then
+	       	    ratePerTypeAndDuration(accountType,duration).rate.toReal()/1200
+	       	else
+	       		0
+	    endif
+</pre>
+</p>	
+
+<p>
+This specification can be used to compute the monthly total that a bank branch should receive from or pay to its customers and, finally,
+to specify an invariant that estimates whether the monthly bank’s benefit has a value that conforms to its financial objective:
+</p>   
+	   
+<p font="Courier New">
+<pre>	  
+context Bank
+
+def:			  
+	-- computes the monthly income
+    let monthlyIncome: Real =		 
+		    -- iterates the accounts and computes the sum that should be received or paid monthly for this account
+        	Account.allInstances->iterate(a: Account; total: Real = 0 |
+        		if (a.accountType = #deposit) then
+	        		total - interestRates.monthlyRate(a.accountType, a.durationInMonths)*a.sum.toReal()
+	        	else
+        	    	total + interestRates.monthlyRate(a.accountType, a.durationInMonths)*a.sum.toReal()
+				endif)   
+						   
+	-- tests if the monthly income is consistent with the bank financial objective
+	inv conformsToFinancialObjective:
+    	self.monthlyIncome >= financialObjective/12
+</pre>
+</p>	
+
+<p>
+In order to perform a static evaluation of the specified invariants, apart from instances obtained after populating the UML model with XML data,
+we need to create instances of logical tier classes. The BankModel example contains the instances from the logical model, so there is no need to 
+create a Bank instance, two BankBranch instances and the links connecting the bank with each branch. All the other instances represented in 
+Figure 5 were created automatically during XML data import.  All we have to do is to create the links connecting the logical tier instances 
+with instances corresponding to XML data. For this, we use the OCLE Object Diagram from the BankModel, where we add to the diagram the Clients_1,
+Accounts_1, Accounts_2 and InterestRates_1 objects. After this step, we draw a link between Clients_1 object and bank object, between
+InterestRates_1 object and bank object and between every BankBranch object and its corresponding Accounts object.
+</p>
+
+<p>	
+<img src="SnapshotXMLValidation.gif" width="620" height="285" alt="" border="0">
+</p>
+
+<p> 
+Figure 5 - OCLE Snapshot showing some of the instances of Bank model
+</p>
+
+<p>
+By evaluating OCL specifications for the constructed snapshot we can detect and correct XML data inconsistencies. After performing these corrections
+we can revert the UML model to a DTD document and a XML document that not only conforms to its associated DTD document, but also satisfies some
+semantic rules that can not be expressed in DTD or XML schema definitions.
+</p>

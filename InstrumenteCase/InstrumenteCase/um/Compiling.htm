@@ -1,0 +1,471 @@
+<html>
+
+<head>
+<title>OCL Compiler</title>
+<link rel="stylesheet" href="Help.css" type="text/css"/>
+</head>
+
+<body>
+<p><a href="#Objectives">Objectives</a></p>
+<p><a href="#UsingTheCompiler">Using the integrated OCL compiler</a></p>
+<p><a href="#CurrentFeatures">Current compiler features</a></p>
+<p><a href="#Examples">Examples</a></p>
+
+<br><br>
+
+<h1><a name="Objectives"></a>Objectives</h1>
+
+<br>
+
+<p>Our main objective when implementing the OCL compiler was a full compliance with the current OCL 2.0 standard.
+The purpose of the OCL compiler is to allow the user check the syntactic and semantic correctness of OCL expressions targeting both the
+user model (business rules) and the UML 1.5 metamodel (well formedness rules), providing as explicit error messages as possible.
+The compilation of OCL expressions is also the first step when you want to check the well formedness of your UML model. Therefore, we consider the
+OCL compiler a key component in any OCL tool. OCL specifications must first be syntactically and semantically correct before being evaluated.
+
+<br><br>
+
+<h1><a name="UsingTheCompiler"></a>Using the OCL compiler</h1>
+
+<br>
+<p>OCLE provides a powerful integrated OCL compiler, which is capable of advanced type-checking operations. You may group your OCL specification files
+into OCLE projects, as shown in <a href="ProjectManagement.htm#AttachingOCLFiles">attaching
+OCL files to a project.</a> OCLE allows you to compile all the files attached to
+the active project as a whole. Please refer to <a href="#multiple">compiling multiple files</a>  for details about compiling the entire project.
+For simpler expressions, you may wish to work with individual OCL files. In this case, you could compile only the currently open OCL file.</p>
+
+<p>To compile all the OCL files in the active project, you first have to <a href="ProjectManagement.htm#NewProjects">open or create an OCLE project</a>
+and then <a href="ProjectManagement.htm#AttachingOCLFiles">attach some OCL specification files to it</a>.
+Then use the <b>Compile project specifications</b> option in the <b>Tools</b> menu (or the corresponding <img src="images/compile_rules.gif"/> toolbar button). Note that this option is only active if there is an active project.
+First, OCLE will save
+any open files that are not saved. Then it will scan the project browser and include all the selected files in the compilation process.
+To select or unselect a file, right click its name in the project browser and choose <b>Select</b> / <b>Unselect</b> as appropriate.
+Unselected files will have their names grayed. In this way you may define many compilation configurations, all involving the same files.
+This is very useful when developing OCL specifications, because they might not be correct from the very beginning, and you may test
+them separately, without having to remove undesired files from the project.</p>
+<a name="IndependentFile"></a>
+<p>To compile the active file, use the <b>Compile active file</b> option in the <b>Tools</b> menu (or the <img src="images/compile.gif"/> toolbar button). This option is only enabled
+if there is an open text file (refered here as the active file). The active file is compiled against the active UML model, if any. If no UML model is loaded, the
+active model is the UML 1.5 metamodel, always accessible in OCLE. Therefore, you may even have no active user model,
+but in this case you cannot specify the context of OCL expressions, unless the context is a metaclass (a class in the
+UML metamodel). You may however
+use <a href="#implicit">specifications with implicit context</a>, a feature implemented in OCLE.</p>
+
+<p>When compiling a file, OCLE automatically detects its type, namely if it contains 
+  expressions targeted at the UML metamodel or at the user model. This version 
+  performs file type detection using the file extension. More precisely, a file 
+  with the <b>.ocl</b> extension is considered to be holding OCL specifications 
+  expressed at the metamodel level. To specify that a file holds user model level 
+  expressions (business constraints), it is <b>mandatory</b> that the file has 
+  the <b>.bcr</b> extension. Therefore, you cannot compile a file that targets 
+  both the UML metamodel and a custom user model. OCLE projects 
+  are useful in this context. You may define your metamodel level specifications in some OCL file(s) 
+  and the specifications for the current model in another file(s). Of course, 
+  metamodel level specifications can be reused across several projects, since 
+  they do not target a specific user model, but the UML metamodel. The UML metamodel 
+  is always available in OCLE, so you are not required to have a user model 
+  loaded to compile metamodel specifications (see <a href="UMLModels.htm#Editing">navigating 
+  UML models</a> for details). Please note that <b>without this restriction regarding 
+  file extensions, OCLE cannot deduce the target model for semantic analysis</b>. 
+  In short, you have to take into account the compilation target when saving OCL 
+  text files (and change file extensions if necessary). You may want to use the <b>Save 
+  as ...</b> command in the <b>Files</b> menu to do this. OCLE will allow you 
+  to select the <b>.bcr</b> and <b>.ocl</b> file filters.</p>
+
+<p>Any compilation errors are reported in the <b>Messages</b> panel. However, the current version of the compiler
+stops when it encounters the first error. You may still encounter two errors when compiling the entire project. In this case,
+one of the errors is caused by the OCL specifications expressed at the metamodel level, while the other is caused by the business constraints
+found in the active model. Particularly, if no
+specifications targeting the metamodel or the user model are found, an
+appropriate message is displayed: <b>No specifications found at the metamodel/user
+model level</b>.</p>
+
+<p>When a compilation error occurs, you may see its most probable cause. Just click the error message in the
+<b>Messages</b> panel. OCLE will try to open the file that contains the error, and the text
+that generated it will be highlighted, as shown in the figure below.
+Please be aware that the localization mechanism for syntactic error is not very precise,
+due to the parsing algorithm. However, semantic errors, such
+as type mismatches generate very accurate error messages.</p>
+
+<table  align="center" border="0">
+<tr><td><img src="images/CompilationErrors.gif" alt="Compilation error reporting and localization"></td></tr>
+<tr><td align="center"><code>Fig.1 Viewing compilation errors in the Messages tab</code></td></tr>
+</table>
+
+<br><br>
+
+<h1><a name="CurrentFeatures">Current compiler features</a></h1>
+
+<br>
+<p>The current OCL compiler fully supports the OCL 2.0 grammar. We have even extended the grammar, so that OCLE 2.0 provides some additional features. Please find below
+the main features implemented in the current compiler.</p>
+
+<br>
+<h2><a name="multiple"/>Single and multiple file compilation</h2>
+<br>
+
+<blockquote>
+  <p>OCLE 2.0 allows you to compile either an individual file or a set of files. 
+    To compile more files as a whole, please group them in an OCLE project and 
+    make sure that the files you are interested in are activated in the project 
+    browser. When you compile a set of files, OCLE sees them as a whole, as if their entire contents were stored in one file. The advantage of this approach is that
+	any definition constraint (declared using the <b>def-let</b> mechanism) specified in one file is accessible in any other file included in the same compilation process.
+	In this way OCLE promotes OCL specification reusability at the metamodel level. For example, the <b>Checking_UML_Models</b> example included
+	with this distribution uses this feature to reuse the specification of the UML 1.5 additional operations.
+	This illustrative project contains one file, <code>UML_AO.ocl</code>, which specifies the UML additional operations.
+	All the other files in the project use these definitions when specifying the well formedness rules.</p>
+</blockquote>
+
+<br>
+
+<h2>Formal grammar</h2>
+
+<p>This section provides a formal description of the OCL grammar implemented in OCLE 2.0. The formalism used is EBNF. If you are a beginner with OCL, you may want to
+skip the production rules below. The '?' sign stands for optionality, the '*' means zero or more repetitions, and '+' means one or more repetitions. The expressions quoted using
+" and " are grammar terminals and are required to appear as mentioned here.</p>
+<blockquote><blockquote>
+<pre>oclFile ::=  (("model" pathName oclPackage+ "endmodel") | oclPackage)+
+
+oclPackage ::= ( "package" pathName oclExpressions "endpackage" )
+              | constraint | freeConstraint
+
+freeConstraint ::= ("inv" name? ":" oclExpression) | ("?" expression)
+
+oclExpressions ::= constraint+
+
+constraint ::= contextDeclaration
+              ( ( "def" name? ":" letExpression+ )
+              |
+               (stereotype name? ":" oclExpression)
+              )+
+
+contextDeclaration ::= "context" (operationContext | classifierContext)
+
+classifierContext ::= ( name ":" )? (collectionKind | dottedPathName)
+
+operationContext ::= (collectionKind | dottedPathName) "::" operationName
+                    "(" formalParameterList ")"
+                    ( ":" returnType )?
+
+stereotype ::=  "pre" | "post" | "inv"
+
+operationName ::= name | "=" | "+" | "-" | "&lt;=" | "&gt;=" | "&lt;&gt;" | "&lt;" | "&gt;"|"/"|"*"|
+                 "implies" | "not" | "or" | "xor" | "and" | "div" | "mod"
+
+formalParameterList ::= ( name ":" typeSpecifier
+                       ("," name ":" typeSpecifier )*
+                       )?
+
+oclExpression ::= expression | messageExpression
+
+messageExpression ::= oclExpression ^^ name(messageArguments) | oclExpression ^ name(messageArguments)
+
+messageArguments ::= messageArgument (, messageArgument)*
+
+messageArgument ::= "?" (:typeSpecifier)? | oclExpression
+
+returnType ::= typeSpecifier
+
+letExpression ::= "let" operationName ( "(" formalParameterList ")" )?
+                 ( ":" typeSpecifier )?
+                 ( "=" expression )?
+
+typeSpecifier ::= tupleType | collectionType | simpleTypeSpecifier
+
+collectionType ::= collectionKind "(" typeSpecifier ")"
+
+tupleType ::= "TupleType" "("
+             name ":" typeSpecifier
+             ( "," name ":" typeSpecifier )*
+             ")"
+
+expression ::= (letExpression "in"?)* logicalExpression
+
+ifExpression ::= "if" expression "then" expression "else" expression "endif"
+
+logicalExpression ::= relationalExpression ( logicalOperator relationalExpression )*
+
+relationalExpression ::= additiveExpression ( relationalOperator additiveExpression)*
+
+additiveExpression ::= multiplicativeExpression ( addOperator multiplicativeExpression )*
+
+multiplicativeExpression ::= unaryExpression ( multiplyOperator unaryExpression )*
+
+unaryExpression ::= ( unaryOperator+ postfixExpression ) | postfixExpression
+
+postfixExpression ::= primaryExpression ( ("." | "->")propertyCall )*
+
+primaryExpression ::= collectionType | tupleType | ifExpression | literalCollection | literalTuple | literal
+                     | propertyCall
+                     | ("(" expression ")")
+
+propertyCallParameters ::= "(" ( declarator )? ( actualParameterList )? ")"
+
+literal ::= string | number | enumLiteral
+
+enumLiteral ::= (pathName)? "#" name
+
+simpleTypeSpecifier ::= pathName
+
+literalCollection ::= collectionKind "{" ( collectionItem ("," collectionItem )* )? "}"
+
+collectionItem ::= expression (".." expression )?
+
+literalTuple ::= "Tuple" "{" name ( ":" typeSpecifier )? "=" expression
+             ( "," name (":" typeSpecifier )? "=" expression )*
+             "}"
+
+propertyCall ::= pathName | operationName ( timeExpression )?
+                ( qualifiers )?
+                ( propertyCallParameters )?
+
+qualifiers ::= "[" actualParameterList "]"
+
+declarator ::= name ( "," name )* ( ":" typeSpecifier )?
+              ( ";" name (":" typeSpecifier)? "=" expression )? "|"
+
+pathName ::= name ( "::" name )*
+
+dottedPathName ::= name ( "." name )*
+
+timeExpression ::= "@pre"
+
+actualParameterList ::= expression ("," expression)*
+
+logicalOperator ::= "and" | "or" | "xor" | "implies"
+
+collectionKind ::= "Set" | "Bag" | "Sequence" | "OrderedSet" | "Collection"
+
+relationalOperator ::= "&gt;=" | "&lt;=" | "&lt;" | "=" | "&gt;" | "&lt;&gt;"
+
+addOperator ::= "+" | "-"
+
+multiplyOperator ::= "*" | "/" | "div" | "mod"
+
+unaryOperator ::= "-" | "+" | "not"</pre>
+</blockquote>
+</blockquote>
+<br>
+
+<h2><a name="extensions"/>Extensions provided by OCLE 2.0</h2> 
+  <p>As you have probably noticed in the grammar above, there are some extensions 
+    to the official OCL grammar published by OMG (see <a href="http://www.omg.org"> 
+    www.omg.org</a> for details). The extensions implemented in OCLE 2.0 are listed 
+    here.</p>
+  <br>
+  <h3>The structure of an OCL text file</h3>
+  <blockquote> 
+    <p>OCLE 2.0 allows you to specify that a certain context is at the model level 
+      - namely, inside no inner package. To do this, use the <b>model - endmodel</b> 
+      construct. The <b>model - endmodel</b> construct is optional. If present, 
+      the <b>model</b> keyword must be followed by the exact name of the target 
+      model. In any other aspect, the <b> model - endmodel</b> construct is similar 
+      to the <b>package - endpackage</b> construct: it is just a means to specify 
+      the namespace for a certain context. It can also be useful when two distinct models are included
+	  in the same project and they have similar or identical package structures. As far as package / model names are 
+      concerned, the OCL compiler in OCLE 2.0 applies the following rule: if a 
+      model / package name contains white spaces, each whitespace must be superseded 
+      by the '_' character, to avoid syntactical errors. Thus, if your model were 
+      named 'Company Example' you would have to write <code><b>model</b> Company_Example</code>
+      in the OCL file.</p>
+  </blockquote>
+  <br>
+  <h3><a name="implicit">Specifications with implicit context declaration</a></h3>
+  <blockquote> 
+    <p>For some special invariants, context declarations are somehow redundant. 
+      This is the case of invariants involving the <code>allInstances</code> operation in 
+      OclType. The OCL grammar supported by our compiler does not force you to 
+      have an OCL specification connected to a context declaration. Therefore, 
+      the following specifications are valid in OCLE 2.0:
+	  <blockquote>
+	  <pre><b>inv:</b> Person.allInstances-&gt;forAll(firstName &lt;&gt; '')<i>//appropriate use of allInstances - no context declaration</i></pre>
+      <pre><b>context</b> Person <b>inv</b>: Person.allInstances-&gt;forAll(firstName &lt;&gt; '') <i>//use of allInstances is redundant and inefficient</i></pre>
+      </blockquote>
+	  <p>The invariant above may be written more adequately as:</p>
+	  <blockquote>
+	  <pre><b>context</b> Person <b>inv</b>: <b>self</b>.firstName &lt;&gt; '' <i>//no need of allInstances if context declaration present</i></pre>
+	  </blockquote>
+    <p>You may even compile completely independent expressions, as long as all 
+      type information can be deduced exclusively from the OCL type system. This feature 
+      is valuable for evaluation purposes, as the didactic example below demonstrates 
+      it.</p>
+	<blockquote>
+    <pre>?Set{1..10, Set{2..50}}-&gt;flatten</pre>
+	</blockquote>
+  </blockquote>
+  <br>
+  <h3>Extended comment syntax</h3>
+  <blockquote> 
+    <p>In addition to the standard notation using --, you may also use C++ like 
+      comments in your OCL files. Thus, the OCL compiler recognizes and ignores 
+      any text delimited by /* and */. You may also use the '//' marker to start 
+      a one-line comment.</p>
+  </blockquote>
+  <br>
+  <h3>Inner classes as contexts</h3>
+  <blockquote> 
+    <p>With this version of the compiler you may also attach OCL specifications 
+      to inner classes. Instead of writting the simple name of the class, you 
+      will have to provide a qualified name of the inner class in the context 
+      declaration. The qualified name uses the dot as name separator. This decison 
+      was influenced by the current OCL grammar, where '::' is used to delimit 
+      operation signatures. Therefore, to avoid confusion, class names composing 
+      the qualified name of the inner class are delimited by '.'. In a context 
+      declaration, any simple name follows the same rules described for package 
+      / model names above. Thus, suppose you have defined a <code>List</code> class, with an 
+      inner class <code>Iterator</code>, you could write the following precondition:</p>
+	<blockquote>
+    <pre><b>context</b> List.Iterator::nextElement():Object <b>pre</b>:
+          <b>self</b>.hasMoreElements()
+  </pre>
+  </blockquote></blockquote>
+  <br>
+  <h3>Accessing static features</h3>
+  <blockquote> 
+    <p>Static features of classes may be refered to in OCL specifications, as 
+      long as their declaring type is itself visible. The syntax is similar to 
+      that provided in programming languages, using the '.' character as delimiter: 
+      the (possibly qualified) name of the containing class, followed by a dot 
+      and then by the specification of the static feature.</p>
+  </blockquote>
+  <br>
+  <h3>Extended enumeration literal syntax</h3>
+  <blockquote> 
+    <p>In UML enumerations are represented by the <b>Enumeration</b> and <b>EnumerationLiteral</b> 
+      metaclasses. However, most of the UML tools export enumerations in XMI as 
+      normal classes marked with the &lt;&lt;enumeration&gt;&gt; stereotype. That 
+      is why we thought it would be very useful to consider as enumerations both 
+      instances of the <b>Enumeration</b> metaclass and the normal classes marked 
+      with the above mentioned stereotype. In the latter case the attributes of 
+      the class are considered enumeration literals (regardless of their visibility 
+      and scope).</p>
+    <p>One of the differences between OCL 1.3 and newer versions is that in OCL 
+      1.3 the enumeration literals are specified using the '#' symbol, whereas 
+      in OCL 1.4 and 2.0 the '::' symbol is used. To ensure compatibility with 
+      earlier OCL specifications, OCLE 2.0 supports both ways.</p>
+    <p>Examples of valid enumeration literals in OCLE 2.0:</p>
+	</blockquote>
+	<blockquote>
+    <pre>#male<i>//older syntax</i><br>
+Sex#female<i>//owner class also specified</i><br>
+Sex::female<i>//OCL 1.4 syntax, with owner class</i><br>
+Data_Model::Sex::male<i>//owner class with qualified name</i></pre>
+  </blockquote>
+  <br>
+  <h3>Neutral printing functions in OclAny</h3>
+  <blockquote> 
+    <p>Besides the operations defined in the OCL 2.0 grammar, OclAny also provides 
+      two printing operations with no side effects: the <b>dump</b> and <b>dumpi</b> 
+      operations. These operations are similar to the C/C++ library routine <b>printf</b>: 
+      they print a formatted message on the output panel in OCLE. The difference 
+      between <b>dump</b> and <b>dumpi</b> is that <b>dump</b> always returns 
+      the boolean value <b>true</b> (useful in debugging constraints that have 
+      to be boolean expressions), while <b>dumpi</b> returns the value on which 
+      it is called, no matter its type (useful for interleaving it in the middle 
+      of an expression to print debug messages - especially useful for loop operations 
+      on collections). The syntax of the two operations is given below:</p>
+    <p class="rule">dump(message:String[,p1[,p2...]])</p>
+    <p>The message may contain <code>%number</code> sequences. The sequence <code>%0</code> will be 
+      replaced by the string representation of the expression on which the operation 
+      is called, the sequence <code>%1</code> will be replaced by the string representation 
+      of the first parameter following the message, <code>%2</code> with the second and so 
+      on. An example is provided in the <a href="#Examples">examples</a> section.</p>
+  </blockquote>
+  <br>
+  <h3>The 'closure' operation on OCL collections</h3>
+  <blockquote> 
+    <p>The <b>closure</b> operation computes the transitive closure of an implicit 
+      relation between model elements. It is defined as a supplementary OCL loop 
+      operation. The relation whose transitive closure is computed is defined 
+      by the iterator and the argument expression. Thus, the iterator object is 
+      considered to be in relation with all the elements contained in the argument 
+      expression. This is valid even if the argument expression does not evaluate 
+      to a collection: non-collection elements are considered sets with cardinality 
+      1. In this way, this operation is an elegant way to avoid recursive specifications, 
+      since recursion is applied implicitly.</p>
+    <p>The formal definition of <b>closure</b> follows:</p>
+    <p class="rule">closure(it|&lt;expression-with-it&gt;):Set</p>
+    <p>The operation first iterates over the collection on which it is called 
+      ('it' is the iterator variable). For each encountered element, the argument 
+      expression is evaluated. If this evaluation results in a collection, each 
+      of its elements is added to the result set. Otherwise the evaluation result 
+      is added as an element to the result set. Then, the process is repeated 
+      for the result set until no more distinct elements are added. The current 
+      value of the result set then becomes the result returned by <b>closure</b>. 
+      Please read the <a href="#Examples">examples</a> section for a suggestive 
+      example.</p>
+  </blockquote>
+  <h3>String 'contains', 'pos' and 'split' operations</h3>
+  <blockquote> 
+    <p>Besides the standard String operations, we have implemented three other 
+      operations we considered helpful:</p>
+    <p class="rule">contains(innerString: String):Boolean</p>
+    <blockquote>
+      <p>This operation returns true if innerString is contained in the context 
+        string and false otherwise.</p>
+    </blockquote>
+    <p class="rule">pos(innerString : String):Integer</p>
+    <blockquote>
+      <p>Returns the 0-based position of innerString in the context string or 
+        -1 if <code>contains()</code> would return false for innerString.</blockquote></p> 
+    <p class="rule">split(separators: String):Sequence(String)</p>
+    <blockquote>
+      <p>Splits the context string around the given separators (a separator is 
+        any of the characters from the separators string supplied as parameter) 
+        and returns a sequence with the resulting substrings. The separators themselves 
+        are not included in the result.</p></blockquote>
+  </blockquote>
+</blockquote>
+<br><br>
+<h1><a name="Examples">Examples</a></h1>
+<blockquote>
+  <blockquote>
+    <p>This section provides some examples with valid OCL expressions in OCLE 2.0.</p>
+    <blockquote>
+      <ol>
+        <li>The <b>closure</b> operation</li>
+        <blockquote> 
+          <pre><b>context</b> ModelElement
+	<i>//the direct suppliers of a model element</i>
+	<b>def</b> direct_suppliers:
+	<b>let</b> supplier:Set(ModelElement) = self.clientDependency.supplier-&gt;asSet
+	<i>//Compute the set with all the suppliers of a model element:</i>
+	<b>def</b> suppliers_with_closure:
+	<b>let</b> allSuppliers:Set(ModelElement) =
+		Set{<b>self</b>}-&gt;closure(e:ModelElement|e.supplier)</pre>
+        </blockquote>
+        <li>Neutral printing functions</li>
+		<blockquote>
+        <pre><b>context</b> Namespace:
+	<i>//All Associations must have a unique combination of name and associated Classifiers in the Namespace</i>
+	<b>inv</b> WFR2_Namespace:
+		<b>self</b>.ownedElement-&gt;select(oclIsKindOf(Association)).oclAsType(Association)-&gt;
+			forAll(a1, a2|
+				<b>if</b> (a1.name = a2.name <b>and</b> a1.connection.participant 
+				= a2.connection.participant) <b>implies</b> (a1 = a2)
+					<b>then</b> true
+				<i>//display the participant sequnences that cause the rule failure</i>
+				<b>else not</b> (a1.dumpi('assoc1:%0').connection.participant->dump() 
+					<b>and</b> a2.dumpi('assoc2:%0').connection.participant->dump()))</pre>
+	</blockquote>
+      </ol>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<br><br>
+<h1>See also</h1>
+<blockquote>
+  <p><a href="projectmanagement.htm">Project management</a></p>
+  <p><a href="umlmodels.htm">Model management</a></p>
+</blockquote>
+<br>
+
+<table>
+  <tr> 
+    <td valign="top" align="center"><a href="OCLE_TOC.htm"><img src="images/prev.gif"/></a></td>
+    <td valign="middle" align="center"><a href="OCLE_TOC.htm">Back to main index</a></p></td>
+  </tr>
+</table>
+
+</body>
+</html>

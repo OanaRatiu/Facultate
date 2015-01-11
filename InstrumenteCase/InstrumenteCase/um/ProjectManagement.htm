@@ -1,0 +1,262 @@
+<html>
+
+<head>
+<title>Project Management</title>
+<link rel="stylesheet" href="Help.css" type="text/css"/>
+</head>
+
+<body>
+
+<p><a href="#Overview">Overview</a></p>
+
+<p><a href="#Projects">OCLE Projects</a></p>
+<blockquote>
+
+<p><a href="#ProjectStructure">Project structure</a></p>
+
+<p><a href="#NewProjects">Creating new projects</a></p>
+
+<p><a href="#LoadProjects">Loading existing projects</a></p>
+
+<p><a href="#SavingProjects">Saving projects</a></p>
+</blockquote>
+
+<p><a href="#ManagingProjectStructure">Managing project structure</a></p>
+
+<blockquote>
+
+<p><a href="#AttachingUMLModels">Attaching and detaching UML models</a></p>
+
+<p><a href="#AttachingOCLFiles">Attaching and detaching OCL files</a></p>
+
+</blockquote>
+
+<br><br>
+
+<h1><a name=Overview></a>Overview</h1>
+
+<br>
+
+<p>In order to enable a flexible management of model information and OCL specifications, 
+OCLE allows the modeler to define them in separate files and then join them 
+into a project. The same OCL file or UML model may be used in more than one 
+OCLE project. OCLE overcomes the limitations imposed by the OCL grammar, allowing 
+more specification files (containing OCL expressions which conform to the OCL 
+grammar) to be compiled as a whole against the active UML model. An OCLE project 
+may contain more than one UML model, out of which at most one is the <b>active</b> 
+model. However, the modeler is not forced to create an OCLE project. UML models 
+can be checked and edited without having to be included in a project. Similarly, 
+the modeler may compile independent OCL files (see <a href="Compiling.htm#IndependentFile">compiling independent files</a>) and evaluate the expressions contained 
+in them, as shown in <a href="Compiling.htm#UsingTheCompiler">using the OCL compiler</a>.</p>
+
+<br><br>
+
+<h1><a name=Projects></a>OCLE Projects</h1>
+
+<br>
+
+<h2><a name=ProjectStructure></a>Project structure</h2>
+
+<br>
+
+<p>An OCLE project comprises zero or more UML models and
+OCL specification files. The structure of the active project is displayed in
+the <b>Project</b> panel, which contains the project browser. This browser shows the files containing the project components.
+These files may be grouped in directories by a
+criterion chosen by the user. For more information about constraint files and how they are used in model checking,
+please consult <a href="Editor.htm">editing OCL files</a> and <a href="ModelCheckingAndDebugging.htm">model
+checking</a>.</p>
+
+<p>The structure presented in the project browser will
+usually not match the file structure on disk. Files are displayed using only
+their short name. However, the project file stores the path to these files. To
+see the absolute path of a file included in the project, linger the mouse
+cursor over the file name and the tool tip will display it.</p>
+
+<p>When the application starts, no project is opened or created. Therefore,
+the project browser looks like in figure 1 below.</p>
+
+<table  align="center" border="0">
+<tr>
+    <td><img src="images/EmptyProjectBrowser.gif" alt="Empty Project Browser"></td>
+  </tr>
+<tr><td align="center"><code>Fig.1 Empty Project Browser</code></td></tr>
+</table>
+
+<p>The browser displays the files contained in the project. The directories displayed 
+  in this browser are <b>virtual directories</b>, in the sense that they do not 
+  exist on disk (unless the user creates them); this facility is included only 
+  to allow users group their files. Figure 2 below displays the expanded 
+  project browser for a more complex model – the OrderSys model, included in the 
+  OCLE samples, in the 'Checking UML Models' directory. The project browser contains
+two directories, <b>Constraints</b> and <b>Models</b> which can be neither removed nor renamed.
+OCLE uses them as default locations for specification and model files respectively.</p>
+
+<table  align="center" border="0">
+<tr><td><img src="images/OpenedProjectBrowser.gif" alt="Project structure"></td></tr>
+<tr><td align="center"><code>Fig.2 Project structure</code></td></tr>
+</table>
+
+<p>You may notice that some files are grayed. This means that they are included 
+in the project but not active; unactive files will not be taken into account 
+when compiling OCL specifications (see <a href="Compiling.htm#UsingTheCompiler">using the compiler</a>). Only the active
+UML model is not grayed.</p>
+
+<br>
+<h2><a name=NewProjects></a>Creating new projects</h2>
+<br>
+<p>To create a new OCLE project, select the <b>New</b> option from the <b>Project</b>
+menu (or the corresponding <img src="images/new.gif" alt="New project"/> toolbar button). The <b>New Project</b> Wizard opens, as shown in figure 3 below.</p>
+
+<br>
+<table  align="center" border="0">
+<tr><td><img src="images/NewProjectWizard1.gif" alt="New Project Wizard"></td></tr>
+<tr><td align="center"><code>Fig.3 New Project Wizard</code></td></tr>
+</table>
+
+<p>You will first have to specify whether you want to create an empty
+project or to group existing models and OCL files in the newly created project.
+No matter what option you select, you will first be asked to provide the name
+of the new project and the location of the project file. Select no directory if you want the
+project file to be placed in the current directory (note that the 'current directory' is the directory from which OCLE was launched).
+If you choose the first option, OCLE will generate an empty model and automatically attach it to the
+new project (you will see it in the project browser). Two OCL files will also
+be generated and included in the project. One of them is meant to store the OCL 
+rules expressed at the metamodel level and the other is designed to store user
+model specific constraints. You may want to add some rules in these files. Of course, 
+at any time you may change the contents of these files or even remove them from the project and define 
+your own project structure (see <a href="#AttachingOCLFiles">attaching and detaching OCL files</a>).</p>
+
+<p>If you choose the second option, OCLE will ask you to select the UML model(s) and then
+the OCL files to be included in the new project. Multiple file selection is
+available in the selection dialog. Out of the selected UML models, only one can
+be active at any time. You will have to select the desired active model by
+clicking the appropriate check box, as shown in figure 4 below. With regards
+to the OCL files selected, you will have to specify which of them will be
+included in the compilation process. By default, all chosen files are
+checked, which means that all will be active and thus included in the compilation process.</p>
+
+<table  align="center" border="0">
+<tr><td><img src="images/NewProjectWizard2.gif" alt="Attaching files to a project"></td></tr>
+<tr><td align="center"><code>Fig.4 Attaching files to a project</code></td></tr>
+</table>
+
+<p>When browsing for UML models, the file selection dialog allows you to select both <b>.xml</b> and
+<b>.xml.zip</b> files, because by the default OCLE automatically zips the XML files containing UML models (see
+<a href="umlmodels.htm">working with UML models</a>).
+When browsing for OCL specification files, you may select both <b>.bcr</b> and <b>.ocl</b> files.
+Please refer to <a href="Compiling.htm#UsingTheCompiler">using the compiler</a>
+for details about the meaning of these extensions.</p>
+
+<br>
+<h2><a name=LoadProjects></a>Loading existing projects</h2>
+<br>
+
+<p>To load an existing OCLE project, select <b>Open</b> from the <b>Project</b>
+menu (or the corresponding <img src="images/open.gif" alt="Open project"/> toolbar button). You will have to specify the location of an existing .oepr file (OEPR is
+the default extension for OCLE project files). OCLE will try to open the
+specified file; any error message encountered will be displayed in the
+<b>Messages</b> panel at the bottom of the main window. If no load-time errors
+occur, the contents of the chosen project will be displayed in the project
+browser. If the project file specifies any active model, OCLE will try to open that model and if no errors occur,
+the contents of the model will be displayed in the model browser.</p>
+
+<p>When loading OCLE projects, the recent file list can be very useful.
+This list is available under the <b>Open recent</b> option in the <b>Project</b> menu. It
+displays the most recently used five project files. Please note that the recent files list is user-account specific,
+which means that different users will probably see different files listed in this menu.</p>
+
+<br>
+
+<h2><a name=SavingProjects></a>Saving projects</h2>
+
+<br>
+
+<p>To save your OCLE project, choose one of the options <b>Save project</b> or <b>Save project as …</b> in the
+<b>Project</b> menu. When saving a project, OCLE also tries to save the specified active model, if the model is included in the project.</p>
+
+<br><br>
+
+<h1><a name="ManagingProjectStructure"/>Managing project structure</h1>
+<br>
+
+<p>The project browser offers a context sensitive popup menu that
+lets the user manage the project and the files associated with it. To create a
+new (virtual) directory inside an existing one, right click the chosen parent directory
+and select <b>New directory</b> from the popup menu. A default name will be
+generated for the new directory. If you are not satisfied with the generated
+name, directory names can easily be changed. To change the name of a directory,
+double click it and enter the new name. You can also remove a directory and its
+entire contents from the project. To do this, right click the directory name and
+select <b>Remove</b> from the popup menu. Please note that removing a directory from
+the project does not affect the contained files in any way – they are only not
+included in the project anymore. Particularly, the contained files will not be
+removed from disk. To remove a single file from the project, right click its
+name and select <b>Remove</b>, as in the case of directories.</p>
+
+<br>
+
+<h2><a name=AttachingUMLModels></a>Attaching and detaching UML models</h2>
+
+<br>
+
+<p>OCLE can read UML models stored in XMI format (see
+<a href="umlmodels.htm">working with UML models</a> for
+details). To add a UML model to the active project, right click the <b>Models</b>
+directory (or one of its child directories) in the project browser and choose <b>Add file(s)</b>. The XMI file
+selection dialog appears (see figure 4) and you have to follow the same
+steps as described above. If you check no model file in this dialog, the active model does not
+change; if you check a UML model from the list, that model will become the
+active model for the current project. You may however change the active
+model at any time. To do this, right click the model you want to activate and select
+<b>Activate</b> from the popup menu. Any previously active model is discarded.</p>
+
+<p>To detach (remove) a UML model from the current project, right click the corresponding model file in the
+project browser and select <b>Remove</b>. If you remove the active model from
+the project, one of the remaining contained models will be activated. You may disable
+this default behavior by choosing <b>Close and remove</b> instead of <b>Remove</b>. In this
+later case, the active model will be closed, removed from the project, and no other model
+will be activated.</p>
+
+<br>
+
+<h2><a name=AttachingOCLFiles></a>Attaching and detaching OCL files</h2>
+
+<br>
+
+<p>To add OCL text files to the active project, right click any directory having <b>Constraints</b> as a parent in the project
+browser and select <b>Add file(s)</b>. The OCL file selection dialog appears. You
+will have to browse for OCL files and then check those files you want to
+include in the compilation process. Unchecked files will have their names grayed in the project browser.
+To remove an OCL file from the project, right click its name in the project browser and select <b>Remove</b>. You may however
+modify the compile configuration at any time. To do this, right click an OCL file in the project browser and choose <b>Include</b>
+or <b>Exclude</b> as appropriate.
+</p>
+
+<p><b>Note </b>: a more general way to add files to your project is to select the
+<b>Add to project…</b> option from the <b>Project</b> menu. Using this option you may add
+both OCL files and UML models. However, in this way you cannot specify the virtual directory where the added
+files will be placed. Therefore, any UML model files will be added in the <b>Models</b> directory, while
+any OCL specification files will be added in the <b>Constraints</b> directory.</p>
+
+<br><br>
+
+<h1>See also</h1>
+
+<blockquote>
+
+<p><a href="UMLModels.htm">Working with UML models</a></p>
+
+<p><a href="Editor.htm">Editing OCL files</a></p>
+
+</blockquote>
+<br><br>
+<table>
+  <tr> 
+    <td valign="top" align="center"><a href="OCLE_TOC.htm"><img src="images/prev.gif"/></a></td>
+    <td valign="middle" align="center"><a href="OCLE_TOC.htm">Back to main index</a><p></p></td>
+  </tr>
+</table>
+
+</body>
+</html>

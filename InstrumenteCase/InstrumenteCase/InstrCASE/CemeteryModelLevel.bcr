@@ -1,0 +1,73 @@
+-- In this file you can write OCL constraints at the UML model level.
+-- You have below an example invariant showing you the OCL syntax used. 
+
+model Cimitir
+
+context Decedat
+    -- id trebuie sa fie definit si diferit de 0, unic
+    	inv : idDecedat.isDefined() and idDecedat > 0
+    	inv : Decedat.allInstances.idDecedat->isUnique(n | n)
+    -- nume trebuie sa fie definite
+    	inv : nume<>'' and prenume<>''
+    	    
+context Detinator
+	-- id trebuie sa fie definit si diferit de 0, unic
+    	inv : idDetinator.isDefined() and idDetinator > 0
+    	inv : Detinator.allInstances.idDetinator->isUnique(n | n)
+    --chitanta trebuie sa existe
+    	inv: chitanta<>''
+    
+context Mormant
+    -- id trebuie sa fie definit si diferit de 0, unic
+    	inv : idMormant.isDefined() and idMormant > 0
+    	inv : Mormant.allInstances.idMormant->isUnique(n | n)
+
+context Inspector
+	-- nume definit
+		inv : nume<>''	    
+
+context Inspector::addDecedat(d:Decedat)
+	pre: d.idDecedat>0 and d.nume<>'' and d.prenume<>''
+	post: self.decedati->includes(d)
+
+context Inspector::addDetinator(d:Detinator)
+	pre: d.idDetinator>0 and d.nume<>'' and d.chitanta<>''
+	post: self.detinatori->includes(d)
+	    
+context Inspector::addMormant(m:Mormant)
+	pre: m.idMormant>0
+	post: self.morminte->includes(m)
+
+
+context Mormant::addDecedat(d:Decedat)
+	pre: d.idDecedat>0 and d.nume<>'' and d.prenume<>''
+	post: self.decedati->includes(d)
+	    
+
+context Detinator::addMormant(m:Mormant)
+	pre: m.idMormant>0
+	post: self.morminte->includes(m)
+	    
+-- OBSERVERS 
+context Decedat
+    def getNume:
+        let getNume():String = self.nume
+    def getPrenume:
+        let getPrenume():String = self.prenume
+        
+context Detinator
+    def getNume:
+        let getNume():String = self.nume
+    def getChitanta:
+        let getChitanta():String = self.chitanta
+    def getMormant:
+        let getMormant(id:Integer) = self.morminte->select(m:Mormant|m.idMormant=id)
+    def getMormant2:
+        let getMormant2(id:Integer) = self.morminte->iterate(m:Mormant; a:Set(Mormant)=Set{} | if m.idMormant=id then a->including(m) else a endif)
+        
+        
+context Inspector
+    def getNume:
+        let getNume():String = self.nume
+
+endmodel

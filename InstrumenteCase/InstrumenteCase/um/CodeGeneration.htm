@@ -1,0 +1,628 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="Help.css" type="text/css"/>
+<title>Java source code generation</title>
+</head>
+
+<body>
+
+<p><a href="#Objectives">Objectives</a></p>
+<p><a href="#Using">Using the built-in code generator</a></p>
+<p><a href="#UmlModels">Code generation for UML models</a></p>
+<p><a href="#OclConstraints">Code generation for OCL expressions</a></p>
+<p><a href="#Integration">Code integration</a></p>
+<p><a href="#CodeAspect">Code patterns used and limitations</a></p>
+<br><br>
+<h1><a name="Objectives"></a>Objectives</h1>
+<br>
+<p>The main objective of the source code generator is to produce a completely runnable application from the UML model and the
+attached OCL specifications. Using the built-in code generator, you can turn classes, interfaces, datatypes into their corresponding
+Java source code equivalents. In its current version, OCLE also generates the code required for the
+runtime management of associations.
+Additionally, attached OCL constraints are turned into runnable code, which is integrated in the code
+for the UML model, producing a Java application that checks its own constraints. Thus, apart from the verification capabilities provided by the
+evaluation system (see <a href="ModelCheckingAndDebugging.htm">model checking and debugging</a>), you may also check your constraints at runtime.
+Unlike in other state-of-the-art tools, you can generate the code for the operations specified in OCL (using the <b>def-let</b> mechanism).
+The code generated for OCL specifications reduces object allocation to the maximum extent possible, using built-in Java types
+wherever this is possible.</p>
+<p>The code generator produces Java source code that is compilable, though not complete. Once you have generated the code, you still have
+to write the body of generated methods.</p>
+
+<br><br>
+<h1><a name="Using"></a>Using the built-in code generator</h1>
+<br>
+<p>To invoke the built-in source code generator, use the <b>Generate code...</b> option in the <b>Tools</b> menu. Please note
+that this option is only active if you have an active user model loaded in OCLE. For details about UML models and OCLE projects, you may
+want to refer to <a href="umlmodels.htm">UML models</a> and <a href="projectmanagement.htm">project management</a>. The code generation
+wizards starts, showing the window in figure 1.</p>
+<table align="center">
+<tr><td><img src="images/CodeGenerationWizard.gif" alt="Code generation wizard window"/></td></tr>
+<tr><td align="center"><code>Fig. 1 Code generation wizard</code></td></tr>
+</table>
+<p>You first have to specify the destination directory. The destination directory is where your source files are placed, in fact the
+base directory for the classpath of the resulting application. Use the <b>Browse</b> button to locate a specific directory. The value of the destination 
+directory property remains unchanged between two generation operations, so for 
+the same project you will have to specify this directory only once. However, 
+you will probably have to change it when you switch to another OCLE project 
+in the same session. At first code generation operation, the supplied
+default directory is <code>&lt;STARTUP_DIRECTORY&gt;/output</code>.</p>
+<p>In the code generation wizard you may also provide details about the properties 
+  of the generated code. Thus, select the <b>Put opening brace on new line</b> 
+  option if you want the opening brace '{' to be placed on the next line for class, 
+  method and block declarations. This checkbox is not selected by default, to 
+  follow the Java coding conventions. 
+<p>When generating code, OCLE inserts one tab as the indentation level increases. Therefore, you may also specify if tabs must be converted to spaces and the
+number of blank characters for a tab (the default is 4 spaces).</p>
+<p>The most important option provided by the code generation wizard is the validation of business constraints (the <b>Validate business constraints </b> option). This checkbox can only be selected if there is an active project. Therefore, it is advisable that
+you <a href="projectmanagement.htm">define an OCLE project</a> containing the UML model and some business constraints before generating code.
+If this checkbox is selected, OCLE will translate the associated business constraints into equivalent Java code. Moreover, this code
+will be injected in the code for the active UML model, thus creating a running application that checks its own constraints. Unselect
+this checkbox if you are interested only in the code for the UML model.</p>
+
+<br><br>
+<h1><a name="UmlModels"></a>Code generation for UML models</h1>
+<br>
+<p>The source code generator allows you to turn design models into <b>skeleton 
+code</b>. Skeleton code consists of the structure code for all model entities 
+that have an equivalent in the target programming language (Java in this case). The goal of the 
+generator is to translate most of the model elements in their corresponding 
+source code equivalents. Different tools allow for different types of model 
+elements to be turned into code. This version of the code generator considers
+only the elements composing the static view of the model. Therefore, no code is generated for actors, object 
+diagrams or state machines. Instead you may generate code for the classes, interfaces, data types 
+and enumerations in the active user model. An outstanding capability is the management of accessor methods for associations,
+even qualified.</p>
+
+<p>The code generation process itself has two phases. The first consists in the 
+  validation of the active UML model against a set of profile rules. Currently, 
+  two profiles are considered: the UML profile and the Java profile. The UML profile 
+  specifies the rules that the model must fulfill in order to be correct 
+  against the definition of the UML (well formedness rules). The Java profile 
+imposes additional, Java specific rules, such as for example <b>no feature may 
+have a Java reserved word as its name</b>. The model checking process is basically 
+a <a href="ModelCheckingAndDebugging.htm#BatchEvaluation">batch evaluation</a> 
+process, since profile rules are expressed in OCL. Therefore, any model errors 
+are reported in the same manner as with  plain batch evaluation. If 
+ at least one error is identified, you will be prompted to confirm that you want 
+to go further with code generation, because the resulting Java code may have 
+syntactic / semantic errors. However, at this step  you may choose to stop the 
+code generation process.</p>
+
+<p>Below you can find some details regarding the way in which the code generator 
+handles different types of model elements.</p>
+<br>
+<h2>Classes and interfaces</h2>
+<br>
+<p>An interface in your UML model is turned into a Java interface. If the interface 
+is created with OCLE (not imported from some other tool through XMI), you can only add 
+operations to it. These operations are translated to method prototypes in the 
+generated Java interface. Note that any existing visibility modifier is ignored, since methods 
+in Java interfaces are by default public (please see <a href="http://java.sun.com/docs/books/jls/second_edition/html/j.title.doc.html">
+the Java language specification</a>). If your interface happens to contain 
+some attributes (if it is imported from another tool), these attributes are 
+turned into the corresponding Java fields. No visibility modifier is inserted 
+either, since fields in Java interfaces are by default <b>public</b>, <b>static</b> and <b>final</b>. Therefore,
+we strongly suggest that you pay special attention to the semantics of the fields declared
+in interfaces when you want to generate source code for them.</p>
+
+<p>For classes, the following rules apply. First, each attribute is translated 
+into the corresponding Java field. The <b>owner scope</b> and <b>visibility</b> properties 
+of the attribute specify whether the resulting field is <b>static</b> and <b>public/protected/private/friendly</b>. 
+For operations, besides the prototype, a default return statement is generated 
+if any non-void type is specified as the operation's return type.</p>
+
+<p>Associations have a special treatment. Each navigable opposite association 
+end is turned into a Java field. For association ends with multiplicity greater 
+than one, the <code>java.util.Set</code> type is used as the declared type of the field. 
+Note that this behavior is not customizable as of this version of OCLE, which 
+means that you cannot change the container type for association ends.</p>
+<br>
+<h3>Association classes</h3>
+<br>
+<p>If an opposite association end of a class or interface is part of an 
+association class, the following rules apply:</p>
+
+<ul>
+<li>If the association end has a multiplicity greater than one, the 
+  corresponding field is also declared as having the type <code>java.util.Set</code></li>
+  <li>Otherwise, the type of the resulting field will be the association class itself, instead of the class
+  at the opposite end</li>
+</ul>
+<p>Thus, in the <b>Company</b> example (provided with the distribution), for the (partial) class diagram in figure 2, you will
+see the following sources (only fragments are included, for brevity)</p>
+<table align="center">
+<tr><td><img src="images/AssociationClasses.gif" alt="Class diagram for code generation"/></td></tr>
+<tr><td align="center"><code>Fig. 2 Example class diagram for code generation</code></td></tr>
+</table>
+</p>
+
+<pre>	<i>//File Person.java</i>
+
+	<i>//the declaration for the opposite end 'employer'</i>
+	<b>public</b> Set employer;
+	...
+	<b>public</b> <b>final</b> Set getEmployer() {
+		<b>if</b> (employer == null) {
+			<b>return</b> java.util.Collections.EMPTY_SET;
+		}
+		<b>return</b> java.util.Collections.unmodifiableSet(employer);
+	}
+
+	<b>public</b> <b>final</b> Set directGetEmployer() {
+
+		java.util.Set temp = <b>new</b> LinkedHashSet();
+		<b>if</b> (employer != null) {
+			Iterator it = employer.iterator();
+			<b>while</b> (it.hasNext()) {
+				temp.add(((Job)it.next()).getEmployer());
+			}
+		}
+		<b>return</b> temp;
+	}
+
+	<b>public</b> <b>final</b> void addEmployer(Job arg) {
+
+		<b>if</b> (arg != null) {
+			<b>if</b> (employer == null) {
+				employer = <b>new</b> LinkedHashSet();
+			}
+			<b>if</b> (employer.add(arg)) {
+				arg.setEmployee(<b>this</b>);
+			}
+		}
+
+	}
+
+	<b>public final</b> void removeEmployer(Job arg) {
+
+		<b>if</b> (employer != null && arg != null) {
+			<b>if</b> (employer.remove(arg)) {
+				arg.setEmployee(<b>null</b>);
+			}
+		}
+
+	}
+</pre>
+
+<p>No matter the multiplicity of the opposite 
+association end, the Java class generated for the association class will also 
+contain two fields having the name and type corresponding to its connections as 
+a plain association. In the diagram above, it is the case of the <code>Job</code> class.</p>
+
+<pre>
+<i>	//File Job.java</i>
+
+	<b>public</b> Company employer;
+	<b>public</b> Person employee;
+
+	
+	<b>public</b> <b>final</b> Person getEmployee() {
+		<b>return</b> employee;
+	}
+
+	<b>public</b> <b>final</b> void setEmployee(Person arg) {
+		<b>if</b> (employee != arg) {
+			Person temp = employee;
+			employee = <b>null</b>; <i>//to avoid infinite recursions</i>
+			<b>if</b> (temp != <b>null</b>) {
+				temp.removeEmployer(this);
+			}
+			<b>if</b> (arg != <b>null</b>) {
+				employee = arg;
+				arg.addEmployer(<b>this</b>);
+			}
+		}
+	}
+</pre>
+	
+<br>
+<h3>Qualified associations</h3>
+<br>
+<p>If an opposite association end of a class is qualified (has at least one qualifier), the resulting Java field 
+will be declared of type <code>java.util.Map</code>. This type cannot be changed in this version of OCLE.</p>
+<br>
+<h3>Accessor methods for association ends</h3>
+<br>
+<p>For each association end, besides the corresponding Java field, OCLE also generates the minimum required accessor 
+methods. Their purpose is to enable the developer maintain the consistency of 
+links between the objects composing the runtime configuration. Basically, this is 
+about updating links in both directions, irrespective of the accessor method 
+that triggers the update operation. For example,  the <code>removeEmployer(Job)</code> method
+in class <code>Person</code> also calls <code>setEmployee(<b>null</b>)</code> on the argument object.</p>
+
+<p>For simple, non-qualified association ends, only two methods are generated. The getter method returns either the value of the 
+association end or an unmodifiable view of the set that contains the objects at 
+the opposite link end, depending on the end's multiplicity. The setter has the 
+form <code>set&lt;EndName&gt;</code> or <code>add&lt;EndName&gt;</code> 
+if the end is 0..1/1 or multiple respectively. If the association end is 
+multiple, an additional <code>remove</code> method is automatically generated.</p>
+
+<p>For an association end that is part of an 
+association class, the setter methods have the same characteristics. However, a 
+supplementary getter is generated that obtains the real opposite end, skipping 
+the association class object. This is the case of the <code>directGetEmployer()</code> method in class <code>Person</code>.
+In the case of association classes, connections are mapped to fields of multiplicity 0..1/1, and appropriate 
+setter / getter methods are generated (see the <code>Job</code> class code snippet above).</p>
+
+<p>For qualified association ends, the signature of generated accessor methods also includes the qualifier attributes. Particularly, 
+two getter methods are generated. One of them has no arguments and returns the 
+entire set of objects at the opposite association end. The other returns a 
+single object from the set. This object is retrieved based on specific values 
+for the qualifier attributes. Therefore, this second getter method has 
+the qualifiers as formal arguments. For example, the structure displayed in the diagram in figure 3 turns into the following
+code (only an excerpt included, for brevity)</p>
+
+<pre>	<i>//File Bank.java (class Bank)</i>
+
+	<b>public</b> <b>final</b> Set getCustomer() {
+		java.util.Set temp = <b>new</b> LinkedHashSet();
+		<b>if</b> (customer != <b>null</b>) {
+			temp.addAll(customer.values());
+		}
+		<b>return</b> temp;
+	}
+	
+	<b>public final</b> Person getCustomer(int accountNumber) {
+		<b>if</b> (customer == null) <b>return null</b>;
+		ArrayList key = <b>new</b> ArrayList();
+		key.add(Integer.toInteger(accountNumber));
+		<b>return</b> (Person)customer.get(key);
+	}
+	
+	<b>public final</b> void addCustomer(int accountNumber, Person arg) {
+		<b>if</b> (arg != <b>null</b>) {
+			ArrayList key = <b>new</b> ArrayList();
+			key.add(Integer.toInteger(accountNumber));
+			<b>if</b> (customer == <b>null</b>) customer = <b>new</b> HashMap();
+			Person temp = (Person)customer.put(key, arg); <i>//the previous value, if any</i>
+			<b>if</b> (temp != arg) {
+				arg.setBank(<b>this</b>);
+				<b>if</b> (temp != <b>null</b>) {
+					temp.setBank(<b>null</b>);
+				}
+			}
+		}
+	}
+	
+	<b>public final</b> void removeCustomer(int accountNumber) {
+		<b>if</b> (customer != <b>null</b>) {
+			ArrayList key = <b>new</b> ArrayList();
+			key.add(Integer.toInteger(accountNumber));
+			Person temp = (Person)customer.remove(key);
+			<b>if</b> (temp != <b>null</b>) {
+				temp.setBank(<b>null</b>);
+			}
+		}
+	}
+	
+	<b>public final</b> void removeCustomer(Person arg) {
+		<b>if</b> (customer != <b>null</b> || arg != <b>null</b>) {
+			<b>if</b> (customer.values().remove(arg)) {
+				arg.setBank(<b>null</b>);
+			}
+		}
+	}
+</pre>
+<table align="center">
+<tr><td><img src="images/QualifiedAssociations.gif" alt="Class diagram for qualified associations"/></td></tr>
+<tr><td align="center"><code>Fig. 3 Example class diagram for qualified associations</code></td></tr>
+</table>
+
+<p>A qualified association end inherently has a 
+multiplicity greater than one. Therefore, additional
+<code>add</code> and <code>remove</code> methods are generated for it. The generated <code>add</code>
+method has the qualifiers specified as formal arguments, the last argument being 
+the object to add, declared with the appropriate type.
+There are two <code>remove</code> methods generated. One of them also has the qualifiers specified as formal 
+arguments. The other specifies the exact object to remove. Please see the above code snippet for the qualified association
+between class <code>Bank</code> and <code>Person</code>.</p>
+
+<br>
+<h2>Datatypes</h2>
+
+<br>
+<p>Some UML CASE tools (Rational Rose, for example) create Datatypes behind the scenes and the resulting 
+models refer to these datatypes. Therefore, a proper mapping is required for 
+datatypes too. When it encounters a Datatype, OCLE first checks if it represents 
+a primitive type. If it is a non-primitive type, a Java class is generated for 
+it, using the mapping for plain UML classes.</p>
+
+<br>
+<h2>Enumerations and enumeration literals</h2>
+<br>
+<p>Since enumerations are very useful artifacts both in modeling and in programming languages, OCLE also defines a
+mapping for the <code>Enumeration</code> metaclass. This mapping is also used for classes that are &lt;&lt;enumeration&gt;&gt; stereotyped.
+For an explicit enumeration, a class is generated that has the literals as <b>public static final</b> fields. These fields are initialized
+in a static initializer using a private constructor.  This behavior is the same for &lt;&lt;enumeration&gt;&gt; stereotyped classes; the only difference is that
+the fields are generated from the features of the class (instead of the enumeration literals). Please note that the resulting fields are declared
+as having the class / enumeration itself as their type. Moreover, for &lt;&lt;enumeration&gt;&gt; stereotyped classes, any operations and any field type/
+visibility specifications are ignored. Therefore, we stronly suggest that you pay special attention to which classes you apply the &lt;&lt;enumeration&gt;&gt;
+stereotype when you intend to generate Java code from them.</p>
+<p>Consider the enumeration <code>Sex</code> in figure 4 (this is from the <b>Company</b> example included in this distribution of OCLE).
+</p>
+<table align="center">
+<tr><td align="center"><img src="images/Enumerations.gif" alt="Enumerations in the model browser"/></td></tr>
+<tr><td align="center">Fig. 4 Enumerations in the model browser</td></tr>
+</table>
+<p>Below you find the generated source code for enumeration <code>Sex</code>.</p>
+<pre>
+	<b>public class</b> Sex {
+
+		<b>private</b> Sex() {
+
+		}
+	
+		<b>public static final</b> Sex male;
+	
+		<b>public static final</b> Sex female;
+	
+		<b>static</b>{
+
+			male = <b>new</b> Sex();
+			female = <b>new</b> Sex();
+
+		}
+	}</pre>
+<br>
+<p>As you may see, the standard <code>equals()</code> method is not generated for the corresponding Java class. This means that enumeration literals will be compared
+using object identity. This is not a problem, however, since the corresponding class has a private constructor, and the only instances are those created
+in the static initializer - in fact the enumeration literals.</p>
+<br><br>
+
+<h1><a name="OclConstraints"></a>Code generation for OCL expressions</h1>
+
+<br>
+<p>If the <b>Validate business constraints</b> checkbox is selected, OCLE will also generate source code equivalents for the
+OCL expressions attached to the active user model. Moreover, the resulting code fragments are properly integrated in the source
+code for the structure of the model. Note that only business constraints are taken into account, which means that no code is generated for
+OCL specifications expressed at the metamodel level.</p>
+<p>In its current version, OCLE translates the following entities:</p>
+<ul><blockquote>
+<li>Class invariants</li>
+<li>Method preconditions and postconditions</li>
+<li>Observer operations , specified using the <b>def-let</b> mechanism</li>
+</blockquote>
+</ul>
+<p>OCL 2.0 tuple types are also treated in a special manner by the code generator.</p>
+<p>Following paragraphs describe the way in which different types of OCL specifications are integrated into the generated structural code.
+The extensions to the OCL grammar proposed by us (see them <a href="Compiling.htm#extensions">here</a>)
+and implemented in the integrated OCL compiler are not taken into account by the source code generator.</p>
+
+<br><br>
+<h1><a name="Integration"/>Code integration</h1>
+<br>
+<p>This section describes the ways in which the source code generated for different kinds of OCL expressions is integrated into
+the generated structural code.</p>
+<br>
+<h2>Code integration for class invariants</h2>
+<br>
+<p>If a class in your UML model has at least one invariant attached to it, its generated source code is modified in the following way:</p>
+<ul>
+<blockquote>
+<li>A public inner class, having its name starting with <code>ConstraintChecker</code> is declared. This class is responsible for the validation
+of class invariants at runtime.</li>
+<li>As of this version, no code is generated that uses this class (no insertion points are defined for any class invariant).
+The developer must decide upon where to trigger the verification of a class invariant.</li>
+<li>The constraint checker class inherits either from a default class provided by the framework if the constrained class has no parents or its parents
+are not constrained, or from the constraint checker class attached to the parent class, if the parent class is also constrained. Invariant inheritance is
+ensured in this way.</li>
+<li>The constraint checker class has a public method, <code>checkConstraints</code>, which is responsible for triggering the verification
+of all class invariants, including any inherited invariants.</li>
+<li>For any specific class invariant, a public method that verifies it is inserted in the constraint checker class. The <code>checkConstraints</code>
+method contains one call for each such method.</li>
+</blockquote>
+</ul>
+<p>Thus, wherever the Java compiler allows it, you may trigger the verification of one or more class invariants using the code template given here:
+<blockquote>
+<pre>	<b>new</b> ConstraintChecker().&lt;checker_method&gt;();</pre></blockquote>
+<p> where &lt;checker_method&gt; is either <code>checkConstraints</code>
+for all constraints or a specific method for checking a particular invariant. Since the <code>ConstraintChecker</code> class is public, you may trigger the evaluation
+of class invariants even outside the body of the constrained class.</p>
+
+<br>
+<h2>Code integration for method pre/post conditions</h2>
+<br>
+<p>For operation constraints, OCLE uses the same code pattern as for class invariants. Some differences exist, however. The constraint checker class is inserted
+at the beginning of the body code for the constrained method. It has no base class. It contains two public methods, <code>checkPreconditions</code> and
+<code>checkPostconditions</code>. Both methods have the same arguments as the constrained method itself, so that the names of the formal parameters
+are available to the code that checks the constraints. The constraint checker class also contains a private checker method for each method constraint.
+The resulting private methods are called by either <code>checkPreconditions</code> or <code>checkPostconditions</code>.</p>
+<p>The code for a constraint method looks like this:</p>
+
+<pre>	
+	<b>public boolean</b> hireEmployee(Person p) {
+
+		<b>class</b> ConstraintChecker {
+			<b>public</b> void checkPreconditions(Person p) {
+				check_precondition(p);
+			}
+
+			<b>public</b> void checkPostconditions(Person p) {
+			}
+
+			<b>public</b> void check_precondition(Person p) {
+				Set setEmployee = Company.<b>this</b>.directGetEmployee();
+				<b>boolean</b> bIncludes = CollectionUtilities.includes(setEmployee, p);
+				<b>boolean</b> bNot = !bIncludes;
+				<b>if</b> (!bNot) {
+					System.err.println("precondition 'precondition' failed for object "+Company.<b>this</b>);
+				}
+			}
+			<b>boolean</b> result;
+		}
+
+		ConstraintChecker checker = <b>new </b>ConstraintChecker();
+		checker.checkPreconditions(p);
+		checker.result = internal_hireEmployee(p);
+
+		checker.checkPostconditions(p);
+		<b>return</b> checker.result;
+	}
+</pre>
+
+<p>As we can see, the real body of the constrained method is moved 
+  in another method (in this case <code>internal_hireEmployee()</code>). Moreover, 
+  the constraint checker class also has a public field, <code>result</code> which 
+  maps to the <b>result</b> variable available in OCL postconditions. This variable 
+  is properly assigned before triggering the verification of any postcondition. 
+  However, some postcondition specific constructs, such as <b>@pre</b> and the <b>oclIsNew</b> operation in <code>OclAny</code> are not 
+  properly mapped in the generated source code. If the code generator encounters 
+  such constructs, it issues adequate warning messages.</p>
+<br>
+<h2>Code integration for observers specified in OCL </h2>
+<br>
+<p>All OCL observers are mapped to  Java methods in the generated source code. The corresponding method for such an observer (somertimes called a <i>definition constraint </i>) is
+public and is placed in the class in the context of which the definition constraint is specified.
+The following example (<b>Finance Business</b>, also included in the distribution) illustrates the translation of definition constraints.</p>
+<pre>
+		<b>context</b> Portofolio
+		<b>def</b> prices:
+         	<b>let</b> priceOfOrders: Real = orders.security.price-&gt;sum()
+</pre>
+
+<p>In this case, class <code>Portofolio</code> would contain the following code (completely generated by OCLE):</p>
+<pre>
+		<b>public float</b> priceOfOrders() {
+		
+			Set setOrders = Portofolio.<b>this</b>.getOrders();
+			
+			<i>//evaluate 'collect(security)':</i>
+			List bagCollect = CollectionUtilities.newBag();
+			<b>final</b> Iterator iter = setOrders.iterator();
+			<b>while</b> (iter.hasNext()) {
+				<b>final</b> Order decl = (Order)iter.next();
+				Security securitySecurity = decl.getSecurity();
+				bagCollect.add(securitySecurity);
+			}
+			bagCollect = CollectionUtilities.flatten(bagCollect);
+
+			<i>//evaluate 'collect(price)':</i>
+			List bagCollect0 = CollectionUtilities.newBag();
+			<b>final</b> Iterator iter0 = bagCollect.iterator();
+			<b>while</b> (iter0.hasNext()) {
+				<b>final</b> Security decl = (Security)iter0.next();
+				<b>float</b> fPrice = decl.price;
+				bagCollect0.add(Real.toReal(fPrice));
+			}
+			bagCollect0 = CollectionUtilities.flatten(bagCollect0);
+
+			<b>float</b> fSum = CollectionUtilities.sum(bagCollect0);
+			<b>return</b> fSum;
+		}
+</pre>
+<br>
+<h2>Code integration for tuple types</h2>
+<br>
+<p>If your business constraints use OCL tuple types, OCLE will turn each identified (distinct) tuple type into a class. Tuple parts are converted to public fields with
+the names deduced from the names of the involved tuple parts. This mapping is in fact similar to C/C++ structs. The <code>equals()</code> method is also generated,
+to ensure proper comparison between tuples (tuple type instances). Let us for example consider the following OCL tuple type:</p>
+<pre>
+		TupleType(array:String, length:Integer)
+</pre>
+<p>OCLE will generate the following code for it:</p>
+<pre>
+		<i>//File TupleType1.java</i>
+		<b>package</b> tupleTypes;
+
+		<b>publc class</b> TupleType1 {
+			<b>public</b> boolean equals(Object arg) {
+				<b>if</b> (!(arg <b>instanceof</b> TupleType1)) {
+					<b>return</b> false;
+				}
+				boolean result = true;
+				TupleType1 local = (TupleType1)arg;
+				result&amp;= (array != null ? array.equals(local.array) : local.array == null);
+				result&amp;= (length == local.length);
+				<b>return</b> result;
+			}
+			
+			<b>public</b> String array;
+			<b>public</b> int length;
+		}
+</pre>
+<p>Please note that the name of the resulting class is generated by OCLE, since OCL does not allow for the specification of tuple type names.</p>
+<p>All tuple types identified in the OCL expressions are placed in a dedicated package, named <b>tupleTypes</b> and this behaviour cannot be
+changed in this version of OCLE - this means that you cannot change the location for a class corresponding to a tuple type.</p>
+<br><br>
+<h1><a name="CodeAspect"/>Code patterns used and limitations</h1>
+<br>
+<p>The translation from OCL to Java follows a syntax-directed approach. Support for metamodeling (<code>OclAny</code>, <code>allInstances</code> and so on)
+is provided by means of a simple library shipped with the distribution.
+The library, named <b>OCLFramework.jar</b> is located in the <b>/lib</b> subdirectory of your OCLE installation directory.
+Since the generated code contains calls to classes in the framework, you will have to include this archive in the classpath of
+the generated application. Basically, the entire OCL 2.0 grammar is supported. There are however two notable drawbacks. First of them
+has already been mentioned: the <b>@pre</b> construct is not properly mapped. Moreover, this version provides limited degree of customization as
+far as constraint violations are concerned. More precisely, the same pattern, based on <code>System.err.println</code>
+is used whenever a constraint is violated. Additionally, although supported by the compiler, messaging expressions are not translated
+in equivalent source code.</p>
+<br>
+<h2>OCL datatypes</h2>
+<br>
+<p>The source code generator was designed with efficiency in mind. Therefore, primitive OCL types are mapped to primitive types provided
+by the Java programming language, thus avoiding excessive wrapping. More precisely, <code>Boolean</code> maps to <code><b>boolean</b></code>, <code>Integer</code> maps
+to <code><b>int</b></code> and <code>Real</code> maps to <code><b>float</b></code>. The <code>String</code> type provided by OCL is
+translated using the <code>java.lang.String</code> type. Please note that these mappings are not customizable as of this version of OCLE.</p>
+<br>
+<h2>The OclAny metaclass</h2>
+<br>
+<p>The <code>OclAny</code> metaclass is equated with the root class <code>java.lang.Object</code>.
+The operations in <code>OclAny</code>, including the navigation to <code>OclType</code> are translated by redirecting them to
+the <code>Ocl</code> class in the above mentioned library. Each method in this class has an object as its first argument. This
+argument is a placeholder for <code><b>self</b></code>. The rest of the arguments are those mentioned in the OCL specification.
+Whenever an object is expected and the previous result is of primitive type, the expected object is obtained by wrapping the
+primitive value. Please note, however, that some operations are not properly implemented in this version (this is the case for
+<code>oclIsNew()</code> and <code>oclInState()</code>).</p>
+<br>
+<h2>The OclType metaclass and OCL collection types</h2>
+<br>
+<p>The <code>OclType</code> metaclass in OCL is mapped to a class <code>OclType</code> specifically designed for this purpose
+in the <code>OCLFramework</code> library. Basically, OclType objects are wrappers around <code>java.lang.Class</code> objects.
+However, <code>OclType</code> can be used to model nested collection types, such as <code>Set(Bag(Integer))</code>. The following
+table lists the mappings used for OCL collection types.</p>
+<br><br>
+<table border="1" cellspacing="2" align="center">
+<tr><td align="center"><b>OCL Collection type</b></td>
+<td align="center"><b>Java equivalent type</b></td>
+</tr>
+<tr><td align="center">Set</td>
+<td align="center">java.util.Set</td>
+</tr>
+<tr><td align="center">OrderedSet</td>
+<td align="center">ro.ubbcluj.lci.codegen.framework.dt.OrderedSet</td>
+</tr>
+<tr><td align="center">Sequence</td>
+<td align="center">java.util.List</td>
+</tr>
+<tr><td align="center">Bag</td>
+<td align="center">java.util.List</td>
+</tr>
+</table>
+<p>Type casts and conversion to primitive values are generated whenever necessary, so that the resulting source code is semantically
+correct from the point of view of the Java compiler</p>
+<p>Operations in OCL collection types are translated by redirecting them to the framework class <code>CollectionUtilities</code>, as
+in the case of <code>OclAny</code>. As in that case, the first of argument of the methods in the <code>CollectionUtilities</code> class is a placeholder for
+<b>self</b> - the collection on which the operation is called.</p>
+<br>
+<h2>OCL Undefined values</h2>
+<br>
+<p>This version of the code generator does not handle OCL Undefined values properly. The biggest problem we encountered when modeling
+the <code>Undefined</code> value was its type, <code>OclVoid</code>. The OCL specification asserts that this type must
+conform to all types in the user model or in the OCL datatype system. Therefore, the code generator does not map the <code>OclVoid</code>
+type explicitly. Instead, the semantics mentioned in the OCL grammar is partially ensured using the following conventions:</p>
+<ul>
+<blockquote>
+<li>The <b>null</b> literal is used as a placeholder for <code>Undefined</code> in the case of non primitive types.</li>
+<li><code>Integer.MAX_VALUE</code> is used as a placeholder for Undefined integer values and <code>Float.POSITIVE_INFINITY</code>
+is used for undefined real numbers. As a consequence, undefined boolean values cannot be modeled in the generated code. Due to this limitations, you may encounter some compilation problems in the generated source code. </li>
+</blockquote>
+</ul>
+<br><br>
+<table>
+  <tr> 
+    <td valign="top" align="center"><a href="OCLE_TOC.htm"><img src="images/prev.gif"/></a></td>
+    <td valign="middle" align="center"><a href="OCLE_TOC.htm">Back to main index</a></p></td>
+  </tr>
+</table>
+</body>
+</html>

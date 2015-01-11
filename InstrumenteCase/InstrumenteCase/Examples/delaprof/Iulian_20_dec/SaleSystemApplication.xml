@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XMI xmlns:UML="//org.omg/UML/1.3" xmi.version="1.1">
+ <XMI.header>
+  <XMI.documentation>
+   <XMI.exporter>ocle 2.0</XMI.exporter>
+   <XMI.exporterVersion>1.0</XMI.exporterVersion>
+  </XMI.documentation>
+  <XMI.metamodel xmi.name="UML" xmi.version="1.3"/>
+ </XMI.header>
+ <XMI.content>
+  <UML:Model isAbstract="false" isLeaf="true" isRoot="true" isSpecification="false" name="SaleSystemApplication" visibility="public" xmi.id="S.1" xmlns:UML="http://lci/xml">
+   <UML:Namespace.ownedElement>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="global" namespace="S.1" visibility="package" xmi.id="S.2"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="file" namespace="S.1" visibility="package" xmi.id="S.3"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="facade" namespace="S.1" visibility="package" xmi.id="S.4"/>
+    <UML:DataType instance="S.6 S.7 S.8" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="undefined" namespace="S.1" visibility="package" xmi.id="S.5"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="systemModel" namespace="S.1" visibility="package" xmi.id="S.9"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="framework" namespace="S.1" visibility="package" xmi.id="S.10"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="enumeration" namespace="S.1" visibility="package" xmi.id="S.11"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="association" namespace="S.1" visibility="package" xmi.id="S.12"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="precondition" namespace="S.1" visibility="package" xmi.id="S.13"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="invariant" namespace="S.1" visibility="package" xmi.id="S.14"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="executable" namespace="S.1" visibility="package" xmi.id="S.15"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="profile" namespace="S.1" visibility="package" xmi.id="S.16"/>
+    <UML:DataType instance="S.18 S.19 S.20 S.21 S.22 S.23 S.24 S.25 S.26 S.27 S.28 S.29 S.30 S.31" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Integer" namespace="S.1" visibility="package" xmi.id="S.17"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="powertype" namespace="S.1" visibility="package" xmi.id="S.32"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="document" namespace="S.1" visibility="package" xmi.id="S.33"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="trace" namespace="S.1" visibility="package" xmi.id="S.34"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="self" namespace="S.1" visibility="package" xmi.id="S.35"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="local" namespace="S.1" visibility="package" xmi.id="S.36"/>
+    <UML:Stereotype baseClass="Permission" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="import" namespace="S.1" visibility="package" xmi.id="S.37"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="parameter" namespace="S.1" visibility="package" xmi.id="S.38"/>
+    <UML:Stereotype baseClass="Comment" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="requirement" namespace="S.1" visibility="package" xmi.id="S.39"/>
+    <UML:Stereotype baseClass="Comment" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="responsibility" namespace="S.1" visibility="package" xmi.id="S.40"/>
+    <UML:Stereotype baseClass="BehavioralFeature CallEvent" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="destroy" namespace="S.1" visibility="package" xmi.id="S.41"/>
+    <UML:Stereotype baseClass="Class Generalization" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="implementation" namespace="S.1" visibility="package" xmi.id="S.42"/>
+    <UML:Stereotype baseClass="Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="call" namespace="S.1" visibility="package" xmi.id="S.43"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="appliedProfile" namespace="S.1" visibility="package" xmi.id="S.44"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="type" namespace="S.1" visibility="package" xmi.id="S.45"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="focus" namespace="S.1" visibility="package" xmi.id="S.46"/>
+    <UML:DataType instance="S.48 S.49 S.50 S.51 S.52 S.53 S.54" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Real" namespace="S.1" visibility="package" xmi.id="S.47"/>
+    <UML:Stereotype baseClass="Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="send" namespace="S.1" visibility="package" xmi.id="S.55"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="process" namespace="S.1" visibility="package" xmi.id="S.56"/>
+    <UML:Stereotype baseClass="Permission" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="access" namespace="S.1" visibility="package" xmi.id="S.57"/>
+    <UML:Stereotype baseClass="BehavioralFeature CallEvent Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="create" namespace="S.1" visibility="package" xmi.id="S.58"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="refine" namespace="S.1" visibility="package" xmi.id="S.59"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="source" namespace="S.1" visibility="package" xmi.id="S.60"/>
+    <UML:DataType isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="UnlimitedInteger" namespace="S.1" visibility="package" xmi.id="S.61"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="table" namespace="S.1" visibility="package" xmi.id="S.62"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="stub" namespace="S.1" visibility="package" xmi.id="S.63"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="library" namespace="S.1" visibility="package" xmi.id="S.64"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="realize" namespace="S.1" visibility="package" xmi.id="S.65"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="derive" namespace="S.1" visibility="package" xmi.id="S.66"/>
+    <UML:Stereotype baseClass="Flow" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="copy" namespace="S.1" visibility="package" xmi.id="S.67"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="auxiliary" namespace="S.1" visibility="package" xmi.id="S.68"/>
+    <UML:Stereotype baseClass="Flow" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="become" namespace="S.1" visibility="package" xmi.id="S.69"/>
+    <UML:Stereotype baseClass="ObjectFlowState" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="signalflow" namespace="S.1" visibility="package" xmi.id="S.70"/>
+    <UML:Stereotype baseClass="Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="instantiate" namespace="S.1" visibility="package" xmi.id="S.71"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="stateInvariant" namespace="S.1" visibility="package" xmi.id="S.72"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="postcondition" namespace="S.1" visibility="package" xmi.id="S.73"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="utility" namespace="S.1" visibility="package" xmi.id="S.74"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="thread" namespace="S.1" visibility="package" xmi.id="S.75"/>
+    <UML:DataType instance="S.77 S.78 S.79 S.80 S.81 S.82 S.83 S.84 S.85 S.86 S.87 S.88 S.89 S.90 S.91 S.92 S.93 S.94 S.95" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="String" namespace="S.1" visibility="package" xmi.id="S.76"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="modelLibrary" namespace="S.1" visibility="package" xmi.id="S.96"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="metamodel" namespace="S.1" visibility="package" xmi.id="S.97"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="metaclass" namespace="S.1" visibility="package" xmi.id="S.98"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="topLevel" namespace="S.1" visibility="package" xmi.id="S.99"/>
+    <UML:DataType isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Boolean" namespace="S.1" visibility="package" xmi.id="S.100"/>
+    <UML:Stereotype baseClass="Permission" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="friend" namespace="S.1" visibility="package" xmi.id="S.101"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDChoice" namespace="S.1" visibility="public" xmi.id="S.102"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDSequence" namespace="S.1" visibility="public" xmi.id="S.103"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDMixed" namespace="S.1" visibility="public" xmi.id="S.104"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDAny" namespace="S.1" visibility="public" xmi.id="S.105"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDAnyElement" namespace="S.1" visibility="public" xmi.id="S.106"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDEmptyElement" namespace="S.1" visibility="public" xmi.id="S.107"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDElement" namespace="S.1" visibility="public" xmi.id="S.108"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDUndefinedElement" namespace="S.1" visibility="public" xmi.id="S.109"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDUndefinedAttribute" namespace="S.1" visibility="public" xmi.id="S.110"/>
+    <UML:Stereotype baseClass="Association" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDUndefinedAssociation" namespace="S.1" visibility="public" xmi.id="S.111"/>
+    <UML:Stereotype baseClass="Association" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDInvalidAssociation" namespace="S.1" visibility="public" xmi.id="S.112"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="CDATA" namespace="S.1" visibility="public" xmi.id="S.113"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="ID" namespace="S.1" visibility="public" xmi.id="S.114"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="IDREF" namespace="S.1" visibility="public" xmi.id="S.115"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="IDREFS" namespace="S.1" visibility="public" xmi.id="S.116"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="NMTOKEN" namespace="S.1" visibility="public" xmi.id="S.117"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="NMTOKENS" namespace="S.1" visibility="public" xmi.id="S.118"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="ENTITY" namespace="S.1" visibility="public" xmi.id="S.119"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="ENTITIES" namespace="S.1" visibility="public" xmi.id="S.120"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="NOTATION" namespace="S.1" visibility="public" xmi.id="S.121"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="REQUIRED" namespace="S.1" visibility="public" xmi.id="S.122"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="IMPLIED" namespace="S.1" visibility="public" xmi.id="S.123"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="FIXED" namespace="S.1" visibility="public" xmi.id="S.124"/>
+    <UML:Stereotype baseClass="AttributeLink" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLMissingAttribute" namespace="S.1" visibility="public" xmi.id="S.125"/>
+    <UML:Stereotype baseClass="AttributeLink" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLUnexpectedAttribute" namespace="S.1" visibility="public" xmi.id="S.126"/>
+    <UML:Stereotype baseClass="Object" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLMissingElement" namespace="S.1" visibility="public" xmi.id="S.127"/>
+    <UML:Stereotype baseClass="Object" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLUnexpectedElement" namespace="S.1" visibility="public" xmi.id="S.128"/>
+    <UML:Stereotype baseClass="Link" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLMissingLink" namespace="S.1" visibility="public" xmi.id="S.129"/>
+    <UML:Stereotype baseClass="Link" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLUnexpectedLink" namespace="S.1" visibility="public" xmi.id="S.130"/>
+    <UML:Stereotype baseClass="Link" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLInvalidLink" namespace="S.1" visibility="public" xmi.id="S.131"/>
+    <UML:Stereotype baseClass="Collaboration" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLObjectsCollaboration" namespace="S.1" visibility="public" xmi.id="S.132"/>
+    <UML:TagDefinition isSpecification="false" name="sequence" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.133">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.134">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.134" upper="1" xmi.id="S.135"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:TagDefinition isSpecification="false" name="choice" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.136">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.137">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.137" upper="1" xmi.id="S.138"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:TagDefinition isSpecification="false" name="mixed" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.139">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.140">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.140" upper="1" xmi.id="S.141"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:TagDefinition isSpecification="false" name="any" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.142">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.143">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.143" upper="1" xmi.id="S.144"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:Class instance="S.146" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="SaleSystem" namespace="S.1" visibility="public" xmi.id="S.145">
+     <UML:Classifier.feature>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="handleNewSale" owner="S.145" ownerScope="instance" visibility="public" xmi.id="S.147">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.147" isSpecification="false" kind="in" name="sale" type="S.149" visibility="private" xmi.id="S.148"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="handleCreateNewProduct" owner="S.145" ownerScope="instance" visibility="public" xmi.id="S.150">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.150" isSpecification="false" kind="in" name="bCode" type="S.76" visibility="private" xmi.id="S.151"/>
+        <UML:Parameter behavioralFeature="S.150" isSpecification="false" kind="in" name="name" type="S.76" visibility="private" xmi.id="S.152"/>
+        <UML:Parameter behavioralFeature="S.150" isSpecification="false" kind="in" name="price" type="S.47" visibility="private" xmi.id="S.153"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="handleUpdateProduct" owner="S.145" ownerScope="instance" visibility="public" xmi.id="S.154">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.154" isSpecification="false" kind="in" name="bCode" type="S.76" visibility="private" xmi.id="S.155"/>
+        <UML:Parameter behavioralFeature="S.154" isSpecification="false" kind="in" name="producft" type="S.157" visibility="private" xmi.id="S.156"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="handleDeleteProduct" owner="S.145" ownerScope="instance" visibility="public" xmi.id="S.158">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.158" isSpecification="false" kind="in" name="bCode" type="S.76" visibility="private" xmi.id="S.159"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Class instance="S.161" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="Administrator" namespace="S.1" visibility="public" xmi.id="S.160">
+     <UML:Classifier.feature>
+      <UML:Attribute attributeLink="S.163" changeability="changeable" isSpecification="false" name="name" ordering="unordered" owner="S.160" ownerScope="instance" targetScope="instance" type="S.76" visibility="private" xmi.id="S.162">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.164"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.165">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.165" upper="1" xmi.id="S.166"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="createNewProduct" owner="S.160" ownerScope="instance" visibility="public" xmi.id="S.167">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.167" isSpecification="false" kind="in" name="bCode" type="S.76" visibility="private" xmi.id="S.168"/>
+        <UML:Parameter behavioralFeature="S.167" isSpecification="false" kind="in" name="name" type="S.76" visibility="private" xmi.id="S.169"/>
+        <UML:Parameter behavioralFeature="S.167" isSpecification="false" kind="in" name="price" type="S.47" visibility="private" xmi.id="S.170"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="deleteProduct" owner="S.160" ownerScope="instance" visibility="public" xmi.id="S.171">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.171" isSpecification="false" kind="in" name="barCode" type="S.76" visibility="private" xmi.id="S.172"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="updateProduct" owner="S.160" ownerScope="instance" visibility="public" xmi.id="S.173">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.173" isSpecification="false" kind="in" name="barCode" type="S.76" visibility="private" xmi.id="S.174"/>
+        <UML:Parameter behavioralFeature="S.173" isSpecification="false" kind="in" name="name" type="S.76" visibility="private" xmi.id="S.175"/>
+        <UML:Parameter behavioralFeature="S.173" isSpecification="false" kind="in" name="price" type="S.47" visibility="private" xmi.id="S.176"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" link="S.186" name="A_Administrator_SaleSystem" namespace="S.1" visibility="private" xmi.id="S.177">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.177" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.179" name="administrator" ordering="unordered" targetScope="instance" type="S.160" visibility="private" xmi.id="S.178">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.180">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.180" upper="1" xmi.id="S.181"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.177" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.183" name="job" ordering="unordered" targetScope="instance" type="S.145" visibility="private" xmi.id="S.182">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.184">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="0" multiplicity="S.184" upper="1" xmi.id="S.185"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Class instance="S.188 S.189 S.190" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="SaleAgent" namespace="S.1" visibility="public" xmi.id="S.187">
+     <UML:Classifier.feature>
+      <UML:Attribute attributeLink="S.192 S.193 S.194" changeability="changeable" isSpecification="false" name="id" ordering="unordered" owner="S.187" ownerScope="instance" targetScope="instance" type="S.17" visibility="private" xmi.id="S.191">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.195"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.196">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.196" upper="1" xmi.id="S.197"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Attribute attributeLink="S.199 S.200 S.201" changeability="changeable" isSpecification="false" name="name" ordering="unordered" owner="S.187" ownerScope="instance" targetScope="instance" type="S.76" visibility="private" xmi.id="S.198">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.202"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.203">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.203" upper="1" xmi.id="S.204"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="makeSale" owner="S.187" ownerScope="instance" visibility="public" xmi.id="S.205">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.205" isSpecification="false" kind="in" name="sale" type="S.149" visibility="private" xmi.id="S.206"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" link="S.220 S.221 S.222" name="A_SaleSystem_SaleAgent" namespace="S.1" visibility="private" xmi.id="S.207">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.207" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.209 S.210 S.211" name="job" ordering="unordered" targetScope="instance" type="S.145" visibility="private" xmi.id="S.208">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.212">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="0" multiplicity="S.212" upper="1" xmi.id="S.213"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.207" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.215 S.216 S.217" name="saleAgents" ordering="unordered" targetScope="instance" type="S.187" visibility="private" xmi.id="S.214">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.218">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="0" multiplicity="S.218" upper="-1" xmi.id="S.219"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Class instance="S.223 S.224 S.225" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="Sale" namespace="S.1" visibility="public" xmi.id="S.149">
+     <UML:Classifier.feature>
+      <UML:Attribute attributeLink="S.227 S.228 S.229" changeability="changeable" isSpecification="false" name="saleId" ordering="unordered" owner="S.149" ownerScope="instance" targetScope="instance" type="S.17" visibility="private" xmi.id="S.226">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.230"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.231">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.231" upper="1" xmi.id="S.232"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Attribute attributeLink="S.234 S.235 S.236" changeability="changeable" isSpecification="false" name="saleDate" ordering="unordered" owner="S.149" ownerScope="instance" targetScope="instance" type="S.76" visibility="private" xmi.id="S.233">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.237"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.238">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.238" upper="1" xmi.id="S.239"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Attribute attributeLink="S.241 S.242 S.243" changeability="changeable" isSpecification="false" name="saleAgentId" ordering="unordered" owner="S.149" ownerScope="instance" targetScope="instance" type="S.17" visibility="private" xmi.id="S.240">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.244"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.245">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.245" upper="1" xmi.id="S.246"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="A_SaleSystem_Sale" namespace="S.1" visibility="private" xmi.id="S.247">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.247" changeability="changeable" isNavigable="false" isSpecification="false" name="saleSystem" ordering="unordered" targetScope="instance" type="S.145" visibility="private" xmi.id="S.248">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.249">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.249" upper="1" xmi.id="S.250"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.247" changeability="changeable" isNavigable="true" isSpecification="false" name="log" ordering="unordered" targetScope="instance" type="S.149" visibility="private" xmi.id="S.251">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.252">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="0" multiplicity="S.252" upper="-1" xmi.id="S.253"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Class instance="S.255 S.256 S.257 S.258 S.259" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="SaleItem" namespace="S.1" visibility="public" xmi.id="S.254">
+     <UML:Classifier.feature>
+      <UML:Attribute attributeLink="S.261 S.262 S.263 S.264 S.265" changeability="changeable" isSpecification="false" name="quantitySold" ordering="unordered" owner="S.254" ownerScope="instance" targetScope="instance" type="S.17" visibility="private" xmi.id="S.260">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.266"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.267">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.267" upper="1" xmi.id="S.268"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="SaleItem" owner="S.254" ownerScope="instance" visibility="public" xmi.id="S.269">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.269" isSpecification="false" kind="in" name="quantity" type="S.17" visibility="private" xmi.id="S.270"/>
+        <UML:Parameter behavioralFeature="S.269" isSpecification="false" kind="in" name="product" type="S.157" visibility="private" xmi.id="S.271"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" link="S.289 S.290 S.291 S.292 S.293" name="A_Sale_SaleItem" namespace="S.1" visibility="private" xmi.id="S.272">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="composite" association="S.272" changeability="changeable" isNavigable="false" isSpecification="false" linkEnd="S.274 S.275 S.276 S.277 S.278" name="sale" ordering="unordered" targetScope="instance" type="S.149" visibility="private" xmi.id="S.273">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.279">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.279" upper="1" xmi.id="S.280"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.272" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.282 S.283 S.284 S.285 S.286" name="items" ordering="ordered" targetScope="instance" type="S.254" visibility="private" xmi.id="S.281">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.287">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.287" upper="-1" xmi.id="S.288"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Class instance="S.294 S.295 S.296 S.297 S.298" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="Product" namespace="S.1" visibility="public" xmi.id="S.157">
+     <UML:Classifier.feature>
+      <UML:Attribute attributeLink="S.300 S.301 S.302 S.303 S.304" changeability="changeable" isSpecification="false" name="barCode" ordering="unordered" owner="S.157" ownerScope="instance" targetScope="instance" type="S.76" visibility="private" xmi.id="S.299">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.305"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.306">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.306" upper="1" xmi.id="S.307"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Attribute attributeLink="S.309 S.310 S.311 S.312 S.313" changeability="changeable" isSpecification="false" name="name" ordering="unordered" owner="S.157" ownerScope="instance" targetScope="instance" type="S.76" visibility="private" xmi.id="S.308">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.314"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.315">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.315" upper="1" xmi.id="S.316"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Attribute attributeLink="S.318 S.319 S.320 S.321 S.322" changeability="changeable" isSpecification="false" name="price" ordering="unordered" owner="S.157" ownerScope="instance" targetScope="instance" type="S.47" visibility="private" xmi.id="S.317">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.323"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.324">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.324" upper="1" xmi.id="S.325"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" link="S.343 S.344 S.345 S.346 S.347" name="A_SaleItem_Product" namespace="S.1" visibility="private" xmi.id="S.326">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.326" changeability="changeable" isNavigable="false" isSpecification="false" linkEnd="S.328 S.329 S.330 S.331 S.332" name="saleItem" ordering="unordered" targetScope="instance" type="S.254" visibility="private" xmi.id="S.327">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.333">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.333" upper="1" xmi.id="S.334"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.326" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.336 S.337 S.338 S.339 S.340" name="product" ordering="unordered" targetScope="instance" type="S.157" visibility="private" xmi.id="S.335">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.341">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.341" upper="1" xmi.id="S.342"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" link="S.361 S.362 S.363" name="A_SaleAgent_Sale" namespace="S.1" visibility="private" xmi.id="S.348">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.348" changeability="changeable" isNavigable="false" isSpecification="false" linkEnd="S.350 S.351 S.352" name="saleAgent" ordering="unordered" targetScope="instance" type="S.187" visibility="private" xmi.id="S.349">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.353">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.353" upper="1" xmi.id="S.354"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.348" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.356 S.357 S.358" name="sales" ordering="ordered" targetScope="instance" type="S.149" visibility="private" xmi.id="S.355">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.359">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="0" multiplicity="S.359" upper="-1" xmi.id="S.360"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Class instance="S.365" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="Stock" namespace="S.1" visibility="public" xmi.id="S.364">
+     <UML:Classifier.feature>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="addProduct" owner="S.364" ownerScope="instance" visibility="public" xmi.id="S.366">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.366" isSpecification="false" kind="in" name="p" type="S.157" visibility="private" xmi.id="S.367"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="deleteProduct" owner="S.364" ownerScope="instance" visibility="public" xmi.id="S.368">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.368" isSpecification="false" kind="in" name="p" type="S.157" visibility="private" xmi.id="S.369"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+      <UML:Operation concurrency="concurrent" isAbstract="false" isLeaf="false" isQuery="false" isRoot="false" isSpecification="false" name="updateProduct" owner="S.364" ownerScope="instance" visibility="public" xmi.id="S.370">
+       <UML:BehavioralFeature.parameter>
+        <UML:Parameter behavioralFeature="S.370" isSpecification="false" kind="in" name="p" type="S.157" visibility="private" xmi.id="S.371"/>
+       </UML:BehavioralFeature.parameter>
+      </UML:Operation>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="A_SaleSystem_ProductRepository" namespace="S.1" visibility="private" xmi.id="S.372">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.372" changeability="changeable" isNavigable="false" isSpecification="false" name="saleSystem" ordering="unordered" targetScope="instance" type="S.145" visibility="private" xmi.id="S.373">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.374">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.374" upper="1" xmi.id="S.375"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.372" changeability="changeable" isNavigable="true" isSpecification="false" name="stock" ordering="unordered" targetScope="instance" type="S.364" visibility="private" xmi.id="S.376">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.377">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.377" upper="1" xmi.id="S.378"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" link="S.396 S.397 S.398 S.399 S.400" name="A_ProductRepository_Product" namespace="S.1" visibility="private" xmi.id="S.379">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.379" changeability="changeable" isNavigable="false" isSpecification="false" linkEnd="S.381 S.382 S.383 S.384 S.385" name="productRepository" ordering="unordered" targetScope="instance" type="S.364" visibility="private" xmi.id="S.380">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.386">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.386" upper="1" xmi.id="S.387"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.379" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.389 S.390 S.391 S.392 S.393" name="products" ordering="unordered" targetScope="instance" type="S.157" visibility="private" xmi.id="S.388">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.394">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="0" multiplicity="S.394" upper="-1" xmi.id="S.395"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Collaboration isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Collaboration" namespace="S.1" visibility="public" xmi.id="S.401">
+     <UML:Namespace.ownedElement>
+      <UML:Object classifier="S.157" isSpecification="false" linkEnd="S.336 S.381" name="p1" namespace="S.401" visibility="public" xmi.id="S.294">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.299" instance="S.294" isSpecification="false" name="barCode" value="S.78" visibility="private" xmi.id="S.300"/>
+        <UML:AttributeLink attribute="S.308" instance="S.294" isSpecification="false" name="name" value="S.79" visibility="private" xmi.id="S.309"/>
+        <UML:AttributeLink attribute="S.317" instance="S.294" isSpecification="false" name="price" value="S.49" visibility="private" xmi.id="S.318"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.254" isSpecification="false" linkEnd="S.328 S.274" name="saleItem1" namespace="S.401" visibility="public" xmi.id="S.255">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.260" instance="S.255" isSpecification="false" name="quantitySold" value="S.19" visibility="private" xmi.id="S.261"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.326" isSpecification="false" name="A_saleItem1_p1" namespace="S.401" visibility="public" xmi.id="S.343">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.327" instance="S.255" isSpecification="false" link="S.343" name="saleItem" visibility="private" xmi.id="S.328"/>
+        <UML:LinkEnd associationEnd="S.335" instance="S.294" isSpecification="false" link="S.343" name="product" visibility="private" xmi.id="S.336"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.157" isSpecification="false" linkEnd="S.329 S.338 S.382" name="p2" namespace="S.401" visibility="public" xmi.id="S.295">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.299" instance="S.295" isSpecification="false" name="barCode" value="S.80" visibility="private" xmi.id="S.301"/>
+        <UML:AttributeLink attribute="S.308" instance="S.295" isSpecification="false" name="name" value="S.81" visibility="private" xmi.id="S.310"/>
+        <UML:AttributeLink attribute="S.317" instance="S.295" isSpecification="false" name="price" value="S.50" visibility="private" xmi.id="S.319"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.254" isSpecification="false" linkEnd="S.337 S.283" name="saleItem2" namespace="S.401" visibility="public" xmi.id="S.256">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.260" instance="S.256" isSpecification="false" name="quantitySold" value="S.20" visibility="private" xmi.id="S.262"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.326" isSpecification="false" name="A_p2_saleItem2" namespace="S.401" visibility="public" xmi.id="S.344">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.327" instance="S.295" isSpecification="false" link="S.344" name="saleItem" visibility="private" xmi.id="S.329"/>
+        <UML:LinkEnd associationEnd="S.335" instance="S.256" isSpecification="false" link="S.344" name="product" visibility="private" xmi.id="S.337"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.149" isSpecification="false" linkEnd="S.282 S.275 S.356" name="sale1" namespace="S.401" visibility="public" xmi.id="S.223">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.226" instance="S.223" isSpecification="false" name="saleId" value="S.29" visibility="private" xmi.id="S.227"/>
+        <UML:AttributeLink attribute="S.233" instance="S.223" isSpecification="false" name="saleDate" value="S.82" visibility="private" xmi.id="S.234"/>
+        <UML:AttributeLink attribute="S.240" instance="S.223" isSpecification="false" name="saleAgentId" value="S.21" visibility="private" xmi.id="S.241"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.272" isSpecification="false" name="A_saleItem1_sale1" namespace="S.401" visibility="public" xmi.id="S.289">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.273" instance="S.255" isSpecification="false" link="S.289" name="sale" visibility="private" xmi.id="S.274"/>
+        <UML:LinkEnd associationEnd="S.281" instance="S.223" isSpecification="false" link="S.289" name="items" visibility="private" xmi.id="S.282"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.272" isSpecification="false" name="A_sale1_saleItem2" namespace="S.401" visibility="public" xmi.id="S.290">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.273" instance="S.223" isSpecification="false" link="S.290" name="sale" visibility="private" xmi.id="S.275"/>
+        <UML:LinkEnd associationEnd="S.281" instance="S.256" isSpecification="false" link="S.290" name="items" visibility="private" xmi.id="S.283"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.187" isSpecification="false" linkEnd="S.350 S.351 S.215" name="saleAgent1" namespace="S.401" visibility="public" xmi.id="S.188">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.191" instance="S.188" isSpecification="false" name="id" value="S.19" visibility="private" xmi.id="S.192"/>
+        <UML:AttributeLink attribute="S.198" instance="S.188" isSpecification="false" name="name" value="S.83" visibility="private" xmi.id="S.199"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.149" isSpecification="false" linkEnd="S.357 S.276 S.277 S.286" name="sale2" namespace="S.401" visibility="public" xmi.id="S.224">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.226" instance="S.224" isSpecification="false" name="saleId" value="S.30" visibility="private" xmi.id="S.228"/>
+        <UML:AttributeLink attribute="S.233" instance="S.224" isSpecification="false" name="saleDate" value="S.84" visibility="private" xmi.id="S.235"/>
+        <UML:AttributeLink attribute="S.240" instance="S.224" isSpecification="false" name="saleAgentId" value="S.21" visibility="private" xmi.id="S.242"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.348" isSpecification="false" name="A_saleAgent1_sale1" namespace="S.401" visibility="public" xmi.id="S.361">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.349" instance="S.188" isSpecification="false" link="S.361" name="saleAgent" visibility="private" xmi.id="S.350"/>
+        <UML:LinkEnd associationEnd="S.355" instance="S.223" isSpecification="false" link="S.361" name="sales" visibility="private" xmi.id="S.356"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.348" isSpecification="false" name="A_saleAgent1_sale2" namespace="S.401" visibility="public" xmi.id="S.362">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.349" instance="S.188" isSpecification="false" link="S.362" name="saleAgent" visibility="private" xmi.id="S.351"/>
+        <UML:LinkEnd associationEnd="S.355" instance="S.224" isSpecification="false" link="S.362" name="sales" visibility="private" xmi.id="S.357"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.254" isSpecification="false" linkEnd="S.330 S.284" name="saleItem3" namespace="S.401" visibility="public" xmi.id="S.257">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.260" instance="S.257" isSpecification="false" name="quantitySold" value="S.22" visibility="private" xmi.id="S.263"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.254" isSpecification="false" linkEnd="S.331 S.285" name="saleItem4" namespace="S.401" visibility="public" xmi.id="S.258">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.260" instance="S.258" isSpecification="false" name="quantitySold" value="S.23" visibility="private" xmi.id="S.264"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.326" isSpecification="false" name="A_saleItem3_p2" namespace="S.401" visibility="public" xmi.id="S.345">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.327" instance="S.257" isSpecification="false" link="S.345" name="saleItem" visibility="private" xmi.id="S.330"/>
+        <UML:LinkEnd associationEnd="S.335" instance="S.295" isSpecification="false" link="S.345" name="product" visibility="private" xmi.id="S.338"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.157" isSpecification="false" linkEnd="S.339 S.383" name="p3" namespace="S.401" visibility="public" xmi.id="S.296">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.299" instance="S.296" isSpecification="false" name="barCode" value="S.85" visibility="private" xmi.id="S.302"/>
+        <UML:AttributeLink attribute="S.308" instance="S.296" isSpecification="false" name="name" value="S.86" visibility="private" xmi.id="S.311"/>
+        <UML:AttributeLink attribute="S.317" instance="S.296" isSpecification="false" name="price" value="S.51" visibility="private" xmi.id="S.320"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.326" isSpecification="false" name="A_saleItem4_p3" namespace="S.401" visibility="public" xmi.id="S.346">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.327" instance="S.258" isSpecification="false" link="S.346" name="saleItem" visibility="private" xmi.id="S.331"/>
+        <UML:LinkEnd associationEnd="S.335" instance="S.296" isSpecification="false" link="S.346" name="product" visibility="private" xmi.id="S.339"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.272" isSpecification="false" name="A_sale2_saleItem3" namespace="S.401" visibility="public" xmi.id="S.291">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.273" instance="S.224" isSpecification="false" link="S.291" name="sale" visibility="private" xmi.id="S.276"/>
+        <UML:LinkEnd associationEnd="S.281" instance="S.257" isSpecification="false" link="S.291" name="items" visibility="private" xmi.id="S.284"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.272" isSpecification="false" name="A_sale2_saleItem4" namespace="S.401" visibility="public" xmi.id="S.292">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.273" instance="S.224" isSpecification="false" link="S.292" name="sale" visibility="private" xmi.id="S.277"/>
+        <UML:LinkEnd associationEnd="S.281" instance="S.258" isSpecification="false" link="S.292" name="items" visibility="private" xmi.id="S.285"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.364" isSpecification="false" linkEnd="S.389 S.390 S.391 S.384 S.385" name="stock" namespace="S.401" visibility="public" xmi.id="S.365"/>
+      <UML:Link association="S.379" isSpecification="false" name="A_p1_stock" namespace="S.401" visibility="public" xmi.id="S.396">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.380" instance="S.294" isSpecification="false" link="S.396" name="productRepository" visibility="private" xmi.id="S.381"/>
+        <UML:LinkEnd associationEnd="S.388" instance="S.365" isSpecification="false" link="S.396" name="products" visibility="private" xmi.id="S.389"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.379" isSpecification="false" name="A_p2_stock" namespace="S.401" visibility="public" xmi.id="S.397">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.380" instance="S.295" isSpecification="false" link="S.397" name="productRepository" visibility="private" xmi.id="S.382"/>
+        <UML:LinkEnd associationEnd="S.388" instance="S.365" isSpecification="false" link="S.397" name="products" visibility="private" xmi.id="S.390"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.379" isSpecification="false" name="A_p3_stock" namespace="S.401" visibility="public" xmi.id="S.398">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.380" instance="S.296" isSpecification="false" link="S.398" name="productRepository" visibility="private" xmi.id="S.383"/>
+        <UML:LinkEnd associationEnd="S.388" instance="S.365" isSpecification="false" link="S.398" name="products" visibility="private" xmi.id="S.391"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.145" isSpecification="false" linkEnd="S.209 S.210 S.179 S.211" name="SS" namespace="S.401" visibility="public" xmi.id="S.146"/>
+      <UML:Object classifier="S.187" isSpecification="false" linkEnd="S.216" name="saleAgent2" namespace="S.401" visibility="public" xmi.id="S.189">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.191" instance="S.189" isSpecification="false" name="id" value="S.25" visibility="private" xmi.id="S.193"/>
+        <UML:AttributeLink attribute="S.198" instance="S.189" isSpecification="false" name="name" value="S.88" visibility="private" xmi.id="S.200"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.207" isSpecification="false" name="A_SS_saleAgent1" namespace="S.401" visibility="public" xmi.id="S.220">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.208" instance="S.146" isSpecification="false" link="S.220" name="job" visibility="private" xmi.id="S.209"/>
+        <UML:LinkEnd associationEnd="S.214" instance="S.188" isSpecification="false" link="S.220" name="saleAgents" visibility="private" xmi.id="S.215"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.207" isSpecification="false" name="A_SS_saleAgent2" namespace="S.401" visibility="public" xmi.id="S.221">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.208" instance="S.146" isSpecification="false" link="S.221" name="job" visibility="private" xmi.id="S.210"/>
+        <UML:LinkEnd associationEnd="S.214" instance="S.189" isSpecification="false" link="S.221" name="saleAgents" visibility="private" xmi.id="S.216"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.157" isSpecification="false" linkEnd="S.392 S.332" name="p4" namespace="S.401" visibility="public" xmi.id="S.297">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.299" instance="S.297" isSpecification="false" name="barCode" value="S.89" visibility="private" xmi.id="S.303"/>
+        <UML:AttributeLink attribute="S.308" instance="S.297" isSpecification="false" name="name" value="S.90" visibility="private" xmi.id="S.312"/>
+        <UML:AttributeLink attribute="S.317" instance="S.297" isSpecification="false" name="price" value="S.53" visibility="private" xmi.id="S.321"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.379" isSpecification="false" name="A_stock_p4" namespace="S.401" visibility="public" xmi.id="S.399">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.380" instance="S.365" isSpecification="false" link="S.399" name="productRepository" visibility="private" xmi.id="S.384"/>
+        <UML:LinkEnd associationEnd="S.388" instance="S.297" isSpecification="false" link="S.399" name="products" visibility="private" xmi.id="S.392"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.157" isSpecification="false" linkEnd="S.393" name="p4" namespace="S.401" visibility="public" xmi.id="S.298">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.299" instance="S.298" isSpecification="false" name="barCode" value="S.91" visibility="private" xmi.id="S.304"/>
+        <UML:AttributeLink attribute="S.308" instance="S.298" isSpecification="false" name="name" value="S.92" visibility="private" xmi.id="S.313"/>
+        <UML:AttributeLink attribute="S.317" instance="S.298" isSpecification="false" name="price" value="S.54" visibility="private" xmi.id="S.322"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.379" isSpecification="false" name="A_stock_p41" namespace="S.401" visibility="public" xmi.id="S.400">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.380" instance="S.365" isSpecification="false" link="S.400" name="productRepository" visibility="private" xmi.id="S.385"/>
+        <UML:LinkEnd associationEnd="S.388" instance="S.298" isSpecification="false" link="S.400" name="products" visibility="private" xmi.id="S.393"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.254" isSpecification="false" linkEnd="S.340 S.278" name="saleItem5" namespace="S.401" visibility="public" xmi.id="S.259">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.260" instance="S.259" isSpecification="false" name="quantitySold" value="S.27" visibility="private" xmi.id="S.265"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.326" isSpecification="false" name="A_p4_saleItem5" namespace="S.401" visibility="public" xmi.id="S.347">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.327" instance="S.297" isSpecification="false" link="S.347" name="saleItem" visibility="private" xmi.id="S.332"/>
+        <UML:LinkEnd associationEnd="S.335" instance="S.259" isSpecification="false" link="S.347" name="product" visibility="private" xmi.id="S.340"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.272" isSpecification="false" name="A_saleItem5_sale2" namespace="S.401" visibility="public" xmi.id="S.293">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.273" instance="S.259" isSpecification="false" link="S.293" name="sale" visibility="private" xmi.id="S.278"/>
+        <UML:LinkEnd associationEnd="S.281" instance="S.224" isSpecification="false" link="S.293" name="items" visibility="private" xmi.id="S.286"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.160" isSpecification="false" linkEnd="S.183" name="admin1" namespace="S.401" visibility="public" xmi.id="S.161">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.162" instance="S.161" isSpecification="false" name="name" value="S.89" visibility="private" xmi.id="S.163"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.177" isSpecification="false" name="A_SS_admin11" namespace="S.401" visibility="public" xmi.id="S.186">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.178" instance="S.146" isSpecification="false" link="S.186" name="administrator" visibility="private" xmi.id="S.179"/>
+        <UML:LinkEnd associationEnd="S.182" instance="S.161" isSpecification="false" link="S.186" name="job" visibility="private" xmi.id="S.183"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Object classifier="S.187" isSpecification="false" linkEnd="S.352 S.217" name="saleAgent3" namespace="S.401" visibility="public" xmi.id="S.190">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.191" instance="S.190" isSpecification="false" name="id" value="S.27" visibility="private" xmi.id="S.194"/>
+        <UML:AttributeLink attribute="S.198" instance="S.190" isSpecification="false" name="name" value="S.94" visibility="private" xmi.id="S.201"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.149" isSpecification="false" linkEnd="S.358" name="sale3" namespace="S.401" visibility="public" xmi.id="S.225">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.226" instance="S.225" isSpecification="false" name="saleId" value="S.31" visibility="private" xmi.id="S.229"/>
+        <UML:AttributeLink attribute="S.233" instance="S.225" isSpecification="false" name="saleDate" value="S.95" visibility="private" xmi.id="S.236"/>
+        <UML:AttributeLink attribute="S.240" instance="S.225" isSpecification="false" name="saleAgentId" value="S.28" visibility="private" xmi.id="S.243"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.348" isSpecification="false" name="A_saleAgent3_sale3" namespace="S.401" visibility="public" xmi.id="S.363">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.349" instance="S.190" isSpecification="false" link="S.363" name="saleAgent" visibility="private" xmi.id="S.352"/>
+        <UML:LinkEnd associationEnd="S.355" instance="S.225" isSpecification="false" link="S.363" name="sales" visibility="private" xmi.id="S.358"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.207" isSpecification="false" name="A_SS_saleAgent3" namespace="S.401" visibility="public" xmi.id="S.222">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.208" instance="S.146" isSpecification="false" link="S.222" name="job" visibility="private" xmi.id="S.211"/>
+        <UML:LinkEnd associationEnd="S.214" instance="S.190" isSpecification="false" link="S.222" name="saleAgents" visibility="private" xmi.id="S.217"/>
+       </UML:Link.connection>
+      </UML:Link>
+     </UML:Namespace.ownedElement>
+    </UML:Collaboration>
+    <UML:DataValue classifier="S.76" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.77"/>
+    <UML:DataValue classifier="S.47" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.48"/>
+    <UML:DataValue attributeLink="S.300" classifier="S.76" isSpecification="false" name="123" namespace="S.1" visibility="public" xmi.id="S.78"/>
+    <UML:DataValue attributeLink="S.309" classifier="S.76" isSpecification="false" name="Lapte" namespace="S.1" visibility="public" xmi.id="S.79"/>
+    <UML:DataValue attributeLink="S.318" classifier="S.47" isSpecification="false" name="3" namespace="S.1" visibility="public" xmi.id="S.49"/>
+    <UML:DataValue classifier="S.17" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.18"/>
+    <UML:DataValue attributeLink="S.192 S.261" classifier="S.17" isSpecification="false" name="3" namespace="S.1" visibility="public" xmi.id="S.19"/>
+    <UML:DataValue attributeLink="S.301" classifier="S.76" isSpecification="false" name="234" namespace="S.1" visibility="public" xmi.id="S.80"/>
+    <UML:DataValue attributeLink="S.310" classifier="S.76" isSpecification="false" name="Paine" namespace="S.1" visibility="public" xmi.id="S.81"/>
+    <UML:DataValue attributeLink="S.319" classifier="S.47" isSpecification="false" name="2" namespace="S.1" visibility="public" xmi.id="S.50"/>
+    <UML:DataValue attributeLink="S.262" classifier="S.17" isSpecification="false" name="2" namespace="S.1" visibility="public" xmi.id="S.20"/>
+    <UML:DataValue classifier="S.5" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.6"/>
+    <UML:DataValue attributeLink="S.227" classifier="S.17" isSpecification="false" name="1" namespace="S.1" visibility="public" xmi.id="S.29"/>
+    <UML:DataValue attributeLink="S.234" classifier="S.76" isSpecification="false" name="04/12/2013" namespace="S.1" visibility="public" xmi.id="S.82"/>
+    <UML:DataValue attributeLink="S.242 S.241" classifier="S.17" isSpecification="false" name="3" namespace="S.1" visibility="public" xmi.id="S.21"/>
+    <UML:DataValue attributeLink="S.199" classifier="S.76" isSpecification="false" name="Iulian" namespace="S.1" visibility="public" xmi.id="S.83"/>
+    <UML:DataValue attributeLink="S.228" classifier="S.17" isSpecification="false" name="2" namespace="S.1" visibility="public" xmi.id="S.30"/>
+    <UML:DataValue attributeLink="S.235" classifier="S.76" isSpecification="false" name="05/12/2013" namespace="S.1" visibility="public" xmi.id="S.84"/>
+    <UML:DataValue attributeLink="S.263" classifier="S.17" isSpecification="false" name="5" namespace="S.1" visibility="public" xmi.id="S.22"/>
+    <UML:DataValue attributeLink="S.264" classifier="S.17" isSpecification="false" name="20" namespace="S.1" visibility="public" xmi.id="S.23"/>
+    <UML:DataValue attributeLink="S.302" classifier="S.76" isSpecification="false" name="345" namespace="S.1" visibility="public" xmi.id="S.85"/>
+    <UML:DataValue attributeLink="S.311" classifier="S.76" isSpecification="false" name="Bere" namespace="S.1" visibility="public" xmi.id="S.86"/>
+    <UML:DataValue attributeLink="S.320" classifier="S.47" isSpecification="false" name="5.5" namespace="S.1" visibility="public" xmi.id="S.51"/>
+    <UML:DataValue classifier="S.17" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.24"/>
+    <UML:DataValue classifier="S.76" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.87"/>
+    <UML:DataValue attributeLink="S.193" classifier="S.17" isSpecification="false" name="2" namespace="S.1" visibility="public" xmi.id="S.25"/>
+    <UML:DataValue attributeLink="S.200" classifier="S.76" isSpecification="false" name="Vasile" namespace="S.1" visibility="public" xmi.id="S.88"/>
+    <UML:DataValue attributeLink="S.163 S.303" classifier="S.76" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.89"/>
+    <UML:DataValue classifier="S.47" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.52"/>
+    <UML:DataValue attributeLink="S.312" classifier="S.76" isSpecification="false" name="Ceai" namespace="S.1" visibility="public" xmi.id="S.90"/>
+    <UML:DataValue attributeLink="S.321" classifier="S.47" isSpecification="false" name="7.8" namespace="S.1" visibility="public" xmi.id="S.53"/>
+    <UML:DataValue attributeLink="S.304" classifier="S.76" isSpecification="false" name="493" namespace="S.1" visibility="public" xmi.id="S.91"/>
+    <UML:DataValue attributeLink="S.313" classifier="S.76" isSpecification="false" name="Coca-Cola" namespace="S.1" visibility="public" xmi.id="S.92"/>
+    <UML:DataValue attributeLink="S.322" classifier="S.47" isSpecification="false" name="0.0" namespace="S.1" visibility="public" xmi.id="S.54"/>
+    <UML:DataValue classifier="S.17" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.26"/>
+    <UML:DataValue attributeLink="S.194 S.265" classifier="S.17" isSpecification="false" name="-2" namespace="S.1" visibility="public" xmi.id="S.27"/>
+    <UML:DataValue classifier="S.76" isSpecification="false" name="Ion Radulescu" namespace="S.1" visibility="public" xmi.id="S.93"/>
+    <UML:DataValue attributeLink="S.201" classifier="S.76" isSpecification="false" name="Vasile Popa" namespace="S.1" visibility="public" xmi.id="S.94"/>
+    <UML:DataValue attributeLink="S.236" classifier="S.76" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.95"/>
+    <UML:DataValue classifier="S.5" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.7"/>
+    <UML:DataValue attributeLink="S.229" classifier="S.17" isSpecification="false" name="3" namespace="S.1" visibility="public" xmi.id="S.31"/>
+    <UML:DataValue classifier="S.5" isSpecification="false" name="3" namespace="S.1" visibility="public" xmi.id="S.8"/>
+    <UML:DataValue attributeLink="S.243" classifier="S.17" isSpecification="false" name="-5" namespace="S.1" visibility="public" xmi.id="S.28"/>
+   </UML:Namespace.ownedElement>
+  </UML:Model>
+ </XMI.content>
+</XMI>

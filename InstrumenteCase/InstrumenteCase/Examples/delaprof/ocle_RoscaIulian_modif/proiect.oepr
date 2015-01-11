@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project name="proiect">
+    <Directory kind="0" name="Constraints">
+        <File AbsolutePath="C:/Users/Iulian Rosca/Desktop/Instrumente Case/Proiect/proiectModelLevel.bcr" RelativePath="../Proiect/proiectModelLevel.bcr" kind="1" selected="true"/>
+    </Directory>
+    <Directory kind="0" name="Models">
+        <Model AbsolutePath="C:/Users/Iulian Rosca/Desktop/Instrumente Case/Proiect/SaleSystemApplication.xml" RelativePath="../Proiect/SaleSystemApplication.xml" kind="2" selected="true"/>
+    </Directory>
+</Project>

@@ -1,0 +1,98 @@
+Language Specification:
+
+1. Language Definition:
+    1.1 Alphabet:
+    1.1.a. Upper (A-Z) and lower case letters (a-z) of the English alphabet
+    b. Underline character '_';
+    c. Decimal digits (0-9);
+    Lexic:
+        a.Special symbols, representing:
+        - operators + - * / = < <= == >= !=
+        - separators [ ] { } : ; space
+        - reserved words:
+            program
+            var const of
+            array
+            int char string
+            while do if then else
+            read write 
+        b.identifiers
+        -a sequence of letters and digits, such that the first charater is a letter; the rule is:
+        identifier := letter | letter{letter}{digit}
+        letter := "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+        digit := "0" | "1" |...| "9"
+        c.constants
+
+    1.nonzero
+        nonzero := 1 |...| 9
+    2.integer - rule:
+        noconst := +nz|-nz|nz|0
+        no := digit{no}
+        nz := nonzero{no}
+    3.character
+        char:='letter'|'digit'
+    4.string
+        string:="char{string}"
+        char:=letter|digit
+
+
+2. Syntax:
+    The words - predefined tokens are specified between " and ":    
+    a) Sintactical rules:
+        1001 -> 3 1002 ";" 1003 "."
+
+        1004 -> 7 | 6 | 8
+        1006 -> 5 40 nr 41 34 1004
+        1005 -> 1004|1006
+        1007 -> 0 38 1005 31
+        1009 -> 1007 | 1007 1009
+
+        1010 -> 1011 | 1012
+        1013 -> 1010 | 1010 31 1013
+        1003 -> 16 1013 17
+        1014 -> 0 26 1015
+        1011 -> 1014 | 1016
+        
+        1015 -> 1015 1023 1017 | 1017              
+        1017 -> 1017 1023 1018 | 1018                       
+        1018 -> 18 1015 19 | 0                  
+        
+        1016 -> 14 | 15 18 0 19
+        1012 -> 1003 | 1019 | 1020
+        1019 -> 11 1021 12 1010 [13 1010]
+        1020 -> 9 1021 10 1010
+        1021 -> 1015 1022 1015
+
+    b) lexical rules:
+        identifier := letter | letter{letter}{digit}
+        letter := "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+        digit := "0" | "1" | ... | "9"
+        operator := "+" "-" "*" "/"
+        RELATION := "<" | "<=" | "==" | "!=" | ">=" | ">" 
+
+nonterminals =
+{
+    program: 1001,
+    declist: 1002,
+    cmpdstmt: 1003,
+    simpletype: 1004,
+    type: 1005,
+    arraydecl: 1006,
+    declaration: 1007,
+    identifier: 1008,
+    decllist: 1009,
+    stmt: 1010,
+    simplstmt: 1011,
+    structstmt: 1012,
+    stmtlist: 1013,
+    assignstmt: 1014,
+    expression: 1015,
+    iostmt: 1016,
+    term: 1017,
+    factor: 1018,
+    ifstmt: 1019,
+    whilestmt: 1020,
+    condition: 1021,
+    relation: 1022,
+    operator: 1023
+}

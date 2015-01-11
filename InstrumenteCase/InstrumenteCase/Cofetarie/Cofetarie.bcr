@@ -1,0 +1,14 @@
+model Cofetarie
+
+context Cofetarie
+    inv denumire:
+        not self.denumire.size.isUndefined
+        
+        def prajituriScumpe:
+            let prajituriScumpe:Set(Prajitura)=self.prajituri->select(p | p.getPret > 25)
+
+context Prajitura
+     def getPret:
+            let getPret:Integer = self.pret
+
+endmodel

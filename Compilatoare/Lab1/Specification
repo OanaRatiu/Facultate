@@ -1,0 +1,71 @@
+Language Specification:
+
+1. Language Definition:
+	1.1 Alphabet:
+	1.1.a. Upper (A-Z) and lower case letters (a-z) of the English alphabet
+	b. Underline character '_';
+	c. Decimal digits (0-9);
+	Lexic:
+		a.Special symbols, representing:
+		- operators + - * / = < <= == >= !=
+		- separators [ ] { } : ; space
+		- reserved words:
+			program
+			var const of
+			array
+			int char string
+			while do if then else
+			read write 
+		b.identifiers
+		-a sequence of letters and digits, such that the first charater is a letter; the rule is:
+		identifier ::= letter | letter{letter}{digit}
+		letter ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+		digit ::= "0" | "1" |...| "9"
+		c.constants
+
+	1.nonzero
+		nonzero := 1 |...| 9
+	2.integer - rule:
+		noconst := +nz|-nz|nz|0
+		no := digit{no}
+		nz := nonzero{no}
+	3.character
+		char:='letter'|'digit'
+	4.string
+		string:="char{string}"
+		char:=letter|digit
+
+
+2. Syntax:
+	The words - predefined tokens are specified between " and ":	
+	a) Sintactical rules:
+		program ::= "var" decllist ";" cmpdstmt "."
+
+		simpletype ::= "char" | "int" | "string"
+		arraydecl ::= "array" "[" nr "]" "of" simpletype
+		type ::= simpletype|arraydecl
+		declaration ::= IDENTIFIER ":" type ";"
+		decllist ::= declaration | declaration decllist
+
+		stmt ::= simplstmt | structstmt
+		stmtlist ::= stmt | stmt ";" stmtlist
+		cmpdstmt ::= "{" stmtlist "}"
+		assignstmt ::= IDENTIFIER "=" expression
+		simplstmt ::= assignstmt | iostmt
+		
+		expression ::= expression operator term | term			   
+		term ::= term operator factor | factor					    
+		factor ::= "(" expression ")" | identifier 				   
+		
+		iostmt ::= "READ" | "WRITE" "(" IDENTIFIER ")"
+		structstmt ::= cmpdstmt | ifstmt | whilestmt
+		ifstmt ::= "IF" condition "THEN" stmt ["ELSE" stmt]
+		whilestmt ::= "WHILE" condition "DO" stmt
+		condition ::= expression RELATION expression
+
+	b) lexical rules:
+		IDENTIFIER ::= letter | letter{letter}{digit}
+		letter ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+		digit ::= "0" | "1" | ... | "9"
+		operator ::= "+" "-" "*" "/"
+		RELATION ::= "<" | "<=" | "==" | "!=" | ">=" | ">" 

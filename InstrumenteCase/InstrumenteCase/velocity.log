@@ -1,0 +1,125 @@
+Sat Jan 10 21:12:32 EET 2015  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
+Sat Jan 10 21:12:32 EET 2015   [info] ************************************************************** 
+Sat Jan 10 21:12:32 EET 2015   [info] Starting Jakarta Velocity v1.3
+Sat Jan 10 21:12:32 EET 2015   [info] RuntimeInstance initializing.
+Sat Jan 10 21:12:32 EET 2015   [info] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+Sat Jan 10 21:12:32 EET 2015   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Sat Jan 10 21:12:32 EET 2015   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Sat Jan 10 21:12:32 EET 2015   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Sat Jan 10 21:12:32 EET 2015   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ClasspathResourceLoader : initialization starting.
+Sat Jan 10 21:12:32 EET 2015   [info] ClasspathResourceLoader : initialization complete.
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Sat Jan 10 21:12:32 EET 2015   [info] Default ResourceManager initialization complete.
+Sat Jan 10 21:12:32 EET 2015   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Sat Jan 10 21:12:32 EET 2015   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Sat Jan 10 21:12:32 EET 2015   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Sat Jan 10 21:12:32 EET 2015   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Sat Jan 10 21:12:32 EET 2015   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Sat Jan 10 21:12:32 EET 2015   [info] Created: 20 parsers.
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : initialization starting.
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Sat Jan 10 21:12:32 EET 2015  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro :  VM library template macro registration complete.
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : messages on  : VM system will output logging messages
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : initialization complete.
+Sat Jan 10 21:12:32 EET 2015   [info] Velocity successfully started.
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #argument_list( ARGS ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #import_list( ARGS ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #list( SEP ARGS ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #opening_brace( ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #closing_brace( ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #comment( TEXT ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #declare( MOD TYPE VAR ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #assignment( MOD TYPE VAR EXP ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #method_call( METHOD ARGS ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #object( EXPR TYPE TYPE_NAME ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #value( EXPR TYPE ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #cast( EXP TYPE ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #cast_and_unwrap( EXPR RESULT_TYPE RESULT_TYPE_WRAPPER_NAME ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] Velocimacro : added new VM : #declarator_init( DECL_NAME DECL_TYPE DECL_TYPE_NAME DECL_TYPE_WRAPPER_NAME JAVA_ITERATOR ) : source = MacroDefs.vm
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found MacroDefs.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found AEGetm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found AESetm1 with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found AERemove1 with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found AEGet1 with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found AESet1m with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found AESetm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found AERemove with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_attribute_call with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_assignment with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_return_statement with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_method_call_object with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_loop_select with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_loop_iterate with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_declaration with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_if_else with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_finalizer_exception with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_method_call with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_type with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_loop_collect with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found OCL_loop_isUnique with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found UML_ClassDeclaration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found UML_MethodDeclaration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found UML_InnerClassDeclaration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found UML_Finalizer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found UML_ConstructorDeclaration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found UML_FieldDeclaration.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015   [info] ResourceManager : found block_start with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:12:32 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${packagename.length()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 19, column 31]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 27, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_ClassDeclaration.vm [line 28, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${extclasses.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 8, column 64]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]
+Sat Jan 10 21:14:58 EET 2015  [error] Left side (${implinterfaces.size()}) of '>' operation has null value. Operation not possible. UML_InnerClassDeclaration.vm [line 9, column 36]

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XMI xmlns:UML="//org.omg/UML/1.3" xmi.version="1.1">
+ <XMI.header>
+  <XMI.documentation>
+   <XMI.exporter>ocle 2.0</XMI.exporter>
+   <XMI.exporterVersion>1.0</XMI.exporterVersion>
+  </XMI.documentation>
+  <XMI.metamodel xmi.name="UML" xmi.version="1.3"/>
+ </XMI.header>
+ <XMI.content>
+  <UML:Model isAbstract="false" isLeaf="true" isRoot="true" isSpecification="false" name="Cofetarie" visibility="public" xmi.id="S.1" xmlns:UML="http://lci/xml">
+   <UML:Namespace.ownedElement>
+    <UML:DataType isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Boolean" namespace="S.1" visibility="public" xmi.id="S.2"/>
+    <UML:DataType instance="S.4 S.5 S.6 S.7" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Integer" namespace="S.1" visibility="public" xmi.id="S.3"/>
+    <UML:DataType isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="UnlimitedInteger" namespace="S.1" visibility="public" xmi.id="S.8"/>
+    <UML:DataType isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Real" namespace="S.1" visibility="public" xmi.id="S.9"/>
+    <UML:DataType instance="S.11 S.12 S.13 S.14 S.15 S.16" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="String" namespace="S.1" visibility="public" xmi.id="S.10"/>
+    <UML:DataType isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="undefined" namespace="S.1" visibility="public" xmi.id="S.17"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="enumeration" namespace="S.1" visibility="public" xmi.id="S.18"/>
+    <UML:Stereotype baseClass="Permission" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="access" namespace="S.1" visibility="public" xmi.id="S.19"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="appliedProfile" namespace="S.1" visibility="public" xmi.id="S.20"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="association" namespace="S.1" visibility="public" xmi.id="S.21"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="auxiliary" namespace="S.1" visibility="public" xmi.id="S.22"/>
+    <UML:Stereotype baseClass="Flow" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="become" namespace="S.1" visibility="public" xmi.id="S.23"/>
+    <UML:Stereotype baseClass="Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="call" namespace="S.1" visibility="public" xmi.id="S.24"/>
+    <UML:Stereotype baseClass="Flow" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="copy" namespace="S.1" visibility="public" xmi.id="S.25"/>
+    <UML:Stereotype baseClass="BehavioralFeature CallEvent Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="create" namespace="S.1" visibility="public" xmi.id="S.26"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="derive" namespace="S.1" visibility="public" xmi.id="S.27"/>
+    <UML:Stereotype baseClass="BehavioralFeature CallEvent" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="destroy" namespace="S.1" visibility="public" xmi.id="S.28"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="document" namespace="S.1" visibility="public" xmi.id="S.29"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="executable" namespace="S.1" visibility="public" xmi.id="S.30"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="facade" namespace="S.1" visibility="public" xmi.id="S.31"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="file" namespace="S.1" visibility="public" xmi.id="S.32"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="focus" namespace="S.1" visibility="public" xmi.id="S.33"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="framework" namespace="S.1" visibility="public" xmi.id="S.34"/>
+    <UML:Stereotype baseClass="Permission" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="friend" namespace="S.1" visibility="public" xmi.id="S.35"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="global" namespace="S.1" visibility="public" xmi.id="S.36"/>
+    <UML:Stereotype baseClass="Class Generalization" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="implementation" namespace="S.1" visibility="public" xmi.id="S.37"/>
+    <UML:Stereotype baseClass="Permission" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="import" namespace="S.1" visibility="public" xmi.id="S.38"/>
+    <UML:Stereotype baseClass="Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="instantiate" namespace="S.1" visibility="public" xmi.id="S.39"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="invariant" namespace="S.1" visibility="public" xmi.id="S.40"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="library" namespace="S.1" visibility="public" xmi.id="S.41"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="local" namespace="S.1" visibility="public" xmi.id="S.42"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="metaclass" namespace="S.1" visibility="public" xmi.id="S.43"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="metamodel" namespace="S.1" visibility="public" xmi.id="S.44"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="modelLibrary" namespace="S.1" visibility="public" xmi.id="S.45"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="parameter" namespace="S.1" visibility="public" xmi.id="S.46"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="postcondition" namespace="S.1" visibility="public" xmi.id="S.47"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="powertype" namespace="S.1" visibility="public" xmi.id="S.48"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="precondition" namespace="S.1" visibility="public" xmi.id="S.49"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="process" namespace="S.1" visibility="public" xmi.id="S.50"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="profile" namespace="S.1" visibility="public" xmi.id="S.51"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="realize" namespace="S.1" visibility="public" xmi.id="S.52"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="refine" namespace="S.1" visibility="public" xmi.id="S.53"/>
+    <UML:Stereotype baseClass="Comment" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="requirement" namespace="S.1" visibility="public" xmi.id="S.54"/>
+    <UML:Stereotype baseClass="Comment" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="responsibility" namespace="S.1" visibility="public" xmi.id="S.55"/>
+    <UML:Stereotype baseClass="AssociationEnd" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="self" namespace="S.1" visibility="public" xmi.id="S.56"/>
+    <UML:Stereotype baseClass="Usage" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="send" namespace="S.1" visibility="public" xmi.id="S.57"/>
+    <UML:Stereotype baseClass="ObjectFlowState" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="signalflow" namespace="S.1" visibility="public" xmi.id="S.58"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="source" namespace="S.1" visibility="public" xmi.id="S.59"/>
+    <UML:Stereotype baseClass="Constraint" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="stateInvariant" namespace="S.1" visibility="public" xmi.id="S.60"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="stub" namespace="S.1" visibility="public" xmi.id="S.61"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="systemModel" namespace="S.1" visibility="public" xmi.id="S.62"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="table" namespace="S.1" visibility="public" xmi.id="S.63"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="thread" namespace="S.1" visibility="public" xmi.id="S.64"/>
+    <UML:Stereotype baseClass="Package" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="topLevel" namespace="S.1" visibility="public" xmi.id="S.65"/>
+    <UML:Stereotype baseClass="Abstraction" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="trace" namespace="S.1" visibility="public" xmi.id="S.66"/>
+    <UML:Stereotype baseClass="Class" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="type" namespace="S.1" visibility="public" xmi.id="S.67"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="utility" namespace="S.1" visibility="public" xmi.id="S.68"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDChoice" namespace="S.1" visibility="public" xmi.id="S.69"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDSequence" namespace="S.1" visibility="public" xmi.id="S.70"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDMixed" namespace="S.1" visibility="public" xmi.id="S.71"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDAny" namespace="S.1" visibility="public" xmi.id="S.72"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDAnyElement" namespace="S.1" visibility="public" xmi.id="S.73"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDEmptyElement" namespace="S.1" visibility="public" xmi.id="S.74"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDElement" namespace="S.1" visibility="public" xmi.id="S.75"/>
+    <UML:Stereotype baseClass="Classifier" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDUndefinedElement" namespace="S.1" visibility="public" xmi.id="S.76"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDUndefinedAttribute" namespace="S.1" visibility="public" xmi.id="S.77"/>
+    <UML:Stereotype baseClass="Association" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDUndefinedAssociation" namespace="S.1" visibility="public" xmi.id="S.78"/>
+    <UML:Stereotype baseClass="Association" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="DTDInvalidAssociation" namespace="S.1" visibility="public" xmi.id="S.79"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="CDATA" namespace="S.1" visibility="public" xmi.id="S.80"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="ID" namespace="S.1" visibility="public" xmi.id="S.81"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="IDREF" namespace="S.1" visibility="public" xmi.id="S.82"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="IDREFS" namespace="S.1" visibility="public" xmi.id="S.83"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="NMTOKEN" namespace="S.1" visibility="public" xmi.id="S.84"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="NMTOKENS" namespace="S.1" visibility="public" xmi.id="S.85"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="ENTITY" namespace="S.1" visibility="public" xmi.id="S.86"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="ENTITIES" namespace="S.1" visibility="public" xmi.id="S.87"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="NOTATION" namespace="S.1" visibility="public" xmi.id="S.88"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="REQUIRED" namespace="S.1" visibility="public" xmi.id="S.89"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="IMPLIED" namespace="S.1" visibility="public" xmi.id="S.90"/>
+    <UML:Stereotype baseClass="Attribute" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="FIXED" namespace="S.1" visibility="public" xmi.id="S.91"/>
+    <UML:Stereotype baseClass="AttributeLink" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLMissingAttribute" namespace="S.1" visibility="public" xmi.id="S.92"/>
+    <UML:Stereotype baseClass="AttributeLink" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLUnexpectedAttribute" namespace="S.1" visibility="public" xmi.id="S.93"/>
+    <UML:Stereotype baseClass="Object" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLMissingElement" namespace="S.1" visibility="public" xmi.id="S.94"/>
+    <UML:Stereotype baseClass="Object" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLUnexpectedElement" namespace="S.1" visibility="public" xmi.id="S.95"/>
+    <UML:Stereotype baseClass="Link" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLMissingLink" namespace="S.1" visibility="public" xmi.id="S.96"/>
+    <UML:Stereotype baseClass="Link" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLUnexpectedLink" namespace="S.1" visibility="public" xmi.id="S.97"/>
+    <UML:Stereotype baseClass="Link" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLInvalidLink" namespace="S.1" visibility="public" xmi.id="S.98"/>
+    <UML:Stereotype baseClass="Collaboration" isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="XMLObjectsCollaboration" namespace="S.1" visibility="public" xmi.id="S.99"/>
+    <UML:TagDefinition isSpecification="false" name="sequence" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.100">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.101">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.101" upper="1" xmi.id="S.102"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:TagDefinition isSpecification="false" name="choice" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.103">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.104">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.104" upper="1" xmi.id="S.105"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:TagDefinition isSpecification="false" name="mixed" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.106">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.107">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.107" upper="1" xmi.id="S.108"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:TagDefinition isSpecification="false" name="any" namespace="S.1" tagType="Integer" visibility="public" xmi.id="S.109">
+     <UML:TagDefinition.multiplicity>
+      <UML:Multiplicity xmi.id="S.110">
+       <UML:Multiplicity.range>
+        <UML:MultiplicityRange lower="1" multiplicity="S.110" upper="1" xmi.id="S.111"/>
+       </UML:Multiplicity.range>
+      </UML:Multiplicity>
+     </UML:TagDefinition.multiplicity>
+    </UML:TagDefinition>
+    <UML:Class instance="S.113" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="Cofetarie" namespace="S.1" visibility="public" xmi.id="S.112">
+     <UML:Classifier.feature>
+      <UML:Attribute attributeLink="S.115" changeability="changeable" isSpecification="false" name="denumire" ordering="unordered" owner="S.112" ownerScope="instance" targetScope="instance" type="S.10" visibility="private" xmi.id="S.114">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.116"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.117">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.117" upper="1" xmi.id="S.118"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Attribute attributeLink="S.120" changeability="changeable" isSpecification="false" name="adresa" ordering="unordered" owner="S.112" ownerScope="instance" targetScope="instance" type="S.10" visibility="private" xmi.id="S.119">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.121"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.122">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.122" upper="1" xmi.id="S.123"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Class instance="S.125 S.126 S.127" isAbstract="false" isActive="true" isLeaf="false" isRoot="false" isSpecification="false" name="Prajitura" namespace="S.1" visibility="public" xmi.id="S.124">
+     <UML:Classifier.feature>
+      <UML:Attribute attributeLink="S.129 S.130 S.131" changeability="changeable" isSpecification="false" name="nume" ordering="unordered" owner="S.124" ownerScope="instance" targetScope="instance" type="S.10" visibility="private" xmi.id="S.128">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.132"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.133">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.133" upper="1" xmi.id="S.134"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+      <UML:Attribute attributeLink="S.136 S.137 S.138" changeability="changeable" isSpecification="false" name="pret" ordering="unordered" owner="S.124" ownerScope="instance" targetScope="instance" type="S.3" visibility="private" xmi.id="S.135">
+       <UML:Attribute.initialValue>
+        <UML:Expression body="" xmi.id="S.139"/>
+       </UML:Attribute.initialValue>
+       <UML:StructuralFeature.multiplicity>
+        <UML:Multiplicity xmi.id="S.140">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.140" upper="1" xmi.id="S.141"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:StructuralFeature.multiplicity>
+      </UML:Attribute>
+     </UML:Classifier.feature>
+    </UML:Class>
+    <UML:Association isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" link="S.155 S.156 S.157" name="A_Cofetarie_Prajitura" namespace="S.1" visibility="public" xmi.id="S.142">
+     <UML:Association.connection>
+      <UML:AssociationEnd aggregation="none" association="S.142" changeability="changeable" isNavigable="false" isSpecification="false" linkEnd="S.144 S.145 S.146" name="cofetarie" ordering="unordered" targetScope="instance" type="S.112" visibility="public" xmi.id="S.143">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.147">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="1" multiplicity="S.147" upper="1" xmi.id="S.148"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+      <UML:AssociationEnd aggregation="none" association="S.142" changeability="changeable" isNavigable="true" isSpecification="false" linkEnd="S.150 S.151 S.152" name="prajituri" ordering="unordered" targetScope="instance" type="S.124" visibility="public" xmi.id="S.149">
+       <UML:AssociationEnd.multiplicity>
+        <UML:Multiplicity xmi.id="S.153">
+         <UML:Multiplicity.range>
+          <UML:MultiplicityRange lower="0" multiplicity="S.153" upper="-1" xmi.id="S.154"/>
+         </UML:Multiplicity.range>
+        </UML:Multiplicity>
+       </UML:AssociationEnd.multiplicity>
+      </UML:AssociationEnd>
+     </UML:Association.connection>
+    </UML:Association>
+    <UML:Collaboration isAbstract="false" isLeaf="false" isRoot="false" isSpecification="false" name="Collaboration" namespace="S.1" visibility="public" xmi.id="S.158">
+     <UML:Namespace.ownedElement>
+      <UML:Object classifier="S.112" isSpecification="false" linkEnd="S.144 S.145 S.146" name="c1" namespace="S.158" visibility="public" xmi.id="S.113">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.114" instance="S.113" isSpecification="false" name="denumire" value="S.12" visibility="private" xmi.id="S.115"/>
+        <UML:AttributeLink attribute="S.119" instance="S.113" isSpecification="false" name="adresa" value="S.13" visibility="private" xmi.id="S.120"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.124" isSpecification="false" linkEnd="S.150" name="p1" namespace="S.158" visibility="public" xmi.id="S.125">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.128" instance="S.125" isSpecification="false" name="nume" value="S.14" visibility="private" xmi.id="S.129"/>
+        <UML:AttributeLink attribute="S.135" instance="S.125" isSpecification="false" name="pret" value="S.5" visibility="private" xmi.id="S.136"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.124" isSpecification="false" linkEnd="S.151" name="p2" namespace="S.158" visibility="public" xmi.id="S.126">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.128" instance="S.126" isSpecification="false" name="nume" value="S.15" visibility="private" xmi.id="S.130"/>
+        <UML:AttributeLink attribute="S.135" instance="S.126" isSpecification="false" name="pret" value="S.6" visibility="private" xmi.id="S.137"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Object classifier="S.124" isSpecification="false" linkEnd="S.152" name="p3" namespace="S.158" visibility="public" xmi.id="S.127">
+       <UML:Instance.slot>
+        <UML:AttributeLink attribute="S.128" instance="S.127" isSpecification="false" name="nume" value="S.16" visibility="private" xmi.id="S.131"/>
+        <UML:AttributeLink attribute="S.135" instance="S.127" isSpecification="false" name="pret" value="S.7" visibility="private" xmi.id="S.138"/>
+       </UML:Instance.slot>
+      </UML:Object>
+      <UML:Link association="S.142" isSpecification="false" name="A_c1_p1" namespace="S.158" visibility="public" xmi.id="S.155">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.143" instance="S.113" isSpecification="false" link="S.155" name="cofetarie" visibility="private" xmi.id="S.144"/>
+        <UML:LinkEnd associationEnd="S.149" instance="S.125" isSpecification="false" link="S.155" name="prajituri" visibility="private" xmi.id="S.150"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.142" isSpecification="false" name="A_c1_p2" namespace="S.158" visibility="public" xmi.id="S.156">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.143" instance="S.113" isSpecification="false" link="S.156" name="cofetarie" visibility="private" xmi.id="S.145"/>
+        <UML:LinkEnd associationEnd="S.149" instance="S.126" isSpecification="false" link="S.156" name="prajituri" visibility="private" xmi.id="S.151"/>
+       </UML:Link.connection>
+      </UML:Link>
+      <UML:Link association="S.142" isSpecification="false" name="A_c1_p3" namespace="S.158" visibility="public" xmi.id="S.157">
+       <UML:Link.connection>
+        <UML:LinkEnd associationEnd="S.143" instance="S.113" isSpecification="false" link="S.157" name="cofetarie" visibility="private" xmi.id="S.146"/>
+        <UML:LinkEnd associationEnd="S.149" instance="S.127" isSpecification="false" link="S.157" name="prajituri" visibility="private" xmi.id="S.152"/>
+       </UML:Link.connection>
+      </UML:Link>
+     </UML:Namespace.ownedElement>
+    </UML:Collaboration>
+    <UML:DataValue classifier="S.10" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.11"/>
+    <UML:DataValue attributeLink="S.115" classifier="S.10" isSpecification="false" name="Carpati" namespace="S.1" visibility="public" xmi.id="S.12"/>
+    <UML:DataValue attributeLink="S.120" classifier="S.10" isSpecification="false" name="p-ta Libertatii 12" namespace="S.1" visibility="public" xmi.id="S.13"/>
+    <UML:DataValue classifier="S.3" isSpecification="false" name="" namespace="S.1" visibility="public" xmi.id="S.4"/>
+    <UML:DataValue attributeLink="S.129" classifier="S.10" isSpecification="false" name="studel cu mere" namespace="S.1" visibility="public" xmi.id="S.14"/>
+    <UML:DataValue attributeLink="S.136" classifier="S.3" isSpecification="false" name="5" namespace="S.1" visibility="public" xmi.id="S.5"/>
+    <UML:DataValue attributeLink="S.130" classifier="S.10" isSpecification="false" name="tort buturuga" namespace="S.1" visibility="public" xmi.id="S.15"/>
+    <UML:DataValue attributeLink="S.137" classifier="S.3" isSpecification="false" name="50" namespace="S.1" visibility="public" xmi.id="S.6"/>
+    <UML:DataValue attributeLink="S.131" classifier="S.10" isSpecification="false" name="Sara Bernard" namespace="S.1" visibility="public" xmi.id="S.16"/>
+    <UML:DataValue attributeLink="S.138" classifier="S.3" isSpecification="false" name="75" namespace="S.1" visibility="public" xmi.id="S.7"/>
+   </UML:Namespace.ownedElement>
+  </UML:Model>
+ </XMI.content>
+</XMI>
