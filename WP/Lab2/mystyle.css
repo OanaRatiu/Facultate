@@ -1,0 +1,132 @@
+body {
+    margin: 0px;
+}
+
+.table-style {
+	width: 100%;
+}
+
+table {
+	border: 0px;
+	border-collapse: collapse;	
+}
+
+.top-row {
+	height: 20%;
+	background-color: #500095;
+}
+
+.top-cell {
+	width: 5%;
+	line-height: 22px;
+
+	color: white;
+	font-size: 13px;
+	font-family: "Helvetica Neue",Helvetica,Arial;
+    text-align: left;
+    padding-top: 1px;
+}
+
+.blank-cell {
+	width:40%;
+}
+
+.image-style {
+	width:20px;
+	height:13px;
+}
+
+.second-row {
+	width: 100%;
+	height: 85px;
+}
+
+input {
+	width: 432px;
+	height: 32px;
+}
+
+button {
+	padding: 1px 6px;
+	padding-top: 1px;
+	padding-right: 6px;
+	padding-bottom: 1px;
+	padding-left: 6px;
+}
+
+.yahoo-logo {
+	width: 134px;
+	height: 48px;
+}
+
+.search-style {
+	font: 15px sans-serif white;
+	height: 33px;
+	width: 130px;
+	border-radius: 4px;		/*asta e pt colturi rotunjite*/
+	color: white;
+	text-align: center;
+	background-color: #3775DD;
+	border: 1px solid #592880;
+}
+
+img {
+	vertical-align: text-bottom;
+}
+
+.list-style {
+	width: 134px;
+}
+
+.list_style {
+	list-style-type: none;
+
+	width: 180px;
+	height: 495px;
+	display: inline-block; /*pe o linie tot*/
+}
+
+.list-font {
+	vertical-align: top;
+	margin-top: 6px;
+	font-size: 15px;
+	color: rgb(30, 38, 131);
+	font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+.news-image {
+	width: 82px;
+	height: 82px;
+	vertical-align: text-bottom;
+}
+
+.news-title {
+	color: #324fe1;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.news-font {
+	font-family: "Helvetica Neue",Helvetica,Arial;
+	font: 13px/1.25;
+	margin-top: 1px;
+}
+
+.main-menu {
+	color: white;
+	background-color: #795ECD;
+	font-weight: 300;
+
+	color: #fff;
+	border: 0;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	outline: 0;
+	outline-width: 0px;
+}
+
+:target {
+    display: none
+}

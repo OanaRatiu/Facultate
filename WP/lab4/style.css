@@ -1,0 +1,21 @@
+.article {
+	color: black;
+}
+
+table {
+	border-collapse: collapse;
+	background: #F8E0F7;
+}
+
+th, td, table {
+    border: 1px solid black;
+}
+
+tr {
+	color: #4C0B5F;
+}
+
+th {
+	text-align:left;
+}
+

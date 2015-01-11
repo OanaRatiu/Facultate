@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<ul>
+	<li><a href="http://www.google.ro">Google</a></li>
+	<li><a href="http://www.yahoo.ro">Yahoo</a></li>
+	<li><a href="http://www.gmail.ro">Gmail</a></li>
+	<li><a href="http://www.facebook.ro">Facebook</a></li>
+	<li><a href="http://www.stumbleupon.ro">Stumble</a></li>
+	<li><a href="http://www.google.ro">Google</a></li>
+	<li><a href="http://www.yahoo.ro">Yahoo</a></li>
+	<li><a href="http://www.gmail.ro">Gmail</a></li>
+	<li><a href="http://www.facebook.ro">Facebook</a></li>
+	<li><a href="http://www.stumbleupon.ro">Stumble</a></li>
+</ul>
+
+<p>
+<input id="bck" type="button" value="Change background">
+<input id="font" type="button" value="Change links">
+</p>
+
+<script>
+	var count = 0;
+	function click_bck() {
+		count += 1;
+		changeBackground(count);
+	}
+	function changeBackground(nb_of_clicks) {	
+		if (nb_of_clicks % 5 == 0)
+			document.body.style.background = "url('dog1.jpg') no-repeat";
+		else if (nb_of_clicks % 5 == 1)
+			document.body.style.background = "url('dog2.jpg') no-repeat";
+		else if (nb_of_clicks % 5 == 2)
+			document.body.style.background = "url('dog3.jpg') no-repeat";
+		else if (nb_of_clicks % 5 == 3)
+			document.body.style.background = "url('dog4.jpg') no-repeat";
+		else if (nb_of_clicks % 5 == 4)
+			document.body.style.background = "url('dog5.jpg') no-repeat";
+	}
+	var button = document.getElementById('bck');
+	button.onclick = click_bck;
+
+
+
+	var font_count = 0;
+	function click_font() {
+		font_count += 1;
+		changeLinks(font_count);
+	}
+	function changeLinks(nb_of_clicks) {
+		all_links = document.getElementsByTagName("a");
+		if (nb_of_clicks % 2 == 0)
+			for (var i = 0; i < all_links.length; i++) {
+				all_links[i].style.fontStyle = 'normal'
+				all_links[i].style.color = 'blue';
+			}
+		if (nb_of_clicks % 2 == 1)
+			for (var i = 0; i < all_links.length; i++) {
+				all_links[i].style.fontStyle = 'italic'
+				all_links[i].style.color = 'red';
+			}
+	}
+	var font_button = document.getElementById('font');
+	font_button.onclick = click_font;
+</script>
+
+</body>
+</html>

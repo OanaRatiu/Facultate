@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LAB6</title>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+</head>
+ 
+<body>
+
+<!--Document Object Model (DOM)!--> 
+
+<script type="text/javascript">
+// use ready because page needs to be ready to execute javascript
+$(document).ready(function() {
+
+    function on_delete(){
+        row = $(this).closest('tr');
+        row.children().text("");
+        var row_id = row.attr('id');
+        for(var i=0; i<=row_id; i++) {
+            row.insertBefore(row.prev());
+        }
+    }
+
+    function on_edit(event){
+        console.log("in edit");
+        event.preventDefault();
+        row = $(this).closest('tr');
+        var row_id = row.attr('id');
+        row_count = $('#my_table tr').length;
+        row_count = row_count + 1;
+        var editable_row = $('<tr id=edit_'+row_count+'></tr>');
+        var remove_cell = $('<td><input id="remove" type="button" value="Remove row"/></td>');
+        editable_row.append(remove_cell);
+        for(var i=1; i<6; i++) {
+            var cell = $('<td style="border: 1px solid black"><div contenteditable="true" /></td>');
+            editable_row.append(cell);
+            cell.click(not_editable_anymore);
+        }
+        var edit_cell = $('<td><input id="edit" type="button" value="Edit row"/></td>');
+        editable_row.append(edit_cell);
+        //$('#edit').on("click", on_edit);
+        $('#my_table tr').eq(row_id).after(editable_row);
+    }
+
+    function not_editable_anymore(){
+        row_count = $('#my_table tr').length;
+        row = $(this).closest('tr');
+        cells = row.children();
+        var count = 0;
+        for(var i=0; i<7; i++)
+            if (cells[i].innerText)
+                count ++;
+        if (count == 7) {
+            for(var i=0; i<7; i++) {
+                $('div').attr('contenteditable', 'false');
+            }
+        }
+    }
+
+    var table = $('<table></table>').css({
+    				'border':"1px solid black",
+    				'border-collapse': 'collapse'});
+    for(var i=0; i<5; i++){
+        var row = $('<tr id='+'"'+i+'"'+'></tr>');
+        var del_but = $('<td><input id="delete" type="button" value="Delete row"/></td>');
+    	del_but.click(on_delete);
+        row.append(del_but.css({'border':"1px solid black"}));
+        for(var j=0; j<5; j++){
+        	var cell = $('<td>cell '+i+'-'+j+'</td>');	
+        	row.append(cell.css({
+        			'border':"1px solid black",
+        			'height':"30px"}));
+        }
+        var edit_but = $('<td><input id="edit" type="button" value="Edit row" class="edit_class"/></td>');
+        //edit_but.on("click", on_edit);
+        row.append(edit_but.css({'border':"1px solid black"}));
+        table.append(row);
+    }
+    $('.edit_class').bind("click", on_edit);
+    $('#my_table').append(table);
+});
+</script>
+
+<div id="my_table"></div>
+ 
+</body>
+</html>
