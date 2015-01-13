@@ -43,20 +43,28 @@ def validate_message(message, alphabet):
 
 
 if __name__ == '__main__':
-    # select prime p and g
-    # p > nb of letters in the alphabet
     alphabet = list(string.ascii_lowercase)
     alphabet = {letter: i for i, letter in enumerate(alphabet)}
     alphabet[" "] = len(alphabet.keys())
+    # make inversed alhpabet because we need it for decryption
+    # decrypt will return the indexes of the ltters in the alphabet
     inversed_alphabet = {value: key for key, value in alphabet.items()}
+
+    # select prime p and g
+    # p > nb of letters in the alphabet
     p = random.randint(len(alphabet), 3000)
     while not isprime(p):
         p = random.randint(len(alphabet), 3000)
     g = 8
+
+    # generate the public and secret keys for bot alice and bob
     alice_public_key, alice_secret_key = generate_key(p, g)
     bob_public_key, bob_secret_key = generate_key(p, g)
     message = "now"
+
+    # text validation
     if validate_message(message, alphabet):
+        # compute K, which is always the same - used for decryption
         K = compute_K(alice_public_key, bob_secret_key, p)
         decrypted_message = ''
         for letter in message:
