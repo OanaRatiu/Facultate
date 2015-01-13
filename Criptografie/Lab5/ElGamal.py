@@ -42,6 +42,13 @@ def validate_message(message, alphabet):
     return True
 
 
+def validate_ciphertext(cipher_symbol, alphabet):
+    if cipher_symbol not in alphabet.keys():
+        print "Message is not valid! It does not contain only numbers!"
+        return False
+    return True
+
+
 if __name__ == '__main__':
     alphabet = list(string.ascii_lowercase)
     alphabet = {letter: i for i, letter in enumerate(alphabet)}
@@ -70,6 +77,10 @@ if __name__ == '__main__':
         for letter in message:
             c = encrypt_letter(
                 alphabet[letter], bob_public_key, alice_secret_key, p)
-            decrypted_message += inversed_alphabet[decrypt_letter(
-                c, alice_public_key, bob_secret_key, p, K)]
+            decrypted_letter = decrypt_letter(
+                c, alice_public_key, bob_secret_key, p, K)
+            if not validate_ciphertext(decrypted_letter, inversed_alphabet):
+                print "Algorithm will stop!"
+                break
+            decrypted_message += inversed_alphabet[decrypted_letter]
         print message + " -> " + decrypted_message
